@@ -1,0 +1,36 @@
+version: '3.1'
+services:
+
+  app:
+    container_name: feel_good
+    build: .
+    restart: always
+    depends_on: 
+      - db
+    ports:
+      # Deployment 
+      #- 80:80
+      # Local Development
+      - 8081:80
+    volumes:
+      - .:/var/www/html/
+
+  db:
+    # build: ./mysql
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    volumes:
+      - ./data/:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_DATABASE}
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      # Deployment
+      #- 8080:8080
+      # Local Development
+      - 8082:8080
