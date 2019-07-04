@@ -9,7 +9,7 @@ export default {
   name: 'ProductDetails',
   props: {
   },
-  date () {
+  data () {
     return{
       productId: this.$route.params.productId
     }

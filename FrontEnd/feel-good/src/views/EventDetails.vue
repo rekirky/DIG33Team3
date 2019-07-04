@@ -9,7 +9,7 @@ export default {
   name: 'EventDetails',
   props: {
   },
-  date () {
+  data () {
     return{
       eventId: this.$route.params.eventId
     }

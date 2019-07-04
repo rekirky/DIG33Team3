@@ -22,6 +22,56 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
     },
     {
+      path: '/contact',
+      name: 'contact',
+      component: () => import('./views/Contact.vue')
+    },
+    {
+      path: '/events',
+      name: 'events',
+      component: () => import('./views/Events.vue')
+    },
+    {
+      path: '/event/:eventId',
+      name: 'event-details',
+      component: () => import('./views/EventDetails.vue')
+    },
+    {
+      path: '/footprint',
+      name: 'footprint',
+      component: () => import('./views/OurFootPrint.vue')
+    },
+    {
+      path: '/policy',
+      name: 'policy',
+      component: () => import('./views/Policy.vue')
+    },    
+    {
+      path: '/products',
+      name: 'products',
+      component: () => import('./views/Products.vue')
+    },
+    {
+      path: '/product/:productId',
+      name: 'product-details',
+      component: () => import('./views/ProductDetails.vue')
+    },   
+    {
+      path: '/sitemap',
+      name: 'sitemap',
+      component: () => import('./views/Sitemap.vue')
+    },    
+    {
+      path: '/references',
+      name: 'references',
+      component: () => import('./views/References.vue')
+    },    
+    {
+      path: '/team',
+      name: 'team',
+      component: () => import('./views/Team.vue')
+    },
+    {
       path: '*',
       component: resolve => require(['@/views/NotFound'], resolve)
     }
