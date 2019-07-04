@@ -1,12 +1,12 @@
 <template>
-  <div class="about">
-    about
+  <div class="sitemap">
+    Sitemap
   </div>
 </template>
 
 <script>
 export default {
-  name: 'About',
+  name: 'Sitemap',
   props: {
   }
 }

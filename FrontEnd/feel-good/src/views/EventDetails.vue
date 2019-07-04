@@ -1,13 +1,18 @@
 <template>
-  <div class="about">
-    about
+  <div class="event-details">
+    Event Detials of: {{eventId}}
   </div>
 </template>
 
 <script>
 export default {
-  name: 'About',
+  name: 'EventDetails',
   props: {
+  },
+  date () {
+    return{
+      eventId: this.$route.params.eventId
+    }
   }
 }
 </script>
