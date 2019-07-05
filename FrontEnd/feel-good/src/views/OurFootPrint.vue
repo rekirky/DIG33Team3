@@ -1,12 +1,12 @@
 <template>
-  <div class="about">
-    about
+  <div class="our-foot-print">
+    Our Foot Print
   </div>
 </template>
 
 <script>
 export default {
-  name: 'about',
+  name: 'OurFootPrint',
   props: {
   }
 }
