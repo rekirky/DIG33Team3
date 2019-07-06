@@ -8,6 +8,14 @@
 export default {
   name: 'Events',
   props: {
+  },
+  mounted () {
+    var points = document.getElementsByClassName("bullet-point active")
+    while(points.length > 0){
+      points[0].classList.remove('active');
+    }
+    var activePoint = document.getElementById("events-link")
+    activePoint.getElementsByClassName("bullet-point")[0].classList.toggle("active")
   }
 }
 </script>

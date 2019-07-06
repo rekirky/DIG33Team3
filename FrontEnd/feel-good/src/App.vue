@@ -1,20 +1,22 @@
 <template>
   <div id="app">
     <nav-menu/>
-    <router-view/>
+    <div class="page-container">
+        <router-view/>
+    </div>
+    <fg-footer/>
   </div>
 </template>
 
 <script>
 import NavMenu from '@/components/NavMenu.vue'
-import Footer from '@/components/Footer.vue'
+import FgFooter from '@/components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
-    NavMenu
-    //,
-    //Footer
+    NavMenu,
+    FgFooter
   }
 }
 </script>
@@ -23,5 +25,9 @@ export default {
 <style lang="scss">
 
   @import "@/assets/css/general.scss";
+
+  .page-container{
+    min-height: calc(100vh - 200px);
+  }
 
 </style>
