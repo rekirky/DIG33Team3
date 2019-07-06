@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Holtwood+One+SC|Open+Sans');
+@import url('https://use.fontawesome.com/releases/v5.7.0/css/all.css');
+
+:root{
+  /*Colours*/
+  --orange-primary:#eb6a27;
+  --blue-primary:#00b0f0;
+  --green-primary:#9ad35c;
+  --purple-primary:#861c8c;
+  --beige-sidebar:#f0e5cf;
+  --orange-secondary:#f49b22;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
