@@ -67,6 +67,7 @@ export default {
     position: absolute;
     left: 0;
     top: 0;
+    z-index: 3;
   }
 
   #menu-container{
@@ -130,7 +131,7 @@ export default {
     position: absolute;
     padding: .5rem;
     cursor: pointer;
-    z-index: 1;
+    z-index: 4;
   }
 
   .circle{
