@@ -27,7 +27,7 @@ export default {
   @import "@/assets/css/general.scss";
 
   .page-container{
-    min-height: calc(100vh - 200px);
+    min-height: calc(100vh - 160px);
   }
 
 </style>
