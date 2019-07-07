@@ -26,6 +26,10 @@ export default {
 
   @import "@/assets/css/general.scss";
 
+  #app{
+    position: relative;
+  }
+
   .page-container{
     min-height: calc(100vh - 160px);
   }

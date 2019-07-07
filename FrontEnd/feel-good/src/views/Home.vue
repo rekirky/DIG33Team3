@@ -19,7 +19,7 @@
         <img src="@/assets/img/hand_1.png">
       </div>
     </div>
-    <div class="feel-content-container">
+    <div id="feel-content-container">
       <div id="feel-content">
         <div id="close-button" v-on:click="feelDeactive">
           <div class="circle hamburger">
@@ -63,7 +63,7 @@
       </div>
     </div>
 
-    <div class="good-container third-container"  @mouseenter="bottomBarGrow" @mouseleave="bottomBarShrink">
+    <div id="good-container" class="third-container"  @mouseenter="bottomBarGrow" @mouseleave="bottomBarShrink" @click="goodActive">
       <div class="top-bar"></div>
       <div class="center-content">
         <div class="top-tag">100%</div>
@@ -76,6 +76,32 @@
       </div>
       <div class="bottle right-bottle">
         <img src="@/assets/img/bottles/Paper-Bottle_lemonmy-499px.png">
+      </div>
+    </div>
+     <div id="good-content-container">
+      <div id="good-content">
+        <div id="close-button" v-on:click="goodDeactive">
+          <div class="circle hamburger">
+            <span class="bar top"></span>
+            <span class="bar bottom"></span>
+          </div>
+        </div>
+        <div class="two-third-container">        
+          <div class="two-third-title">
+            You can become part of the
+            crusade to protect
+            our oceans and children’s future
+          </div>
+          <div class="two-third-body">
+            Ti qui a nonsectaepre con con con est peliqui dolupti ncimus ea qui
+            resequis volor auda pliberae nat veribus, sed molupti volorest, secab ipiscii
+            squaspeliam et eiuntem eosti in nonsent di dolore, qui aligenestet alic
+            tecto cum inis aborro qui dus sum diat latquia simendam coressi musciet
+            archicidel earcium que cus et ulla sequis reici dendebit quis qui sant aliquid
+            erspici pienimi, consequ atecaec temporio. Et fuga. Fictota tiatectet aut
+          </div>        
+          <router-link to="footprint" tag="button">Discover how</router-link>
+        </div>
       </div>
     </div>
 
@@ -108,6 +134,9 @@ export default {
       feelContainer.getElementsByClassName("left-bottle")[0].classList.add("active")
       feelContainer.getElementsByClassName("right-bottle")[0].classList.add("active")
       feelContainer.getElementsByClassName("hand")[0].classList.add("active")
+      $( "#feel-content-container" ).animate({
+        width: "67%"
+      }, 0,);
       document.getElementById("feel-content").classList.add("active")
     },
     feelDeactive(){      
@@ -119,7 +148,32 @@ export default {
       feelContainer.getElementsByClassName("left-bottle")[0].classList.remove("active")
       feelContainer.getElementsByClassName("right-bottle")[0].classList.remove("active")
       feelContainer.getElementsByClassName("hand")[0].classList.remove("active")
+      $( "#feel-content-container" ).delay(2000).animate({
+        width: "0%"
+      }, 0);
       document.getElementById("feel-content").classList.remove("active")
+    },
+    goodActive(){
+      var goodContainer = document.getElementById("good-container")
+      goodContainer.getElementsByClassName("bottom-bar")[0].classList.add("active")
+      goodContainer.getElementsByClassName("top-tag")[0].classList.add("active")
+      goodContainer.getElementsByClassName("bottom-tag")[0].classList.add("active")
+      goodContainer.getElementsByClassName("name-tag")[0].classList.add("active")
+      $( "#good-content-container" ).animate({
+        width: "67%"
+      }, 0,);
+      document.getElementById("good-content").classList.add("active")
+    },
+    goodDeactive(){      
+      var goodContainer = document.getElementById("good-container")
+      goodContainer.getElementsByClassName("bottom-bar")[0].classList.remove("active")
+      goodContainer.getElementsByClassName("top-tag")[0].classList.remove("active")
+      goodContainer.getElementsByClassName("bottom-tag")[0].classList.remove("active")
+      goodContainer.getElementsByClassName("name-tag")[0].classList.remove("active")
+      $( "#good-content-container" ).delay(1000).animate({
+        width: "0%"
+      }, 0);
+      document.getElementById("good-content").classList.remove("active")
     }
   }
 }
@@ -176,6 +230,7 @@ export default {
   }
 
   .bottle>img{
+    transition: all ease-in .5s;
     height: 50vh;
   }
 
@@ -215,8 +270,8 @@ export default {
     background-color: var(--blue-secondary);
   }
 
-  .feel-content-container{
-    width: 67%;
+  #feel-content-container{
+    width: 0;
     height: 100%;
     position: absolute;
     top: 0;
@@ -231,7 +286,7 @@ export default {
     background-size: cover;
     min-height: 100%;  
     z-index: 1;
-    transition: all ease-out 1s;
+    transition: all ease-out 2s;
     width: 100%;
     position: absolute;
     top: 0;
@@ -257,7 +312,7 @@ export default {
     background-color: var(--green-primary);
   }
 
-  .good-container{
+  #good-container{
     position: absolute;
     top: 0;
     right: 0;
@@ -265,8 +320,37 @@ export default {
     width: 33%;
   }
 
-  .good-container .top-bar, .good-container .bottom-bar{
-    background-color: var(--orange-primary);
+  #good-container .top-bar, #good-container .bottom-bar{
+    background-color: var(--orange-secondary);
+  }
+
+  #good-content-container{
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 33%;
+    overflow: hidden;
+  }
+
+  #good-content{
+    background-image: url('../assets/img/animal-bottlenose-dolphin.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;  
+    z-index: 1;
+    transition: all ease-out 1s;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    opacity: 1;
+    display: flex;
+  }
+
+  #good-content.active{
+    right: 0;
   }
 
   .top-tag{
@@ -326,7 +410,7 @@ export default {
     position: absolute;
     padding: .5rem;
     cursor: pointer;
-    z-index: 4;
+    z-index: 6;
   }
 
   .circle{
@@ -355,12 +439,16 @@ export default {
   }
 
   .two-third-container{
-    margin-top: 50%;
-    min-height: 50%;
+    margin-top: 45%;
+    min-height: 55%;
     width: 100%;
     position: relative;
     background-color: rgba(255,255,255,0.9);
     padding: 0px 120px 0px 100px;
+  }
+
+  #good-content .two-third-container{
+    background-color: rgba(34,172,224,0.9);
   }
 
   .two-third-title{
@@ -370,24 +458,38 @@ export default {
     padding: 10px 0px;
   }
 
+  #good-content .two-third-title{
+    color: white;
+  }
+
   .two-third-body{
     font-family: 'Open Sans', sans-serif;
     text-align: left;
     font-size: 1.1rem;
     padding: 5px 0px;
-    line-height: 1.3;
+    line-height: 1.4;
+  }
+
+  #good-content .two-third-body{
+    color: white;
   }
 
   .hand{
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translate(-50%, 100%);
+    transform: translate(-50%, 0);
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .hand>img{
+    transition: all ease-in .5s;
+    transform: translate(0, 300%);
   }
 
   .hand.active>img{
-    transition: all ease-in .5s;
-    transform: translate(0, -100%);
+    transform: translate(0, 170%);
   }
 
 </style>
