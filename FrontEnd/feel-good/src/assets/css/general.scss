@@ -31,6 +31,20 @@
   }
 }
 
+button{
+  background-color: var(--orange-primary);
+  border: none;
+  color: white;
+  padding: 5px 40px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase  !important;;
+  font-size: 24px !important;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
 h1{
   text-transform: uppercase;
   font-family: 'Holtwood One SC', sans-serif;
