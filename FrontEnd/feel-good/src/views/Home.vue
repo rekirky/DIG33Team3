@@ -37,10 +37,7 @@
             pliberae nat veribus, sed molupti volorest, secab ipiscii squaspeliam et eiuntem eosti
             in nonsent di dolore, qui aligenestet alic tecto cum inis aborro qui dus sum diat latquia
             simendam coressi musciet archicidel earcium que cus et ulla sequis reici dendebit quis qui
-            sant aliquid erspici pienimi, consequ atecaec temporio.<br><br>
-            Et fuga. Fictota tiatectet aut assecessum quae liqui blaboreped et ut aliquaero consed
-            quuntecto blatur, conserit omnis pe reprae veliciis poresti dis doluptur rent lam fugit
-            venecte molorep editaquatur architi dolent omnisimet eatus, ex elibus dus volorpo repudae.
+            sant aliquid erspici pienimi, consequ atecaec temporio.
           </div>        
           <router-link to="products" tag="button">The Benefits</router-link>
         </div>
@@ -76,6 +73,12 @@
       </div>
       <div class="bottle right-bottle">
         <img src="@/assets/img/bottles/Paper-Bottle_lemonmy-499px.png">
+      </div>
+      <div class="hand good-hand">
+        <img src="@/assets/img/2hands.png">
+      </div>
+      <div class="good-fish">
+        <img src="@/assets/img/fish.png">
       </div>
     </div>
      <div id="good-content-container">
@@ -134,9 +137,7 @@ export default {
       feelContainer.getElementsByClassName("left-bottle")[0].classList.add("active")
       feelContainer.getElementsByClassName("right-bottle")[0].classList.add("active")
       feelContainer.getElementsByClassName("hand")[0].classList.add("active")
-      $( "#feel-content-container" ).animate({
-        width: "67%"
-      }, 0,);
+      $( "#feel-content-container" ).animate({width: "67%"}, 0,);
       document.getElementById("feel-content").classList.add("active")
     },
     feelDeactive(){      
@@ -148,9 +149,7 @@ export default {
       feelContainer.getElementsByClassName("left-bottle")[0].classList.remove("active")
       feelContainer.getElementsByClassName("right-bottle")[0].classList.remove("active")
       feelContainer.getElementsByClassName("hand")[0].classList.remove("active")
-      $( "#feel-content-container" ).delay(2000).animate({
-        width: "0%"
-      }, 0);
+      $( "#feel-content-container" ).delay(2000).animate({width: "0%"}, 0);
       document.getElementById("feel-content").classList.remove("active")
     },
     goodActive(){
@@ -159,9 +158,9 @@ export default {
       goodContainer.getElementsByClassName("top-tag")[0].classList.add("active")
       goodContainer.getElementsByClassName("bottom-tag")[0].classList.add("active")
       goodContainer.getElementsByClassName("name-tag")[0].classList.add("active")
-      $( "#good-content-container" ).animate({
-        width: "67%"
-      }, 0,);
+      goodContainer.getElementsByClassName("hand")[0].classList.add("active")
+      goodContainer.getElementsByClassName("good-fish")[0].classList.add("active")
+      $( "#good-content-container" ).animate({width: "67%"}, 0,);
       document.getElementById("good-content").classList.add("active")
     },
     goodDeactive(){      
@@ -170,9 +169,9 @@ export default {
       goodContainer.getElementsByClassName("top-tag")[0].classList.remove("active")
       goodContainer.getElementsByClassName("bottom-tag")[0].classList.remove("active")
       goodContainer.getElementsByClassName("name-tag")[0].classList.remove("active")
-      $( "#good-content-container" ).delay(1000).animate({
-        width: "0%"
-      }, 0);
+      goodContainer.getElementsByClassName("hand")[0].classList.remove("active")
+      goodContainer.getElementsByClassName("good-fish")[0].classList.remove("active")
+      $( "#good-content-container" ).delay(1000).animate({width: "0%"}, 0);
       document.getElementById("good-content").classList.remove("active")
     }
   }
@@ -489,7 +488,21 @@ export default {
   }
 
   .hand.active>img{
-    transform: translate(0, 170%);
+    transform: translate(0, 150%);
+  }
+
+  .good-hand.active>img{
+    transform: translate(0, 250%);
+  }
+
+  .good-fish{
+    opacity: 0;
+    transition: all ease-in .5s;
+    margin-top: 20%;
+  }
+
+  .good-fish.active{
+    opacity: 1;    
   }
 
 </style>
