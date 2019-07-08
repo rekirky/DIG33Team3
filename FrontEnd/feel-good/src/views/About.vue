@@ -3,22 +3,19 @@
   <div class="about">
 
     <article class="about-main"> 
-    <header>
       <!-- Bootstrap and custom classes to style elements -->
       <section class="about-header d-flex align-item-center text-center">       
-      <div class="container">
-      <h1><small> THE HEART OF OUR COMPANY </small></h1>
-      <h1>LET'S TALK ABOUT US</h1>
+      <div class="container ">
+      <h5 class="about-title"><small> THE HEART OF OUR COMPANY </small></h5>
+      <h5><b>LET'S TALK ABOUT US</b></h5>
       </div>
       </section>
-    </header>
-
     <section> 
         <!-- Bootstrap flex box -->
       <Section class="about-text d-flex align-item-center text-center">
          <!-- Bootstrap container -->
     <div class="container">
-      <h3 class="lead">Title text</h3>
+      <h5 class="lead">Title text</h5>
       <p>paragraph text</p>
       </div>
     </Section>
@@ -84,6 +81,18 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
+.about-title{
+  color:  var(--orange-primary)
+}
+
+.about-header {
+  margin-top: 30px;
+  font: 1.4em
+}
+
+.about-text{
+margin-top: 20px
+}
 .about-logo.container {
   margin-top: 40%;
   width: 20%;
