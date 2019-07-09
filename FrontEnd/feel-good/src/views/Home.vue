@@ -44,7 +44,7 @@
       </div>
     </div>
 
-    <div class="natural-container third-container" @mouseenter="bottomBarGrow" @mouseleave="bottomBarShrink">
+    <div id="natural-container" class="third-container" @mouseenter="bottomBarGrow" @mouseleave="bottomBarShrink" @click="naturalActive">
       <div class="top-bar"></div>
       <div class="center-content">
         <div class="top-tag">100%</div>
@@ -57,6 +57,22 @@
       </div>
       <div class="bottle right-bottle">
         <img src="@/assets/img/bottles/Paper-Bottle_crnlime_499px.png">
+      </div>
+    </div>
+    <div id="natural-content-container-left" class="natural-content-container">
+      <div id="natural-content-left">
+
+      </div>
+    </div>
+    <div id="natural-content-container-right" class="natural-content-container">
+      <div id="natural-content-right">
+        <div id="close-button" v-on:click="naturalDeactive">
+          <div class="circle hamburger">
+            <span class="bar top"></span>
+            <span class="bar bottom"></span>
+          </div>
+        </div>
+        
       </div>
     </div>
 
@@ -173,6 +189,32 @@ export default {
       goodContainer.getElementsByClassName("good-fish")[0].classList.remove("active")
       $( "#good-content-container" ).delay(1000).animate({width: "0%"}, 0);
       document.getElementById("good-content").classList.remove("active")
+    },
+    naturalActive(){
+      var naturalContainer = document.getElementById("natural-container")
+      naturalContainer.getElementsByClassName("bottom-bar")[0].classList.add("active")
+      naturalContainer.getElementsByClassName("top-tag")[0].classList.add("active")
+      naturalContainer.getElementsByClassName("bottom-tag")[0].classList.add("active")
+      naturalContainer.getElementsByClassName("name-tag")[0].classList.add("active")      
+      naturalContainer.getElementsByClassName("left-bottle")[0].setAttribute("style", "opacity: 0;")
+      naturalContainer.getElementsByClassName("right-bottle")[0].setAttribute("style", "opacity: 0;")
+      $( "#natural-content-container-left" ).animate({width: "33%"}, 0,);
+      $( "#natural-content-container-right" ).animate({width: "33%"}, 0,);
+      document.getElementById("natural-content-left").classList.add("active")
+      document.getElementById("natural-content-right").classList.add("active")
+    },
+    naturalDeactive(){      
+      var naturalContainer = document.getElementById("natural-container")
+      naturalContainer.getElementsByClassName("bottom-bar")[0].classList.remove("active")
+      naturalContainer.getElementsByClassName("top-tag")[0].classList.remove("active")
+      naturalContainer.getElementsByClassName("bottom-tag")[0].classList.remove("active")
+      naturalContainer.getElementsByClassName("name-tag")[0].classList.remove("active")      
+      naturalContainer.getElementsByClassName("left-bottle")[0].setAttribute("style", "opacity: 1;")
+      naturalContainer.getElementsByClassName("right-bottle")[0].setAttribute("style", "opacity: 1;")
+      $( "#natural-content-container-left" ).animate({width: "0%"}, 0,);
+      $( "#natural-content-container-right" ).animate({width: "0%"}, 0,);
+      document.getElementById("natural-content-left").classList.remove("active")
+      document.getElementById("natural-content-right").classList.remove("active")
     }
   }
 }
@@ -285,7 +327,7 @@ export default {
     background-size: cover;
     min-height: 100%;  
     z-index: 1;
-    transition: all ease-out 2s;
+    transition: all ease-out 1s;
     width: 100%;
     position: absolute;
     top: 0;
@@ -298,17 +340,74 @@ export default {
     left: 0;
   }
 
-  .natural-container{
+  #natural-container{
     position: absolute;
     top: 0;
     left: 50%;
     height: 100%;
-    width: 34%;
+    width: 34.1%;
     transform: translate(-50%, 0);
   }
 
-  .natural-container .top-bar, .natural-container .bottom-bar{
+  #natural-container .top-bar, #natural-container .bottom-bar{
     background-color: var(--green-primary);
+  }
+
+  #natural-content-container-left{
+    left: 0%;
+  }
+
+  #natural-content-container-right{
+    right: 0%;
+  }
+
+  #natural-content-left{
+    background-color: var(--green-secondary);
+    min-height: 100%;  
+    z-index: 1;
+    transition: all ease-out 1s;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    opacity: 1;
+    display: flex;
+  }
+
+  #natural-content-right{
+    background-image: url('../assets/img/beach-footprints-sand_green.png');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;  
+    z-index: 1;
+    transition: all ease-out 1s;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    opacity: 1;
+    display: flex;
+  }
+
+  #natural-content-left.active{
+    right: 0;
+  }
+
+  #natural-content-right.active{
+    left: 0;
+  }
+
+  .natural-content-container{
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+  }
+
+  .natural-content-container.alert{
+    width: 33%;
   }
 
   #good-container{
@@ -465,7 +564,7 @@ export default {
     font-family: 'Open Sans', sans-serif;
     text-align: left;
     font-size: 1.1rem;
-    padding: 5px 0px;
+    padding: 1rem 0px;
     line-height: 1.4;
   }
 
@@ -475,24 +574,28 @@ export default {
 
   .hand{
     position: absolute;
-    bottom: 0;
+    bottom: 0%;
     left: 50%;
     transform: translate(-50%, 0);
     overflow: hidden;
-    height: 100%;
+    height: 0;
+    width: 100%
+  }
+
+  .hand.active{
+    height: 50%;
   }
 
   .hand>img{
+    position: absolute;
+    bottom: -100%;
+    transform: translate(-50%, 5%);
     transition: all ease-in .5s;
-    transform: translate(0, 300%);
   }
 
   .hand.active>img{
-    transform: translate(0, 150%);
-  }
-
-  .good-hand.active>img{
-    transform: translate(0, 250%);
+    position: absolute;
+    bottom: 0;
   }
 
   .good-fish{
