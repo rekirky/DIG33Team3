@@ -59,6 +59,12 @@
       <div class="bottle right-bottle">
         <img src="@/assets/img/bottles/Paper-Bottle_crnlime_499px.png">
       </div>
+      <div class="hand">
+        <img src="@/assets/img/hand_2.png">
+      </div>
+      <div class="hand plant">
+        <img src="@/assets/img/plants_gif_placeholder.png">
+      </div>
     </div>
     <div id="natural-content-container-left" class="natural-content-container">
       <div id="natural-content-left">
@@ -223,6 +229,8 @@ export default {
       naturalContainer.getElementsByClassName("name-tag")[0].classList.add("active")      
       naturalContainer.getElementsByClassName("left-bottle")[0].setAttribute("style", "opacity: 0;")
       naturalContainer.getElementsByClassName("right-bottle")[0].setAttribute("style", "opacity: 0;")
+      naturalContainer.getElementsByClassName("hand")[0].classList.add("active")
+      naturalContainer.getElementsByClassName("plant")[0].classList.add("active")
       $( "#natural-content-container-left" ).animate({width: "33%"}, 0,);
       $( "#natural-content-container-right" ).animate({width: "33%"}, 0,);
       document.getElementById("natural-content-left").classList.add("active")
@@ -236,6 +244,8 @@ export default {
       naturalContainer.getElementsByClassName("name-tag")[0].classList.remove("active")      
       naturalContainer.getElementsByClassName("left-bottle")[0].setAttribute("style", "opacity: 1;")
       naturalContainer.getElementsByClassName("right-bottle")[0].setAttribute("style", "opacity: 1;")
+      naturalContainer.getElementsByClassName("hand")[0].classList.remove("active")
+      naturalContainer.getElementsByClassName("plant")[0].classList.remove("active")
       $( "#natural-content-container-left" ).delay(1000).animate({width: "0%"}, 0,);
       $( "#natural-content-container-right" ).delay(1000).animate({width: "0%"}, 0,);
       document.getElementById("natural-content-left").classList.remove("active")
