@@ -251,6 +251,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
   
+  //Top level Shared Styling
   .home{
     position: relative;
     height: 105vh;
@@ -322,157 +323,6 @@ export default {
   .right-bottle.active{
     right: -70px;
     transform: rotate(0deg)
-  }
-  
-  #feel-container{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 33%;
-  }
-
-  #feel-container .top-bar, #feel-container .bottom-bar{
-    background-color: var(--blue-secondary);
-  }
-
-  #feel-content-container{
-    width: 0;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 33%;
-    overflow: hidden;
-  }
-
-  #feel-content{
-    background-image: url('../assets/img/baby-beautiful.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100%;  
-    z-index: 1;
-    transition: all ease-out 1s;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: -100%;
-    opacity: 1;
-    display: flex;
-  }
-
-  #feel-content.active{
-    left: 0;
-  }
-
-  #natural-container{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    height: 100%;
-    width: 34.1%;
-    transform: translate(-50%, 0);
-  }
-
-  #natural-container .top-bar, #natural-container .bottom-bar{
-    background-color: var(--green-primary);
-  }
-
-  #natural-content-container-left{
-    left: 0%;
-  }
-
-  #natural-content-container-right{
-    right: 0%;
-  }
-
-  #natural-content-left{
-    background-color: var(--green-secondary);
-    min-height: 100%;  
-    z-index: 1;
-    transition: all ease-out 1s;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    right: -100%;
-    opacity: 1;
-  }
-
-  #natural-content-right{
-    background-image: url('../assets/img/beach-footprints-sand_green.png');
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100%;  
-    z-index: 1;
-    transition: all ease-out 1s;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: -100%;
-    opacity: 1;
-    padding-top: 30%;
-  }
-
-  #natural-content-left.active{
-    right: 0;
-  }
-
-  #natural-content-right.active{
-    left: 0;
-  }
-
-  .natural-content-container{
-    width: 0%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    overflow: hidden;
-  }
-
-  .natural-content-container.alert{
-    width: 33%;
-  }
-
-  #good-container{
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 33%;
-  }
-
-  #good-container .top-bar, #good-container .bottom-bar{
-    background-color: var(--orange-secondary);
-  }
-
-  #good-content-container{
-    width: 0%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 33%;
-    overflow: hidden;
-  }
-
-  #good-content{
-    background-image: url('../assets/img/animal-bottlenose-dolphin.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100%;  
-    z-index: 1;
-    transition: all ease-out 1s;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    right: -100%;
-    opacity: 1;
-    display: flex;
-  }
-
-  #good-content.active{
-    right: 0;
   }
 
   .top-tag{
@@ -569,19 +419,11 @@ export default {
     padding: 0px 120px 0px 100px;
   }
 
-  #good-content .two-third-container{
-    background-color: rgba(34,172,224,0.9);
-  }
-
   .two-third-title{
     font-family: 'Open Sans', sans-serif;
     font-size: 3rem;
     color: var(--orange-primary);
     padding: 10px 0px;
-  }
-
-  #good-content .two-third-title{
-    color: white;
   }
 
   .two-third-body{
@@ -590,10 +432,6 @@ export default {
     font-size: 1.1rem;
     padding: 1rem 0px;
     line-height: 1.4;
-  }
-
-  #good-content .two-third-body{
-    color: white;
   }
 
   .hand{
@@ -622,14 +460,120 @@ export default {
     bottom: 0;
   }
 
-  .good-fish{
-    opacity: 0;
-    transition: all ease-in .5s;
-    margin-top: 20%;
+
+
+  //Feel Section Styling
+
+  #feel-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 33%;
   }
 
-  .good-fish.active{
-    opacity: 1;    
+  #feel-container .top-bar, #feel-container .bottom-bar{
+    background-color: var(--blue-secondary);
+  }
+
+  #feel-content-container{
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 33%;
+    overflow: hidden;
+  }
+
+  #feel-content{
+    background-image: url('../assets/img/baby-beautiful.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;  
+    z-index: 1;
+    transition: all ease-out 1s;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    opacity: 1;
+    display: flex;
+  }
+
+  #feel-content.active{
+    left: 0;
+  }
+
+  //Natural Section Styling
+
+  #natural-container{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 34.1%;
+    transform: translate(-50%, 0);
+  }
+
+  #natural-container .top-bar, #natural-container .bottom-bar{
+    background-color: var(--green-primary);
+  }
+
+  #natural-content-container-left{
+    left: 0%;
+  }
+
+  #natural-content-container-right{
+    right: 0%;
+  }
+
+  #natural-content-left{
+    background-color: var(--green-secondary);
+    min-height: 100%;  
+    z-index: 1;
+    transition: all ease-out 1s;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    opacity: 1;
+  }
+
+  #natural-content-right{
+    background-image: url('../assets/img/beach-footprints-sand_green.png');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;  
+    z-index: 1;
+    transition: all ease-out 1s;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    opacity: 1;
+    padding-top: 30%;
+  }
+
+  #natural-content-left.active{
+    right: 0;
+  }
+
+  #natural-content-right.active{
+    left: 0;
+  }
+
+  .natural-content-container{
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+  }
+
+  .natural-content-container.alert{
+    width: 33%;
   }
 
   .natural-slim-text{
@@ -676,6 +620,73 @@ export default {
     position: absolute;
     bottom: 0;
   }
+
+
+  //Good Section Styling
+  #good-container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 33%;
+  }
+
+  #good-container .top-bar, #good-container .bottom-bar{
+    background-color: var(--orange-secondary);
+  }
+
+  #good-content-container{
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 33%;
+    overflow: hidden;
+  }
+
+  #good-content{
+    background-image: url('../assets/img/animal-bottlenose-dolphin.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;  
+    z-index: 1;
+    transition: all ease-out 1s;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    opacity: 1;
+    display: flex;
+  }
+
+  #good-content.active{
+    right: 0;
+  }
+
+  #good-content .two-third-container{
+    background-color: rgba(34,172,224,0.9);
+  }
+
+  #good-content .two-third-title{
+    color: white;
+  }
+
+  #good-content .two-third-body{
+    color: white;
+  }
+
+  .good-fish{
+    opacity: 0;
+    transition: all ease-in .5s;
+    margin-top: 20%;
+  }
+
+  .good-fish.active{
+    opacity: 1;    
+  }
+
+  
 
 
 </style>
