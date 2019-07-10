@@ -46,6 +46,7 @@
 
     <div id="natural-container" class="third-container" @mouseenter="bottomBarGrow" @mouseleave="bottomBarShrink" @click="naturalActive">
       <div class="top-bar"></div>
+      <div class="logo"><img src="@/assets/img/FGD_Logo_full.png"></div>
       <div class="center-content">
         <div class="top-tag">100%</div>
         <div class="name-tag">NATURAL</div>
@@ -211,8 +212,8 @@ export default {
       naturalContainer.getElementsByClassName("name-tag")[0].classList.remove("active")      
       naturalContainer.getElementsByClassName("left-bottle")[0].setAttribute("style", "opacity: 1;")
       naturalContainer.getElementsByClassName("right-bottle")[0].setAttribute("style", "opacity: 1;")
-      $( "#natural-content-container-left" ).animate({width: "0%"}, 0,);
-      $( "#natural-content-container-right" ).animate({width: "0%"}, 0,);
+      $( "#natural-content-container-left" ).delay(2000).animate({width: "0%"}, 0,);
+      $( "#natural-content-container-right" ).delay(2000).animate({width: "0%"}, 0,);
       document.getElementById("natural-content-left").classList.remove("active")
       document.getElementById("natural-content-right").classList.remove("active")
     }
