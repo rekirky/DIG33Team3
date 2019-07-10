@@ -5,9 +5,9 @@
     <article class="about-main"> 
       <!-- Bootstrap and custom classes to style elements -->
       <section class="about-header d-flex align-item-center text-center">       
-      <div class="container ">
-      <h5 class="about-title"><small> THE HEART OF OUR COMPANY </small></h5>
-      <h5><b>LET'S TALK ABOUT US</b></h5>
+      <div class="container">
+      <h2 class="about-title"><small> THE HEART OF OUR COMPANY </small></h2>
+      <h2><b>LET'S TALK ABOUT US</b></h2>
       </div>
       </section>
     <section> 
@@ -61,7 +61,7 @@
         <img class="img-fluid float-left" src="@/assets/img/logo_247.png" alt="feel good drinks logo">
           </div> 
           <div class="consumer-info">
-            <h5 class="text-light text-left">Consumer Notice</h5>
+            <h6 class="text-light text-left">Consumers</h6>
             <p class="text-light text-left">Buy today</p>
               </div>
                 </div>
@@ -87,7 +87,6 @@ export default {
 
 .about-header {
   margin-top: 30px;
-  font: 1.4em
 }
 
 .about-text{
@@ -127,7 +126,7 @@ margin-top: 20px
 }
 
 .consumer-info{
-padding:40px 20px;
+padding:40px 20px
 }
 
 </style>
