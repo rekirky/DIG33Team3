@@ -62,7 +62,27 @@
     </div>
     <div id="natural-content-container-left" class="natural-content-container">
       <div id="natural-content-left">
-
+        <div class="fruit-bottle-container">
+          <div class="fruit">
+            <img src="@/assets/img/Orange_1.png">
+          </div>
+          <div class="right-bottle">
+            <img src="@/assets/img/bottles/Paper-Bottle_crnlime_499px.png">
+          </div>
+        </div>
+        <div class="">
+          <router-link to="products" tag="button">find your flavour</router-link>
+          <div class="natural-slim-text">Our fuices are made the freshest fruit and berries, no added sugar
+          <span class="natural-bold-text">100%</span> natural ingredients.</div>
+        </div>
+        <div class="fruit-bottle-container">
+          <div class="left-bottle">
+            <img src="@/assets/img/bottles/Paper-Bottle_orange_499px.png">
+          </div>
+          <div class="fruit">
+            <img src="@/assets/img/pommy.png">
+          </div>
+        </div>
       </div>
     </div>
     <div id="natural-content-container-right" class="natural-content-container">
@@ -73,7 +93,11 @@
             <span class="bar bottom"></span>
           </div>
         </div>
-        
+        <div class="natural-bold-text">BEST FOOT <br> FORWARD</div>
+        <router-link to="footprint" tag="button">Discover how</router-link>
+        <div class="natural-slim-text">Our packaging is</div>
+        <div class="natural-bold-text">100%</div>
+        <div class="natural-slim-text">environmentally sound</div>
       </div>
     </div>
 
@@ -166,7 +190,7 @@ export default {
       feelContainer.getElementsByClassName("left-bottle")[0].classList.remove("active")
       feelContainer.getElementsByClassName("right-bottle")[0].classList.remove("active")
       feelContainer.getElementsByClassName("hand")[0].classList.remove("active")
-      $( "#feel-content-container" ).delay(2000).animate({width: "0%"}, 0);
+      $( "#feel-content-container" ).delay(1000).animate({width: "0%"}, 0);
       document.getElementById("feel-content").classList.remove("active")
     },
     goodActive(){
@@ -212,8 +236,8 @@ export default {
       naturalContainer.getElementsByClassName("name-tag")[0].classList.remove("active")      
       naturalContainer.getElementsByClassName("left-bottle")[0].setAttribute("style", "opacity: 1;")
       naturalContainer.getElementsByClassName("right-bottle")[0].setAttribute("style", "opacity: 1;")
-      $( "#natural-content-container-left" ).delay(2000).animate({width: "0%"}, 0,);
-      $( "#natural-content-container-right" ).delay(2000).animate({width: "0%"}, 0,);
+      $( "#natural-content-container-left" ).delay(1000).animate({width: "0%"}, 0,);
+      $( "#natural-content-container-right" ).delay(1000).animate({width: "0%"}, 0,);
       document.getElementById("natural-content-left").classList.remove("active")
       document.getElementById("natural-content-right").classList.remove("active")
     }
@@ -372,7 +396,6 @@ export default {
     top: 0;
     right: -100%;
     opacity: 1;
-    display: flex;
   }
 
   #natural-content-right{
@@ -388,7 +411,7 @@ export default {
     top: 0;
     left: -100%;
     opacity: 1;
-    display: flex;
+    padding-top: 30%;
   }
 
   #natural-content-left.active{
@@ -608,5 +631,51 @@ export default {
   .good-fish.active{
     opacity: 1;    
   }
+
+  .natural-slim-text{
+    color: white;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    padding-bottom: .5rem;
+    user-select: none;
+    padding: 0px 10%;
+  }
+
+  .natural-bold-text{
+    color: white;
+    text-align: center;
+    font-family: 'Holtwood One SC', sans-serif;
+    font-size: 3rem;
+    line-height: 1.2;
+    user-select: none;
+  }
+
+  .fruit-bottle-container{
+    width:100%;
+  }
+
+  .fruit-bottle-container>div{
+    float: left;
+    width: 50%;
+    padding: 20px;
+    padding-bottom: 20%;
+  }
+
+  .fruit-bottle-container img{
+    height: 250px;
+    object-fit: contain;
+  }
+
+  .fruit-bottle-container>.right-bottle>img, .fruit-bottle-container>.left-bottle>img{
+    transform: scale(2,2)
+  }
+
+  .fruit-bottle-container:last-of-type{
+    position: absolute;
+    bottom: 0;
+  }
+
 
 </style>
