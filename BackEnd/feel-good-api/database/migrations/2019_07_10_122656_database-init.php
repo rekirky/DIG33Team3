@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class db_initiate extends Migration
+class dbinit extends Migration
 {
     /**
      * Run the migrations.
@@ -26,7 +26,7 @@ class db_initiate extends Migration
             $table->string('protein',10);
             $table->string('salt',10);
             $table->string('ingredients');       
-        })
+        });
         
         Schema::create('event', function (Blueprint $table) {
             $table->integer('eventid')->unique();
@@ -36,7 +36,7 @@ class db_initiate extends Migration
             $table->datetime('datetime');
             $table->string('featureimage');
            
-        })
+        });
         
         Schema::create('contentblock', function (Blueprint $table) {
             $table->integer('contentid')->unique();
@@ -48,7 +48,7 @@ class db_initiate extends Migration
             $table->string('featureimage');
             $table->string('backgroundimage');
            
-        })
+        });
         
         Schema::create('video', function (Blueprint $table) {
             $table->integer('videoid')->unique();
@@ -57,7 +57,7 @@ class db_initiate extends Migration
             $table->string('description');
             $table->string('youtubeurl');
                        
-        })
+        });
     }
 
     /**
