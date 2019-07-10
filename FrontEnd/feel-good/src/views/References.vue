@@ -18,6 +18,7 @@
             Lumen - https://lumen.laravel.com/.<br>
             MySQL - https://mysql.com/.<br>
             Netlify - https://netlify.com/.<br>
+            NPM - https://www.npmjs.com/ <br>
             jQuery - https://jquery.com/. <br>
             Vue - https://Vuejs.org/. <br>
             </p>
