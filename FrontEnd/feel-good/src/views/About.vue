@@ -3,22 +3,19 @@
   <div class="about">
 
     <article class="about-main"> 
-    <header>
       <!-- Bootstrap and custom classes to style elements -->
       <section class="about-header d-flex align-item-center text-center">       
       <div class="container">
-      <h1><small> THE HEART OF OUR COMPANY </small></h1>
-      <h1>LET'S TALK ABOUT US</h1>
+      <h2 class="about-title"><small> THE HEART OF OUR COMPANY </small></h2>
+      <h2><b>LET'S TALK ABOUT US</b></h2>
       </div>
       </section>
-    </header>
-
     <section> 
         <!-- Bootstrap flex box -->
       <Section class="about-text d-flex align-item-center text-center">
          <!-- Bootstrap container -->
     <div class="container">
-      <h3 class="lead">Title text</h3>
+      <h5 class="lead">Title text</h5>
       <p>paragraph text</p>
       </div>
     </Section>
@@ -64,7 +61,7 @@
         <img class="img-fluid float-left" src="@/assets/img/logo_247.png" alt="feel good drinks logo">
           </div> 
           <div class="consumer-info">
-            <h5 class="text-light text-left">Consumer Notice</h5>
+            <h6 class="text-light text-left">Consumers</h6>
             <p class="text-light text-left">Buy today</p>
               </div>
                 </div>
@@ -84,6 +81,17 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
+.about-title{
+  color:  var(--orange-primary)
+}
+
+.about-header {
+  margin-top: 30px;
+}
+
+.about-text{
+margin-top: 20px
+}
 .about-logo.container {
   margin-top: 40%;
   width: 20%;
@@ -118,7 +126,7 @@ margin-top: 20px
 }
 
 .consumer-info{
-padding:40px 20px;
+padding:40px 20px
 }
 
 </style>
