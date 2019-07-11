@@ -5,7 +5,7 @@
     <h2><b>References </b></h2>
 
       <div>
-        <h4><b>Build tools, frameworks and libraries</b></h4>
+        <h6><b>Build tools, frameworks and libraries</b></h6>
           <p>   
             Abobe CC Illustrator - https://www.adobe.com/au/products/illustrator.html.<br>
             Adobe CC Photoshop - https://www.adobe.com/au/products/photoshop.html.<br>
@@ -25,7 +25,7 @@
        </div>
 
       <div>
-       <h4><b>Fonts</b></h4>
+       <h6><b>Fonts</b></h6>
           <p> 
             Matteson Steve. 2019. OpenSans. Google Fonts, https://fonts.google.com/specimen/Open+Sans.<br>
             Font Awesome. 2019. Social media icons. https://fontawesome.com/.<br>
@@ -34,7 +34,7 @@
       </div>
 
      <div>
-        <h4><b>Images</b></h4>
+        <h6><b>Images</b></h6>
           <p>   
             Adehoidar. 2016.  ‘Fruit illustrations’. https://creativemarket.com/adehoidar/692848-Fruit-illustrations. Accessed 20 June 2019. <br>
             Aweeka. 2019.  ‘Mango and oranges’https://www.shutterstock.com/image-photo/oranges-mango-46109116?. Accessed 20 June 2019.<br>
@@ -82,11 +82,11 @@ export default {
 
 h2{
   color: var(--orange-primary);
-  margin-top: 40px;
-  padding: 10px
+  margin-top: 25px;
+  padding: 20px
 }
 
-h4{
+h6{
 text-align: center;
 }
 
