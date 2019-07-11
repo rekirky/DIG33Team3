@@ -590,7 +590,7 @@ export default {
     color: white;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
-    font-size: 2.5rem;
+    font-size: 34px;
     line-height: 1.2;
     padding-bottom: .5rem;
     user-select: none;
@@ -601,7 +601,7 @@ export default {
     color: white;
     text-align: center;
     font-family: 'Holtwood One SC', sans-serif;
-    font-size: 3rem;
+    font-size: 34px;
     line-height: 1.2;
     user-select: none;
   }
@@ -628,7 +628,16 @@ export default {
 
   .fruit-bottle-container:last-of-type{
     position: absolute;
-    bottom: 0;
+    bottom: -10%;
+  }
+
+  #natural-container .hand{
+    left: 20%;
+  }
+
+  #natural-container .plant{
+    left: 50%;
+    bottom: 10%;
   }
 
 
