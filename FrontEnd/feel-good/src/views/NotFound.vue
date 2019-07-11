@@ -1,11 +1,11 @@
 <template>
   <div class="not-found">
-    <div class="row">
+    <div class="row no-gutters">
       <div class="col-2 offset-2">
         <img class="img-fluid bottle left-bottle" src="@/assets/img/bottles/Paper-Bottle_passion_499px.png">
       </div>
       <div class="col-12 col-lg-4 not-found-content">
-        <img class="img-fluid" src="@/assets/img/logo_247.png" alt="feel good drinks logo">
+        <img class="img-fluid logo" src="@/assets/img/logo_247.png" alt="feel good drinks logo">
         <h1>Oh No!</h1>
         <h2>You went the wrong way</h2>
         <p>Click the Fancy Orange Button in the Top Right, to get back on Track.</p>
@@ -48,6 +48,11 @@ export default {
   .bottle {
     display: none;
   }
+
+  .logo{
+    height: 150px;
+  }
+
 }
 
 </style>
