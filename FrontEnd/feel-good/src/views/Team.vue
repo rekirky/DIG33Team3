@@ -8,6 +8,13 @@
 export default {
   name: 'Team',
   props: {
+  },
+  mounted () {
+    //Jquery Example
+    //mounted basically replaces you $(document).ready(). If you have ESLint enable to might be getting a warning for $ not being defined but it is defined globally
+    $("#toggle").click(function(){
+      $("p").toggle();
+    });
   }
 }
 </script>

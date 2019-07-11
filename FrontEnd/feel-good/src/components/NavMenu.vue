@@ -68,12 +68,13 @@ export default {
     left: 0;
     top: 0;
     z-index: 3;
+    height: 100%;
   }
 
   #menu-container{
     position: absolute;
     width: 300px;
-    height: 100vh;
+    height: 100%;
     background-color: rgba(255,255,255,.9);
     left: -300px;
     top: 0;

@@ -9,10 +9,12 @@
   --purple-primary:#861c8c;
   --beige-sidebar:#f0e5cf;
   --orange-secondary:#f49b22;
+  --blue-secondary:#caeaf7;
+  --green-secondary: #a7d173;
 }
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -28,6 +30,20 @@
       color: #42b983;
     }
   }
+}
+
+button{
+  background-color: var(--orange-primary);
+  border: none;
+  color: white;
+  padding: 5px 40px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase  !important;;
+  font-size: 24px !important;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 h1{
