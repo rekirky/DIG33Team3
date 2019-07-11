@@ -1,13 +1,13 @@
 <template>
   <div class="footer">
     <div class="footer-content">
-      <div class="row">
-        <div class="col-md-5">
+      <div class="row no-gutters">
+        <div class="col-12 col-lg-5">
           <div class="footer-bottles">
             <img src="@/assets/img/SmallBottles.png">
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-9 col-lg-6">
           <div class="footer-links">
             <div>
               Get in touch with us: 
@@ -25,7 +25,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-1">
+        <div class="col-3 col-lg-1">
           <div class="footer-logo">
             <img src="@/assets/img/FGD_Logo_full.png">
           </div>
@@ -89,6 +89,39 @@ export default {
 
   i{
     padding: 0px 5px;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .footer-bottles {
+      display: none;
+    }
+
+    .footer-links a{
+      display: block;
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .footer-content{
+      width: 90%;
+      height: 80%;
+      top: 5px;
+      left: 15px
+    }
+
+    .footer-links{
+      margin-top: 10px;
+      float: left;
+      color: white;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+    }
+
+    .footer-logo>img{
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 20%);
+    }
   }
 
 </style>
