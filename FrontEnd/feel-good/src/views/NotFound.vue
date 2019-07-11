@@ -8,7 +8,7 @@
         <img class="img-fluid logo" src="@/assets/img/logo_247.png" alt="feel good drinks logo">
         <h1>Oh No!</h1>
         <h2>You went the wrong way</h2>
-        <p>Click the Fancy Orange Button in the Top Right, to get back on Track.</p>
+        <p>Click the Fancy Orange Button in the Top Left, to get back on Track.</p>
       </div>
       <div class="col-2">
         <img class="img-fluid bottle right-bottle" src="@/assets/img/bottles/Paper-Bottle_pom_499.png">
