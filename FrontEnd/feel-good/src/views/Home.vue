@@ -21,7 +21,7 @@
     </div>
     <div id="feel-content-container">
       <div id="feel-content">
-        <div id="close-button" v-on:click="feelDeactive">
+        <div class="close-button" v-on:click="feelDeactive">
           <div class="circle hamburger">
             <span class="bar top"></span>
             <span class="bar bottom"></span>
@@ -93,7 +93,7 @@
     </div>
     <div id="natural-content-container-right" class="natural-content-container">
       <div id="natural-content-right">
-        <div id="close-button" v-on:click="naturalDeactive">
+        <div class="close-button" v-on:click="naturalDeactive">
           <div class="circle hamburger">
             <span class="bar top"></span>
             <span class="bar bottom"></span>
@@ -130,7 +130,7 @@
     </div>
      <div id="good-content-container">
       <div id="good-content">
-        <div id="close-button" v-on:click="goodDeactive">
+        <div class="close-button" v-on:click="goodDeactive">
           <div class="circle hamburger">
             <span class="bar top"></span>
             <span class="bar bottom"></span>
@@ -382,7 +382,7 @@ export default {
     100% { transform: rotate(0deg); }
   }
 
-  #close-button{
+  .close-button{
     background-color: white;
     border: 2px solid var(--orange-primary);
     display: inline-block;
