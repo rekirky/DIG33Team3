@@ -74,6 +74,19 @@
 </section> <!--end reference list-->
 
 
+<section>
+    <div class="student-notice">
+        <div class="container-fluid">
+          <h6 class="notice-header">Student Project Notice</h6>
+            <p><em>This website has been created as part of an assignment in an approved course of study for Curtin University 
+              and contains copyright material not created by the authors. All copyright material used remains copyright of the
+              respective owners and has been used here pursuant to Section 40 of the Copyright Act 1968 (Commonwealth of Australia). 
+              No part of this work may be reproduced without consent of the original copyright owners. 
+              References are listed above.</em></p>
+                </div>
+                  </div>
+    </section> <!--end student notice section-->
+ 
    
   </div>
 </template>
