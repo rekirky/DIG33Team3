@@ -10,9 +10,19 @@ class Api {
 
   async getProductGroups (params) {
     //let { data } = await http.get('/content-blocks', { params })
-    console.log(placeholder.productGroups)
     let data = placeholder.productGroups
-    console.log(data)
+    return data
+  }
+
+  async getEvents (params) {
+    //let { data } = await http.get('/content-blocks', { params })
+    let data = placeholder.events
+    return data
+  }
+
+  async getProducts (params) {
+    //let { data } = await http.get('/content-blocks', { params })
+    let data = placeholder.products
     return data
   }
 }

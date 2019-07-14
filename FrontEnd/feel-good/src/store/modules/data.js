@@ -5,7 +5,9 @@ const api = new Api()
 
 const state = {
   contentBlocks: [],
-  productGroups: []
+  productGroups: [],
+  events: [],
+  products: []
 }
 
 const mutations = {
@@ -15,6 +17,14 @@ const mutations = {
 
   async [types.SET_PRODUCT_GROUPS] (state, groups) {
     state.productGroups = [ ...groups ]
+  },
+
+  async [types.SET_EVENTS] (state, events) {
+    state.events = [ ...events ]
+  },
+
+  async [types.SET_PRODUCTS] (state, products) {
+    state.products = [ ...products ]
   }
 }
 
@@ -25,9 +35,18 @@ const actions = {
   },
 
   async [types.GET_PRODUCT_GROUPS] ({ commit, state }) {
-    console.log("inside action");
     let response = await api.getProductGroups()
     commit(types.SET_PRODUCT_GROUPS, response)
+  },
+
+  async [types.GET_EVENTS] ({ commit, state }) {
+    let response = await api.getEvents()
+    commit(types.SET_EVENTS, response)
+  },
+
+  async [types.GET_PRODUCTS] ({ commit, state }) {
+    let response = await api.getProducts()
+    commit(types.SET_PRODUCTS, response)
   }
 }
 
@@ -37,6 +56,12 @@ const getters = {
   },
   getProductGroups (state) {
     return state.productGroups
+  },
+  getEvents (state) {
+    return state.events
+  },
+  getProducts (state) {
+    return state.products
   }
 }
 
