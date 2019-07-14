@@ -70,7 +70,7 @@ export default {
       while(downElements.length > 0){
         downElements[0].classList.remove('down-move');
     }
-    }, 500);
+    }, 100);
 
   },
   methods: {
@@ -110,7 +110,7 @@ export default {
 
   .hero-bottle{
     height: 100%;
-    width: 300px;
+    max-width: 300px;
     float: right;
     position: relative;
     z-index: 2;
@@ -170,14 +170,15 @@ export default {
     position: absolute;
     top: 0px;
     left: 0%;
-    width: 70%;    
+    width: 70%;
     transition: all ease-out 1s;
   }
 
   .fruits-bottles{
     position: absolute;
     width: 70%;
-    top: 40%;    
+    max-height: 40vh;
+    top: 50%;
     transition: all ease-out 1s;
   }
 
@@ -207,7 +208,6 @@ export default {
   }
 
   .fruits-bottles img{
-    width: 100%;
   }
 
   .natural-text{
