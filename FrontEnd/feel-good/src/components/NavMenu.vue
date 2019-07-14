@@ -15,6 +15,14 @@
         <div class="bullet-point"></div>
         <router-link to="/events" class="nav-link" id="events" v-on:click.native="togglePoint">Events</router-link>
       </div>
+      <div v-if="this.productGroups.length != 0">
+      <div v-for="(event, index) in events" :key="index">
+        <div class="link-container child-link" :id="'event-' + event.id + '-link'">
+          <div class="bullet-point"></div>
+          <router-link :to="'/event/' + event.id" class="nav-link" :id="'event-' + event.id" v-on:click.native="togglePoint">{{event.name}}</router-link>
+        </div>
+      </div>
+      </div>
       <div class="link-container" id="about-link">
         <div class="bullet-point"></div>
         <router-link to="/about" class="nav-link" id="about" v-on:click.native="togglePoint">About</router-link>
@@ -41,17 +49,19 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { GET_PRODUCT_GROUPS } from '@/store/types'
+import { GET_PRODUCT_GROUPS, GET_EVENTS } from '@/store/types'
 
 export default {
   name: 'NavMenu',
   computed: {
     ...mapGetters({
-      productGroups: 'getProductGroups'
+      productGroups: 'getProductGroups',
+      events: "getEvents"
     })
   },
   async mounted () {
     await this.$store.dispatch(GET_PRODUCT_GROUPS)
+    await this.$store.dispatch(GET_EVENTS)
   },
   methods: {
     toggleMenu(){
@@ -195,7 +205,7 @@ export default {
   }
 
   .child-link{
-    margin-left: 3rem;
+    margin-left: 4rem;
   }
 
 </style>
