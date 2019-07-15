@@ -2,7 +2,7 @@ export const productGroups = [
   {
     "id": 1,
     "name": "a bit bubbly",
-    "accentColor": "#ce9dc1",
+    "accentColor": "#c0539f",
     "tagLine" : "Enjoy our Bit Bubbly 100% natural* drinks with no added sugar. Now Available in 275ml paper bottles in a range of Feel Good flavours:"
   },
   {
