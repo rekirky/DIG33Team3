@@ -18,6 +18,7 @@ export const events = [
   {
     "id": 1,
     "name": "Crusade",
+    "type" : "Social",
     "title": "Crusade of the Feet",
     "tagline": "How many footprints does it take to clear out waterways and beaches? Let’s find out!",
     "details": "Gather up all your friends, family or local community, to form your team. Feel Good Drinks Co. wants to see how long our human feet chain can reach to clean up—in May 2019 the Guinness Book of Records recorded the longest human chain of 824 people.  We feel 100% sure that we can create the longest human footprint trail, with footprints in sand, dirt or just making chalk marks with your feet and removing the bad stuff that's clogging our waterways.<br><br> Our goal is to get over 1000 people and their footprints to join us to help clean up our waterways in a celebration of the Earth, and an opportunity to create awareness about the plight of the oceans.<br><br> Gather your team and join in! All team must register to enter in the crusade.*<br><br> *Terms and conditions apply.",
@@ -29,6 +30,7 @@ export const events = [
   {
     "id": 2,
     "name": "Go Free!",
+    "type" : "video",
     "title": "",
     "tagline": "The 12-week challenge to live plastic-free.",
     "details": "Post your progress regularly through our Instagram and Facebook pages to tell us about how you are getting plastic-free, and share your exciting new plastic-free innovations.To find how to go plastic free in our 12 week challenge, watch the video above.",
