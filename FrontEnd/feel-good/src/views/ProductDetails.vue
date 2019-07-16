@@ -11,13 +11,13 @@
             <p>{{currentProductGroup.tagLine}}</p>
           </div>
         </div>
-        <div class="row">
+        <div class="row  carousel-container">
           <div id="productSelector" class="carousel slide">
             <div v-if="this.filteredProducts.length != 0">
               <ol class="carousel-indicators">
                 <div v-for="(product, index) in filteredProducts" :key="index">
-                  <li v-if="index == 0" :id="'indicator-' + index" class="active" v-on:click="activeProduct(index)"></li>
-                  <li v-else :id="'indicator-' + index" v-on:click="activeProduct(index)"></li>
+                  <li v-if="index == 0" :id="'indicator-' + index" class="active" v-on:click="activeProduct(index)" :style="'background-color: ' + currentProductGroup.accentColor"></li>
+                  <li v-else :id="'indicator-' + index" v-on:click="activeProduct(index)" :style="'background-color: ' + currentProductGroup.accentColor"></li>
                 </div>
               </ol>
 
@@ -25,30 +25,50 @@
               <div class="carousel-inner">
                 <div v-for="(product, index) in filteredProducts" :key="index">
                   <div v-if="index == 0" class="carousel-item active" :id="'item-' + index">
-                    <img :src="require(`@/assets/img/products/${product.bottleGroupImage}`)" :alt="product.name" class="d-block w-50">
-                    <img :src="require(`@/assets/img/products/${product.fruitGroupImage}`)" :alt="product.name" class="d-block w-50">
-                    <div class="carousel-caption">
-                      <h3>{{product.name}}</h3>
-                      <p>*100% naturally occuring fruit sugars</p>
+                    <div class="row">
+                      <div class="col-4 offset-1">
+                        <img  :src="require(`@/assets/img/products/${product.bottleGroupImage}`)" :alt="product.name" class="d-block">
+                      </div>
+                      <div class="col-5">
+                        <div class="row">
+                          <div class="" :style="'color: ' + currentProductGroup.accentColor">
+                            <h3>{{product.name}}</h3>
+                            <p>*100% naturally occuring fruit sugars</p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <img :src="require(`@/assets/img/products/${product.fruitGroupImage}`)" :alt="product.name" class="d-block">
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div v-else class="carousel-item" :id="'item-' + index">
-                    <img  :src="require(`@/assets/img/products/${product.bottleGroupImage}`)" :alt="product.name" class="d-block w-50">
-                    <img :src="require(`@/assets/img/products/${product.fruitGroupImage}`)" :alt="product.name" class="d-block w-50">
-                    <div class="carousel-caption">
-                      <h3>{{product.name}}</h3>
-                      <p>*100% naturally occuring fruit sugars</p>
+                    <div class="row">
+                      <div class="col-4 offset-1">
+                        <img  :src="require(`@/assets/img/products/${product.bottleGroupImage}`)" :alt="product.name" class="d-block">
+                      </div>
+                      <div class="col-5">
+                        <div class="row">
+                          <div class="" :style="'color: ' + currentProductGroup.accentColor">
+                            <h3>{{product.name}}</h3>
+                            <p>*100% naturally occuring fruit sugars</p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <img :src="require(`@/assets/img/products/${product.fruitGroupImage}`)" :alt="product.name" class="d-block">
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <a class="carousel-control-prev" href="#productSelector" role="button" v-on:click="prevProduct">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <a class="carousel-control-prev" href="#productSelector" role="button" :style="'color: ' + currentProductGroup.accentColor" v-on:click="prevProduct">
+                <span class="fas fa-angle-left" aria-hidden="true" :style="'color: ' + currentProductGroup.accentColor" ></span>
                 <span class="sr-only">Previous</span>
               </a>
-              <a class="carousel-control-next" href="#productSelector" role="button" v-on:click="nextProduct">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <a class="carousel-control-next" href="#productSelector" role="button" :style="'color: ' + currentProductGroup.accentColor" v-on:click="nextProduct">
+                <span class="fas fa-angle-right" aria-hidden="true" :style="'color: ' + currentProductGroup.accentColor" ></span>
                 <span class="sr-only">Next</span>
               </a>
             </div>
@@ -58,6 +78,7 @@
       <div class="col-1">
         <div class="right-gutter">
           <img src="@/assets/img/patternside.png">
+          <div class="section-label">products</div>
         </div>
       </div>
     </div>
@@ -162,16 +183,58 @@ export default {
 
   .product-group-header{
     width: 100%;
-    padding: 0px 20%;
+    padding: 10px 20%;
+    height: 15vh;
   }
 
   .product-group-header h1{
-    color: white
+    color: white;
   }
 
   .product-group-header hr{
-    border: 1px solid white
+    border: 1px solid white;
 
+  }
+
+  .carousel-container{
+    height: calc(85vh - 160px);
+    background-image: url('../assets/img/bgpattern2.png');    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .carousel{
+    background-color: white;
+    width: 60%;
+    height: 80%;
+    margin: auto;
+  }
+
+  .carousel{
+    font-size: 2.5rem;
+  }
+
+  .carousel-item>.row{
+    margin-top: 60px;
+  }
+
+  .carousel-item>div>div>.row{
+    margin-top: 30px;
+  }
+
+  .carousel img{
+    width: 100%;
+  }
+
+  .section-label{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    position: absolute;
+    bottom:0;
+    left: 50%;
+    transform: translate(-50%, -100%) rotate(90deg);
+    padding-right: 100px;
   }
 
 </style>
