@@ -7,14 +7,14 @@
         </div>
       </div>
       <div class="col-9">
-        <div class="row no-gutter">
+        <div class="row no-gutters">
           <div class="product-group-header" :style="'background-color: ' + currentProductGroup.accentColor">
             <h1>{{currentProductGroup.name}}</h1>
             <hr>
             <p>{{currentProductGroup.tagLine}}</p>
           </div>
         </div>
-        <div class="row  carousel-container">
+        <div class="row no-gutters carousel-container">
           <div id="productSelector" class="carousel slide">
             <div v-if="this.filteredProducts.length != 0">
               <ol class="carousel-indicators">
@@ -202,6 +202,7 @@ export default {
     width: 100%;
     padding: 10px 20%;
     height: 15vh;
+    transition: all ease-out 1s;
   }
 
   .product-group-header h1{
@@ -210,7 +211,7 @@ export default {
 
   .product-group-header hr{
     border: 1px solid white;
-
+    margin: 0; 
   }
 
   .carousel-container{
@@ -233,11 +234,11 @@ export default {
   }
 
   .carousel-item>.row{
-    margin-top: 60px;
+    margin-top:2%;
   }
 
   .carousel-item>div>div>.row{
-    margin-top: 30px;
+    margin-top: 4%;
   }
 
   .carousel img{
@@ -280,6 +281,7 @@ export default {
   }
 
   .product-nutrition-container>div{
+    width: 100%;
     height: 100%;
     position: absolute;
     top: 0;

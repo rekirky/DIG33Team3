@@ -1,7 +1,9 @@
 <template>
   <div class="product-nutrition" :style="'background-color: ' + product.color">
     <div class="row no-gutters">
-      <div class="col-11">
+      <div class="col-2">
+      </div>
+      <div class="col-9">
         <div class="nutrition-content">
 
         </div>
@@ -36,7 +38,7 @@ export default {
 <style lang="scss" scoped>
 
   .product-nutrition{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     position: absolute;
     top: 100%;
