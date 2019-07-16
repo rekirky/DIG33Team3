@@ -2,6 +2,9 @@
   <div class="product-details">
     <div class="row no-gutters">
       <div class="col-2">
+        <div class="left-gutter">
+          <img src="@/assets/img/fgCo.png">
+        </div>
       </div>
       <div class="col-9">
         <div class="row no-gutter">
@@ -63,14 +66,14 @@
                 </div>
               </div>
 
-              <a class="carousel-control-prev" href="#productSelector" role="button" :style="'color: ' + currentProductGroup.accentColor" v-on:click="prevProduct">
+              <div class="carousel-control-prev" role="button" :style="'color: ' + currentProductGroup.accentColor" v-on:click="prevProduct">
                 <span class="fas fa-angle-left" aria-hidden="true" :style="'color: ' + currentProductGroup.accentColor" ></span>
                 <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#productSelector" role="button" :style="'color: ' + currentProductGroup.accentColor" v-on:click="nextProduct">
+              </div>
+              <div class="carousel-control-next" role="button" :style="'color: ' + currentProductGroup.accentColor" v-on:click="nextProduct">
                 <span class="fas fa-angle-right" aria-hidden="true" :style="'color: ' + currentProductGroup.accentColor" ></span>
                 <span class="sr-only">Next</span>
-              </a>
+              </div>
             </div>
           </div>
         </div>
@@ -82,15 +85,27 @@
         </div>
       </div>
     </div>
+    <div class="row no-gutter">
+      <div class="product-nutrition-container">
+        <div v-for="(product, index) in filteredProducts" :key="index">
+          <product-nutrition v-if="index == 0" v-bind:product="product" class="active" :id="'nutrition-' + index"/>
+          <product-nutrition v-else v-bind:product="product" :id="'nutrition-' + index"/>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import { GET_PRODUCTS } from '@/store/types'
+import ProductNutrition from '@/components/ProductNutrition.vue'
 
 export default {
   name: 'ProductDetails',
+  components:{
+    ProductNutrition
+  },
   props: {
 
   },
@@ -154,8 +169,10 @@ export default {
     updateActiveProduct(){
       $(".carousel-indicators li").removeClass("active")
       $(".carousel-inner .carousel-item").removeClass("active")
+      $(".product-nutrition").removeClass("active")
       $("#indicator-" + this.currentProductIndex).addClass("active")
       $("#item-" + this.currentProductIndex).addClass("active")
+      $("#nutrition-" + this.currentProductIndex).addClass("active")
     }
   }
 }
@@ -235,6 +252,41 @@ export default {
     left: 50%;
     transform: translate(-50%, -100%) rotate(90deg);
     padding-right: 100px;
+  }
+
+  .left-gutter{
+    position: relative;
+    height: 100%;
+  }
+
+  .left-gutter>img{
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    height: 140px;
+  }
+
+  .product-nutrition-container{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../assets/img/bgpattern2.png');    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+  }
+
+  .product-nutrition-container>div{
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+
+  .product-nutrition .active{
+    bottom: 0;
   }
 
 </style>
