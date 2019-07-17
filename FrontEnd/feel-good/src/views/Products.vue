@@ -25,21 +25,25 @@
         </div>
         <div class="hero-bottle up-move">
           <img src="@/assets/img/bottles/orangebottle_big.png">
+          <router-link to="/product/1">
           <div class="plus-button">
             <div class="circle">
               <span class="bar"></span>
               <span class="bar bar-vertical"></span>
             </div>
           </div>
+          </router-link>
         </div>
         <div class="hero-bottle up-move">
           <img src="@/assets/img/bottles/pinkbottle_big.png">
+          <router-link to="/product/2">
           <div class="plus-button">
             <div class="circle">
               <span class="bar"></span>
               <span class="bar bar-vertical"></span>
             </div>
           </div>
+          </router-link>
         </div>
       </div>
       <div class="col-1">
