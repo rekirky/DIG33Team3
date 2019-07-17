@@ -55,14 +55,54 @@
       </div> <!--end footprint overview-->
    </section><!--end footprint main-->
 
+  <section class="Bottles-main"> 
+    <div class="paper-bottles d-flex align-items-left container">       
+ 	    <div class="row">
+       <div class="col-12">
+         <h5 class="spec-header text-left"><small><b> How we went Green</b></small></h5>
+           </div>
+            <div class="bottle-image">
+	           <img class="img-fluid float-right" src="@/assets/img/bottles/Paper-Bottle_apple_499px.png" alt="apple flavour paper bootle image">
               </div>
-    </div>  
-    </section>   
+  
+            <div class="bottle-specifications">
+             <div class="container">
+              <div class="row">
+               <div class="info-tag-lines col align-self-end">
+                  <hr class="info-lines">
+                  <hr class="info-lines">
+                  <hr class="info-lines">
+                  <hr class="info-lines">
+                    </div>
+                <div class="info-tag-text col align-self-end">
+                  <p class="specs"><small>The 100% organic and renewable moulded fibre</small></p>
+                  <p class="specs"><small>Bottle is designed to look beautiful and functional with patterned paper designs.</small></p>
+                  <p class="specs"><small>The structural integrity of the bottle is comparable to plastic bottle</small></p>
+                  <p class="specs"><small>Paper label’s with ecofriendly printable coating</small></p>
+                    </div>
+                      </div>
+                         </div> <!--end bottle info tags row-->
+                          </div>
 
-       <section class="bottles"> 
-         <div></div>
-         </section>
+            <div class="paper-bottle-text text-left">
+              <div class="col">
+              <h5 class="bottle-text">The size of it?</h5>
+                <p class="plastic-free">The oceans and coastlines of the Earth are in threat of plastic pollution.
+                  As plastic is lighter than water it floats quite easily on the currents and eddies, 
+                  driven by wind and sun. The plastics don't only sit on the surface of the ocean,
+                  they move in three-dimensional motion rising from the deepest parts of the ocean and 
+                  affecting the quality of marine life and threatening to endanger many marine species (Plastic Adrift 2019).</p>
+              <h5 class="bottle-text">How we have changed our packaging</h5>
+                <p class="plastic-free">The structure of the bottles is developed using virgin pulp harvested from Scandinavian forests (Geronimo 2018). 
+                  The 100% organic and renewable moulded fibre (derived from bamboo, bulrushes, and sugar cane) forms the outside part of the bottle and 
+                  the inner lining is coated in recyclable resins.</p>
+                <p class="plastic-free">The bottle's design properties are developed from a pulp recipe by BillerudKorsnäs and can withstand high pressures. The bottles are 100% recyclable and this makes us Feel Good. </p>
+                  </div> 
+                   </div>
 
+        </div> <!--end main row-->
+       </div> <!--end paper bottles container-->
+    </section>  <!--end bottles-main section-->
  </article>
    
 </div>
@@ -157,8 +197,57 @@ img.globe{
   float: left
 }
 
+.bottles.main{
+  width:100%;
 }
 
+.paper-bottle-text{
+  width:50%;
+  margin-left: 20px;
+  margin-bottom: 50px;
+  padding-right: 20px
+}
+
+p.plastic-free{
+  margin-top: 20px;
+}
+
+h5.spec-header{
+  color: var(--green-primary);
+  margin-top: 10px;
+  margin-left: 110px;
+  margin-bottom: 0px;
+}
+
+.spec-header{
+  width: 30%;
+}
+
+h5.bottle-text{
+  color: var(--blue-primary);
+}
+
+.bottle-specifications{
+  width:28%;
+}
+
+hr.info-lines{
+  width: 100%;
+  border: 1px solid var(--green-secondary);
+  margin-block:55px;
+  margin-left:10px;
+  float: left
+}
+
+.bottle-image{
+  width:20%;
+}
+
+p.specs{
+  line-height: 1.3;
+  margin-bottom: 25px;
+  color: var(--green-secondary);
+  text-align: left
 }
 
 </style>
