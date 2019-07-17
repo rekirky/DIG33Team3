@@ -245,6 +245,16 @@ export default {
     width: 100%;
   }
 
+  .carousel-item{
+    transition: all ease-out 1s;
+    display: block;
+    opacity: 0;
+  }
+
+  .carousel-item.active{
+    opacity: 1;
+  }
+
   .section-label{
     font-size: 1.5rem;
     text-transform: uppercase;

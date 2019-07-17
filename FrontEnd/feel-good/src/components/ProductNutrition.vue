@@ -144,7 +144,7 @@ export default {
     position: absolute;
     font-weight: 700;
     color: black;
-    top: 15%;
+    top: 12%;
     left: 0;
     z-index: 1;
   }
@@ -152,7 +152,7 @@ export default {
   .natural-sugar{
     top: 20%;
     left: 45%;
-    font-size: .8rem;
+    font-size: .9rem;
   }
 
   .energy{
@@ -166,7 +166,11 @@ export default {
     height: 150px;
     top: 70%;
     left: 65%;
-    font-size: 1.1rem;
+    font-size: 1rem;
+  }
+
+  .carbs .water-drop-text{
+    top: 25%;
   }
 
   .fat{
