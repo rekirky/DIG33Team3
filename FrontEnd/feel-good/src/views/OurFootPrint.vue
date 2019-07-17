@@ -55,16 +55,6 @@
       </div> <!--end footprint overview-->
    </section><!--end footprint main-->
 
-    
-    <section class="map">
-      <div class="world-map">
-        <div class=" map-content container text-center">
-          <div class="row">
-            <div class="col-6">
-             </div>
-        <div class="col-6">
-          </div>
-            </div>
               </div>
     </div>  
     </section>   
@@ -169,13 +159,6 @@ img.globe{
 
 }
 
-.world-map{
-  /* percentage of viewport height*/
-  height: 100vh;
-  /*Image size to macth container size*/
-   background-size: cover;
-  background-image: url('../assets/img/worldmap_base.png');
-  background-repeat: no-repeat
 }
 
 </style>
