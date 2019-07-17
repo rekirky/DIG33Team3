@@ -267,6 +267,10 @@ export default {
     transform: rotate(25deg);
   }
 
+  .hero-bottle img{
+    height: 138vh;
+  }
+
   .fruit img{
     width: 400px;
   }
