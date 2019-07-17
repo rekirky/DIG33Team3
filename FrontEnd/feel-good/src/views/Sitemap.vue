@@ -22,15 +22,25 @@
               </div>
               <div class="row">
                 <div class="col-4">
-                  <router-link to="home" class="">Home</router-link>
-                  <router-link to="events" class="">Events</router-link>
-                  <router-link to="about" class="">About</router-link>
+                  <router-link to="/home" class="">Home</router-link>
+                  <router-link to="/events" class="">Events</router-link>
+                  <div v-if="this.productGroups.length != 0">
+                    <div v-for="(event, index) in events" :key="index">
+                      <router-link :to="'/event/' + event.id" class="child-link" :id="'event-' + event.id" v-on:click.native="togglePoint">{{event.name}}</router-link>
+                    </div>
+                  </div>
+                  <router-link to="/about" class="">About</router-link>
                 </div>
                 <div class="col-4">
-                  <router-link to="products" class="">Products</router-link>
+                  <router-link to="/products" class="">Products</router-link>
+                  <div v-if="this.productGroups.length != 0">
+                    <div v-for="(group, index) in productGroups" :key="index">
+                      <router-link :to="'/product/' + group.id" class="child-link" :id="'product-group-' + group.id" v-on:click.native="togglePoint">{{group.name}}</router-link>
+                    </div>
+                  </div>
                 </div>
                 <div class="col-4">
-                  <router-link to="footprint" class="">Our Footprint</router-link>
+                  <router-link to="/footprint" class="">Our Footprint</router-link>
                 </div>
               </div>
             </div>
@@ -41,10 +51,10 @@
               </div>
               <div class="row">
                 <div class="col-12">
-                  <router-link to="policy" class="">Privacy Policy</router-link>
-                  <router-link to="contact" class="">Contact Us</router-link>
-                  <router-link to="references" class="">References</router-link>
-                  <router-link to="team" class="">Team</router-link>
+                  <router-link to="/policy" class="">Privacy Policy</router-link>
+                  <router-link to="/contact" class="">Contact Us</router-link>
+                  <router-link to="/references" class="">References</router-link>
+                  <router-link to="/team" class="">Team</router-link>
                 </div>
               </div>
             </div>
@@ -61,11 +71,20 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+import { GET_PRODUCT_GROUPS, GET_EVENTS } from '@/store/types'
+
 export default {
   name: 'Sitemap',
-  props: {
+  computed: {
+    ...mapGetters({
+      productGroups: 'getProductGroups',
+      events: "getEvents"
+    })
   },
-  mounted () {
+  async mounted () {
+    await this.$store.dispatch(GET_PRODUCT_GROUPS)
+    await this.$store.dispatch(GET_EVENTS)
     var points = document.getElementsByClassName("bullet-point active")
     while(points.length > 0){
       points[0].classList.remove('active');
@@ -158,6 +177,10 @@ export default {
     width:90%; 
     text-align:left; 
     margin: 0 auto 0 0;
+  }
+
+  .center-content a.child-link{
+    padding-left: 30px;
   }
 
 </style>

@@ -17,11 +17,11 @@
               <i class='far fa-envelope'></i>
             </div>
             <div>
-              <router-link to="sitemap" class="">Site Map</router-link>
-              <router-link to="policy" class="">Privacy Policy</router-link>
-              <router-link to="contact" class="">Contact Us</router-link>
-              <router-link to="references" class="">References</router-link>
-              <router-link to="team" class="">Team</router-link>
+              <router-link to="/sitemap" class="">Site Map</router-link>
+              <router-link to="/policy" class="">Privacy Policy</router-link>
+              <router-link to="/contact" class="">Contact Us</router-link>
+              <router-link to="/references" class="">References</router-link>
+              <router-link to="/team" class="">Team</router-link>
             </div>
           </div>
         </div>

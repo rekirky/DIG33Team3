@@ -21,7 +21,7 @@
     </div>
     <div id="feel-content-container">
       <div id="feel-content">
-        <div id="close-button" v-on:click="feelDeactive">
+        <div class="close-button" v-on:click="feelDeactive">
           <div class="circle hamburger">
             <span class="bar top"></span>
             <span class="bar bottom"></span>
@@ -29,15 +29,14 @@
         </div>
         <div class="two-third-container">        
           <div class="two-third-title">
-            We want you to feel the benifits of healthy
-            living, for you and future generations.
+            We want you to feel the benefits of a healthy lifestyle and clean environment.
           </div>
           <div class="two-third-body">
-            Ti qui a nonsectaepre con con con est peliqui dolupti ncimus ea qui resequis volor auda
-            pliberae nat veribus, sed molupti volorest, secab ipiscii squaspeliam et eiuntem eosti
-            in nonsent di dolore, qui aligenestet alic tecto cum inis aborro qui dus sum diat latquia
-            simendam coressi musciet archicidel earcium que cus et ulla sequis reici dendebit quis qui
-            sant aliquid erspici pienimi, consequ atecaec temporio.
+            Feel Good drinks are 100% proud of our products—we aim to provide women with alternatives for a healthier lifestyle,
+            feeling good, drinking well, and a clean plastic-free environment. The short and long term benefits of maintaining a
+            healthy lifestyle are reduced risk of disease, cancer diabetes, cardiovascular disease, osteoporosis, and obesity. 
+            Our company's goal is to provide a healthy alternative to women who lead a busy lifestyle and encourage women from all walks
+            of life to get together for a positive future for generations. We would love to hear from you and share the benefits.
           </div>        
           <router-link to="products" tag="button">The Benefits</router-link>
         </div>
@@ -93,7 +92,7 @@
     </div>
     <div id="natural-content-container-right" class="natural-content-container">
       <div id="natural-content-right">
-        <div id="close-button" v-on:click="naturalDeactive">
+        <div class="close-button" v-on:click="naturalDeactive">
           <div class="circle hamburger">
             <span class="bar top"></span>
             <span class="bar bottom"></span>
@@ -130,7 +129,7 @@
     </div>
      <div id="good-content-container">
       <div id="good-content">
-        <div id="close-button" v-on:click="goodDeactive">
+        <div class="close-button" v-on:click="goodDeactive">
           <div class="circle hamburger">
             <span class="bar top"></span>
             <span class="bar bottom"></span>
@@ -138,17 +137,13 @@
         </div>
         <div class="two-third-container">        
           <div class="two-third-title">
-            You can become part of the
-            crusade to protect
-            our oceans and children’s future
+            You can become part of the crusade to protect our oceans for future generations
           </div>
           <div class="two-third-body">
-            Ti qui a nonsectaepre con con con est peliqui dolupti ncimus ea qui
-            resequis volor auda pliberae nat veribus, sed molupti volorest, secab ipiscii
-            squaspeliam et eiuntem eosti in nonsent di dolore, qui aligenestet alic
-            tecto cum inis aborro qui dus sum diat latquia simendam coressi musciet
-            archicidel earcium que cus et ulla sequis reici dendebit quis qui sant aliquid
-            erspici pienimi, consequ atecaec temporio. Et fuga. Fictota tiatectet aut
+            Feel Good Drink Company is working towards a 0% footprint in our plastic usage. 
+            We are putting our best foot forward using innovative design and technology in 
+            making our bottles out of paper. We realised we can take steps to become 100% 
+            plastic-free and wish to encourage others to join our quest.
           </div>        
           <router-link to="footprint" tag="button">Discover how</router-link>
         </div>
@@ -382,7 +377,7 @@ export default {
     100% { transform: rotate(0deg); }
   }
 
-  #close-button{
+  .close-button{
     background-color: white;
     border: 2px solid var(--orange-primary);
     display: inline-block;

@@ -9,33 +9,59 @@
     <div id="menu-container">
       <div class="link-container" id="home-link">
         <div class="bullet-point active"></div>
-        <router-link to="home" class="nav-link" id="home" v-on:click.native="togglePoint">Home</router-link>
+        <router-link to="/home" class="nav-link" id="home" v-on:click.native="togglePoint">Home</router-link>
       </div>
       <div class="link-container" id="events-link">
         <div class="bullet-point"></div>
-        <router-link to="events" class="nav-link" id="events" v-on:click.native="togglePoint">Events</router-link>
+        <router-link to="/events" class="nav-link" id="events" v-on:click.native="togglePoint">Events</router-link>
+      </div>
+      <div v-if="this.productGroups.length != 0">
+        <div v-for="(event, index) in events" :key="index">
+          <div class="link-container child-link" :id="'event-' + event.id + '-link'">
+            <div class="bullet-point"></div>
+            <router-link :to="'/event/' + event.id" class="nav-link" :id="'event-' + event.id" v-on:click.native="togglePoint">{{event.name}}</router-link>
+          </div>
+        </div>
       </div>
       <div class="link-container" id="about-link">
         <div class="bullet-point"></div>
-        <router-link to="about" class="nav-link" id="about" v-on:click.native="togglePoint">About</router-link>
+        <router-link to="/about" class="nav-link" id="about" v-on:click.native="togglePoint">About</router-link>
       </div>
       <div class="link-container" id="products-link">
         <div class="bullet-point"></div>
-        <router-link to="products" class="nav-link" id="products" v-on:click.native="togglePoint">Products</router-link>
+        <router-link to="/products" class="nav-link" id="products" v-on:click.native="togglePoint">Products</router-link>
+      </div>
+      <div v-if="this.productGroups.length != 0">
+      <div v-for="(group, index) in productGroups" :key="index">
+        <div class="link-container child-link" :id="'product-group-' + group.id + '-link'">
+          <div class="bullet-point"></div>
+          <router-link :to="'/product/' + group.id" class="nav-link" :id="'product-group-' + group.id" v-on:click.native="togglePoint">{{group.name}}</router-link>
+        </div>
+      </div>
       </div>
       <div class="link-container" id="footprint-link">
         <div class="bullet-point"></div>
-        <router-link to="footprint" class="nav-link" id="footprint" v-on:click.native="togglePoint">Our Footprint</router-link>
+        <router-link to="/footprint" class="nav-link" id="footprint" v-on:click.native="togglePoint">Our Footprint</router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+import { GET_PRODUCT_GROUPS, GET_EVENTS } from '@/store/types'
+
 export default {
   name: 'NavMenu',
-  mounted () {
-
+  computed: {
+    ...mapGetters({
+      productGroups: 'getProductGroups',
+      events: "getEvents"
+    })
+  },
+  async mounted () {
+    await this.$store.dispatch(GET_PRODUCT_GROUPS)
+    await this.$store.dispatch(GET_EVENTS)
   },
   methods: {
     toggleMenu(){
@@ -176,6 +202,10 @@ export default {
   #wrapper.cross{
     border: 2px solid var(--orange-primary);
     background-color: white;
+  }
+
+  .child-link{
+    margin-left: 4rem;
   }
 
 </style>
