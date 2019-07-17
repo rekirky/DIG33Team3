@@ -85,7 +85,7 @@
         </div>
       </div>
     </div>
-    <div class="row no-gutter">
+    <div class="row no-gutters">
       <div class="product-nutrition-container">
         <div v-for="(product, index) in filteredProducts" :key="index">
           <product-nutrition v-if="index == 0" v-bind:product="product" class="active" :id="'nutrition-' + index"/>

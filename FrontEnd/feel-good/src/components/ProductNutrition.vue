@@ -1,10 +1,51 @@
 <template>
   <div class="product-nutrition" :style="'background-color: ' + product.color">
     <div class="row no-gutters">
-      <div class="col-2">
-      </div>
-      <div class="col-9">
+      <div class="col-11">
         <div class="nutrition-content">
+
+
+
+          <div class="water-drop-container natural-sugar">
+            <div class="water-drop-text">
+                *100% naturally occuring fruit sugars
+            </div>
+            <div class="water-drop">
+            </div>
+          </div>
+
+          <div class="water-drop-container energy">
+            <div class="water-drop-text">
+              Energy {{product.energy}}
+            </div>
+            <div class="water-drop">
+            </div>
+          </div>
+
+          <div class="water-drop-container carbs">
+            <div class="water-drop-text">
+                Carbohydrates {{product.carbs}}
+            </div>
+            <div class="water-drop">
+            </div>
+          </div>
+
+          <div class="water-drop-container fat">
+            <div class="water-drop-text">
+                Fat {{product.fat}}
+            </div>
+            <div class="water-drop">
+            </div>
+          </div>
+
+          <div class="water-drop-container protein">
+            <div class="water-drop-text">
+                Protein {{product.protein}}<br> Salt<br> {{product.salt}}
+            </div>
+            <div class="water-drop">
+            </div>
+          </div>
+
 
         </div>
       </div>
@@ -80,5 +121,65 @@ export default {
     min-width: 100%;
     transform: translate(-50%, -50%);
   }
+
+  .water-drop-container{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+  }
+
+  .water-drop{
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: white;
+    border-radius: 50%;
+    border-top-left-radius: 0;
+    transform: rotate(45deg);
+  }
+
+  .water-drop-text{
+    padding: 0px 15px;
+    width: 100%;
+    position: absolute;
+    font-weight: 700;
+    color: black;
+    top: 15%;
+    left: 0;
+    z-index: 1;
+  }
+
+  .natural-sugar{
+    top: 20%;
+    left: 45%;
+    font-size: .8rem;
+  }
+
+  .energy{
+    top: 50%;
+    left: 50%;
+    font-size: 1rem;
+  }
+
+  .carbs{
+    width: 150px;
+    height: 150px;
+    top: 70%;
+    left: 65%;
+    font-size: 1.1rem;
+  }
+
+  .fat{
+    top: 50%;
+    left: 80%;
+    font-size: 1rem;
+  }
+
+  .protein{
+    top: 40%;
+    left: 90%;
+    font-size: 1rem;
+  }
+
 
 </style>
