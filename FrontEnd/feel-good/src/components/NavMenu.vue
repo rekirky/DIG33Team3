@@ -41,7 +41,7 @@
       </div>
       <div class="link-container" id="footprint-link">
         <div class="bullet-point"></div>
-        <router-link to="footprint" class="nav-link" id="footprint" v-on:click.native="togglePoint">Our Footprint</router-link>
+        <router-link to="/footprint" class="nav-link" id="footprint" v-on:click.native="togglePoint">Our Footprint</router-link>
       </div>
     </div>
   </div>
