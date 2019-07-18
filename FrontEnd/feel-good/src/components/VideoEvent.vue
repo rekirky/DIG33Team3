@@ -6,14 +6,23 @@
         </div>
       </div>
       <div class="col-9 center-content" :style="{ backgroundImage: 'url(' + require(`@/assets/img/events/${event.bgImage}`) + ')' }">
+        <div class="">
+          <img :src="require(`@/assets/img/events/${event.logoImage}`)" :alt="event.title" class="d-block">
+        </div>
         <div>
-          <iframe width="560" height="315" :src="event.video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <h3>{{event.tagline}}</h3>
+        </div>
+        <div class="video-player-container">
+          <iframe class="video-player" :src="event.video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div>
+          <p>{{event.details}}</p>
         </div>
       </div>
       <div class="col-1">
         <div class="right-gutter">
           <img src="@/assets/img/patternside.png">
-          <div class="section-label">Events</div>
+          <div class="section-label">{{event.title}}</div>
         </div>
       </div>
     </div>
@@ -61,6 +70,7 @@ export default {
     position: absolute;
     bottom:0;
     left: 50%;
+    width: 400px;
     transform: translate(-50%, -100%) rotate(90deg);
     padding-right: 100px;
   }
@@ -69,6 +79,22 @@ export default {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 60px;
+  }
+
+  .video-player-container{
+    width: 60%;
+    height: 60%;
+    margin: auto;
+  }
+
+  .video-player{
+    width: 100%;
+    height: 100%;
+  }
+
+  .center-content p, .center-content h3{
+    margin: 20px 100px 30px 100px;
   }
 
 </style>
