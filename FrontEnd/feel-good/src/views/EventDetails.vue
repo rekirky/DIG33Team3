@@ -2,8 +2,8 @@
   <div class="event-details">
     <div v-if="this.events.length != 0">
     <div v-for="(event, index) in events" :key="index">
-      <social-event v-if="event.type == 'social'" v-bind:event="event" :id="'event-' + index"/>
-      <video-event v-if="event.type == 'video'" v-bind:event="event" :id="'event-' + index"/>
+      <social-event v-if="event.type == 'social'" v-bind:event="event" :id="'event-detail-' + index"/>
+      <video-event v-if="event.type == 'video'" v-bind:event="event" :id="'event-detail-' + index"/>
     </div>
   </div>
   </div>
