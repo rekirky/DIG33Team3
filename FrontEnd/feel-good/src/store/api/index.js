@@ -2,9 +2,11 @@ import http from './httpClient'
 import * as placeholder from '../modules/testData'
 
 class Api {
+  //Get Requests utilise the Axios Http Client to retreive selected data groups
+  //Placedholder JSON has been used in place of the axios connection until the backend application is completed
+  //Once Backend Application is complete the axios calls will be un commented and placeholders will be removed.
   async getContentBlocks (params) {
     let { data } = await http.get('/content-blocks', { params })
-    console.log(data)
     return data
   }
 
