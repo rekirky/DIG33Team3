@@ -8,6 +8,7 @@
             <p>*100% naturally occuring fruit sugars</p>
           </div>
 
+          <!-- Fruit Descriptiona-->
           <div class="marker fruit-1-marker">
             <div class="circle-surround">
               <div class="circle"></div>
@@ -26,6 +27,8 @@
             </div>
           </div>
 
+
+          <!-- Bottle Information -->
           <div class="marker bottle-top-marker">
             <div class="circle-surround">
               <div class="circle"></div>
@@ -53,10 +56,12 @@
             </div>
           </div>
 
+          <!-- Hero Bottle Image -->
           <div class="hero-bottle">
             <img :src="require(`@/assets/img/products/${product.bottleHeroImage}`)" :alt="product.name" class="d-block">
           </div>
 
+          <!-- Fruit Images -->
           <div class="fruit fruit-1">
             <img :src="require(`@/assets/img/products/${product.fruit1Image}`)" :alt="product.name" class="d-block">
           </div>
@@ -65,7 +70,7 @@
             <img :src="require(`@/assets/img/products/${product.fruit2Image}`)" :alt="product.name" class="d-block">
           </div>
 
-
+          <!-- Water Droplets -->
           <div class="water-drop-container natural-sugar">
             <div class="water-drop-text">
                 *100% naturally occuring fruit sugars
@@ -130,12 +135,6 @@ export default {
   name: 'ProductNutrition',
   props: { 
     product: Object
-  },
-  computed: {
-  },
-  async mounted () {
-  },
-  methods: {
   }
 }
 </script>
