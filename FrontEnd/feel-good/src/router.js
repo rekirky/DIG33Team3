@@ -31,11 +31,6 @@ export default new Router({
       component: () => import('./views/Contact.vue')
     },
     {
-      path: '/events',
-      name: 'events',
-      component: () => import('./views/Events.vue')
-    },
-    {
       path: '/event',
       name: 'event-details',
       component: () => import('./views/EventDetails.vue')
