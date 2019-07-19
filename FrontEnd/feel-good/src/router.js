@@ -37,7 +37,7 @@ export default new Router({
       component: () => import('./views/Events.vue')
     },
     {
-      path: '/event/:eventId',
+      path: '/event',
       name: 'event-details',
       component: () => import('./views/EventDetails.vue')
     },
@@ -80,5 +80,12 @@ export default new Router({
       path: '*',
       component: resolve => require(['@/views/NotFound'], resolve)
     }
-  ]
+  ],
+  scrollBehavior: function (to) {
+    if (to.hash) {
+      return {
+        selector: to.hash
+      }
+    }
+  },
 })

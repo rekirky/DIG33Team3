@@ -26,7 +26,7 @@
                   <router-link to="/events" class="">Events</router-link>
                   <div v-if="this.productGroups.length != 0">
                     <div v-for="(event, index) in events" :key="index">
-                      <router-link :to="'/event/' + event.id" class="child-link" :id="'event-' + event.id" v-on:click.native="togglePoint">{{event.name}}</router-link>
+                      <router-link :to="'/event#event-detail-' + index" class="child-link" :id="'event-' + event.id" v-on:click.native="togglePoint">{{event.name}}</router-link>
                     </div>
                   </div>
                   <router-link to="/about" class="">About</router-link>
