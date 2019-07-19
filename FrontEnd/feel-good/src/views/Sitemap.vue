@@ -24,7 +24,7 @@
                 <div class="col-4">
                   <router-link to="/home" class="">Home</router-link>
                   <router-link to="/event" class="">Events</router-link>
-                  <div v-if="this.event.length != 0">
+                  <div v-if="this.events.length != 0">
                     <!-- Loop through the event array and add Child links-->
                     <div v-for="(event, index) in events" :key="index">
                       <router-link :to="'/event#event-detail-' + index" class="child-link" :id="'event-' + event.id" v-on:click.native="togglePoint">{{event.name}}</router-link>
