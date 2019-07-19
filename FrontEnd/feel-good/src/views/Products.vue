@@ -64,6 +64,7 @@ export default {
   },
   mounted () {
 
+    //Slide in Animation
     setTimeout( function(){
     var upElements = document.getElementsByClassName("up-move")
       while(upElements.length > 0){
