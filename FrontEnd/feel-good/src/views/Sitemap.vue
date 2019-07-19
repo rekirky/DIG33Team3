@@ -23,8 +23,9 @@
               <div class="row">
                 <div class="col-4">
                   <router-link to="/home" class="">Home</router-link>
-                  <router-link to="/events" class="">Events</router-link>
-                  <div v-if="this.productGroups.length != 0">
+                  <router-link to="/event" class="">Events</router-link>
+                  <div v-if="this.event.length != 0">
+                    <!-- Loop through the event array and add Child links-->
                     <div v-for="(event, index) in events" :key="index">
                       <router-link :to="'/event#event-detail-' + index" class="child-link" :id="'event-' + event.id" v-on:click.native="togglePoint">{{event.name}}</router-link>
                     </div>
@@ -34,6 +35,7 @@
                 <div class="col-4">
                   <router-link to="/products" class="">Products</router-link>
                   <div v-if="this.productGroups.length != 0">
+                    <!-- Loop through the product group array and add Child links-->
                     <div v-for="(group, index) in productGroups" :key="index">
                       <router-link :to="'/product/' + group.id" class="child-link" :id="'product-group-' + group.id" v-on:click.native="togglePoint">{{group.name}}</router-link>
                     </div>
@@ -71,7 +73,10 @@
 </template>
 
 <script>
+//Import of Vuex Local Storage
 import { mapGetters } from 'vuex'
+
+//Import of function types
 import { GET_PRODUCT_GROUPS, GET_EVENTS } from '@/store/types'
 
 export default {
@@ -83,8 +88,12 @@ export default {
     })
   },
   async mounted () {
+
+    //Fetch Product group and event data from API
     await this.$store.dispatch(GET_PRODUCT_GROUPS)
     await this.$store.dispatch(GET_EVENTS)
+
+    //Remove all bullet point makers from the navigtation
     var points = document.getElementsByClassName("bullet-point active")
     while(points.length > 0){
       points[0].classList.remove('active');
@@ -93,7 +102,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
   .sitemap{
