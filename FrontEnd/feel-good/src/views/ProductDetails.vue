@@ -8,16 +8,19 @@
       </div>
       <div class="col-9">
         <div class="row no-gutters">
+          <!-- Product Group header -->
           <div class="product-group-header" :style="'background-color: ' + currentProductGroup.accentColor">
             <h1>{{currentProductGroup.name}}</h1>
             <hr>
             <p>{{currentProductGroup.tagLine}}</p>
           </div>
         </div>
+        <!-- Product Carousel  -->
         <div class="row no-gutters carousel-container">
           <div id="productSelector" class="carousel slide">
             <div v-if="this.filteredProducts.length != 0">
               <ol class="carousel-indicators">
+                <!-- Carousel Indicators generated from the number of events in the array. -->
                 <div v-for="(product, index) in filteredProducts" :key="index">
                   <li v-if="index == 0" :id="'indicator-' + index" class="active" v-on:click="activeProduct(index)" :style="'background-color: ' + currentProductGroup.accentColor"></li>
                   <li v-else :id="'indicator-' + index" v-on:click="activeProduct(index)" :style="'background-color: ' + currentProductGroup.accentColor"></li>
@@ -26,6 +29,7 @@
 
 
               <div class="carousel-inner">
+                <!-- Carousel Product content generated from the number of events in the array. -->
                 <div v-for="(product, index) in filteredProducts" :key="index">
                   <div v-if="index == 0" class="carousel-item active" :id="'item-' + index">
                     <div class="row">
@@ -66,6 +70,7 @@
                 </div>
               </div>
 
+              <!-- Next and Previous Selectors -->
               <div class="carousel-control-prev" role="button" :style="'color: ' + currentProductGroup.accentColor" v-on:click="prevProduct">
                 <span class="fas fa-angle-left" aria-hidden="true" :style="'color: ' + currentProductGroup.accentColor" ></span>
                 <span class="sr-only">Previous</span>
@@ -87,6 +92,7 @@
     </div>
     <div class="row no-gutters">
       <div class="product-nutrition-container">
+        <!-- Generate product nutrition for each product in the array. -->
         <div v-for="(product, index) in filteredProducts" :key="index">
           <product-nutrition v-if="index == 0" v-bind:product="product" class="active" :id="'nutrition-' + index"/>
           <product-nutrition v-else v-bind:product="product" :id="'nutrition-' + index"/>
@@ -97,8 +103,11 @@
 </template>
 
 <script>
+//Import for vuex local storage
 import { mapGetters } from 'vuex'
+//Import of types to be accessed via despatches
 import { GET_PRODUCTS } from '@/store/types'
+//Import of components
 import ProductNutrition from '@/components/ProductNutrition.vue'
 
 export default {
@@ -124,6 +133,7 @@ export default {
       return this.$route.params.productId
     },
 
+    //Returns only the products that are in that product group
     filteredProducts () {
       if(!this.products){return null}
 
@@ -147,11 +157,14 @@ export default {
     
   },
   methods: {
+    //Switch to the next product in the array
     nextProduct(){
       this.currentProductIndex++
       this.currentProductIndex = this.currentProductIndex % this.filteredProducts.length
       this.updateActiveProduct()
     },
+
+    //Switch to the previous product in the array
     prevProduct(){
       this.currentProductIndex--
       if(this.currentProductIndex < 0){
@@ -162,10 +175,14 @@ export default {
       }
       this.updateActiveProduct()
     },
+
+    //Assign the product to be displayed based on the
     activeProduct(index){
       this.currentProductIndex = index
       this.updateActiveProduct()
     },
+
+    //Updates the page to show the active product
     updateActiveProduct(){
       $(".carousel-indicators li").removeClass("active")
       $(".carousel-inner .carousel-item").removeClass("active")
