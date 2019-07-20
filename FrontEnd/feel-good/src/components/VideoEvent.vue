@@ -12,6 +12,7 @@
         <div>
           <h3>{{event.tagline}}</h3>
         </div>
+        <!-- Embed Video Player -->
         <div class="video-player-container">
           <iframe class="video-player" :src="event.video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
@@ -35,8 +36,6 @@ export default {
   name: 'VideoEvent',
   props:{
     event: Object
-  },
-  computed:{
   }
 }
 </script>

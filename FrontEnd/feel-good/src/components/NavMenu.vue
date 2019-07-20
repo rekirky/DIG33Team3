@@ -1,11 +1,13 @@
 <template>
   <div class="nav-menu">
+    <!-- Animated Hamburger Menu Button -->
     <div id="wrapper" v-on:click="toggleMenu">
       <div id="icon" class="circle hamburger">
         <span class="bar top"></span>
         <span class="bar bottom"></span>
       </div>
     </div>
+    <!-- Navigation Links -->
     <div id="menu-container">
       <div class="link-container" id="home-link">
         <div class="bullet-point active"></div>
@@ -15,7 +17,8 @@
         <div class="bullet-point"></div>
         <router-link to="/event" class="nav-link" id="events" v-on:click.native="togglePoint">Events</router-link>
       </div>
-      <div v-if="this.productGroups.length != 0">
+      <!-- If there and events, loop through them to add their links -->
+      <div v-if="this.events.length != 0">
         <div v-for="(event, index) in events" :key="index">
           <div class="link-container child-link" :id="'event-' + event.id + '-link'">
             <div class="bullet-point"></div>
@@ -31,6 +34,7 @@
         <div class="bullet-point"></div>
         <router-link to="/products" class="nav-link" id="products" v-on:click.native="togglePoint">Products</router-link>
       </div>
+      <!-- If there and products groups, loop through them to add their links -->
       <div v-if="this.productGroups.length != 0">
       <div v-for="(group, index) in productGroups" :key="index">
         <div class="link-container child-link" :id="'product-group-' + group.id + '-link'">
@@ -64,6 +68,7 @@ export default {
     await this.$store.dispatch(GET_EVENTS)
   },
   methods: {
+    //Open and closes the menu when the hamburger button is clicked.
     toggleMenu(){
       var hamburger = document.getElementById("icon")
       var wrapper = document.getElementById("wrapper")
@@ -72,6 +77,8 @@ export default {
       wrapper.classList.toggle("cross")
       menu.classList.toggle("cross")
     },
+
+    //Added the Active link marker to the Selected Link.
     togglePoint(event){
       var points = document.getElementsByClassName("bullet-point active")
       while(points.length > 0){

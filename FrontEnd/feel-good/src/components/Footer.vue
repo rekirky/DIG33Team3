@@ -10,6 +10,7 @@
         <div class="col-9 col-lg-6">
           <div class="footer-links">
             <div>
+              <!-- Social Media Icons -->
               Get in touch with us: 
               <i class='fab fa-twitter'></i>
               <i class='fab fa-facebook-f'></i>
@@ -17,6 +18,7 @@
               <i class='far fa-envelope'></i>
             </div>
             <div>
+              <!-- Links For Secondary Pages -->
               <router-link to="/sitemap" class="">Site Map</router-link>
               <router-link to="/policy" class="">Privacy Policy</router-link>
               <router-link to="/contact" class="">Contact Us</router-link>

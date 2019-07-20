@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-
+    <!-- 100% Feel Section -->
     <div id="feel-container" class="third-container" @mouseenter="bottomBarGrow" @mouseleave="bottomBarShrink" @click="feelActive">
       <div class="top-bar"></div>
       <div class="center-content">
@@ -43,6 +43,7 @@
       </div>
     </div>
 
+    <!-- 100% Natural Section -->
     <div id="natural-container" class="third-container" @mouseenter="bottomBarGrow" @mouseleave="bottomBarShrink" @click="naturalActive">
       <div class="top-bar"></div>
       <div class="logo"><img src="@/assets/img/FGD_Logo_full.png"></div>
@@ -106,6 +107,7 @@
       </div>
     </div>
 
+    <!-- 100% Good Section -->
     <div id="good-container" class="third-container"  @mouseenter="bottomBarGrow" @mouseleave="bottomBarShrink" @click="goodActive">
       <div class="top-bar"></div>
       <div class="center-content">
@@ -157,19 +159,18 @@
 
 export default {
   name: 'home',
-  components: {
-
-  },
-  mounted () {
-
-  },
   methods: {
+    //Expands the Background of the selected section
     bottomBarGrow(event){
       event.target.getElementsByClassName("bottom-bar")[0].classList.add("grow")
     },
+
+    //Returns the background of the select section back to its orginal size
     bottomBarShrink(event){
       event.target.getElementsByClassName("bottom-bar")[0].classList.remove("grow")
     },
+
+    //When the Feel section is selected, active Classes are added to reveal the section
     feelActive(){
       var feelContainer = document.getElementById("feel-container")
       feelContainer.getElementsByClassName("bottom-bar")[0].classList.add("active")
@@ -182,6 +183,8 @@ export default {
       $( "#feel-content-container" ).animate({width: "67%"}, 0,);
       document.getElementById("feel-content").classList.add("active")
     },
+
+    //Resets Feel section back to normal
     feelDeactive(){      
       var feelContainer = document.getElementById("feel-container")
       feelContainer.getElementsByClassName("bottom-bar")[0].classList.remove("active")
@@ -194,6 +197,8 @@ export default {
       $( "#feel-content-container" ).delay(1000).animate({width: "0%"}, 0);
       document.getElementById("feel-content").classList.remove("active")
     },
+
+    //When the Good section is selected, active Classes are added to reveal the section
     goodActive(){
       var goodContainer = document.getElementById("good-container")
       goodContainer.getElementsByClassName("bottom-bar")[0].classList.add("active")
@@ -205,6 +210,8 @@ export default {
       $( "#good-content-container" ).animate({width: "67%"}, 0,);
       document.getElementById("good-content").classList.add("active")
     },
+
+    //Resets Good section back to normal
     goodDeactive(){      
       var goodContainer = document.getElementById("good-container")
       goodContainer.getElementsByClassName("bottom-bar")[0].classList.remove("active")
@@ -216,6 +223,8 @@ export default {
       $( "#good-content-container" ).delay(1000).animate({width: "0%"}, 0);
       document.getElementById("good-content").classList.remove("active")
     },
+
+    //When the Natural section is selected, active Classes are added to reveal the section
     naturalActive(){
       var naturalContainer = document.getElementById("natural-container")
       naturalContainer.getElementsByClassName("bottom-bar")[0].classList.add("active")
@@ -231,6 +240,8 @@ export default {
       document.getElementById("natural-content-left").classList.add("active")
       document.getElementById("natural-content-right").classList.add("active")
     },
+
+    //Resets Natural section back to normal
     naturalDeactive(){      
       var naturalContainer = document.getElementById("natural-container")
       naturalContainer.getElementsByClassName("bottom-bar")[0].classList.remove("active")

@@ -1,8 +1,9 @@
+//Import of Google Font Holtwood One SC and Open Sans. Import of fontawesome iconography
 @import url('https://fonts.googleapis.com/css?family=Holtwood+One+SC|Open+Sans:400,700&display=swap');
 @import url('https://use.fontawesome.com/releases/v5.7.0/css/all.css');
 
 :root{
-  /*Colours*/
+  /*Colour Variables*/
   --orange-primary:#eb6a27;
   --blue-primary:#00b0f0;
   --green-primary:#9ad35c;
@@ -31,6 +32,8 @@
     }
   }
 }
+
+//Global Tag Styling
 
 button{
   background-color: var(--orange-primary);

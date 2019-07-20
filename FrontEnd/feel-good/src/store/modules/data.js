@@ -3,6 +3,9 @@ import Api from '../api'
 
 const api = new Api()
 
+
+//Collection arrays for objects retrieved from the API
+//Objects are stored locally until the use leaves the application
 const state = {
   contentBlocks: [],
   productGroups: [],
@@ -10,6 +13,7 @@ const state = {
   products: []
 }
 
+//Setters for the Collection Arrays, generelly call within this file, for the actions
 const mutations = {
   async [types.SET_CONTENT_BLOCKS] (state, blocks) {
     state.contentBlocks = [ ...blocks ]
@@ -28,6 +32,8 @@ const mutations = {
   }
 }
 
+//Global Getters accessed via the matching of type names.
+//They call the API for data and the returned data is set in the collection arrays
 const actions = {
   async [types.GET_CONTENT_BLOCKS] ({ commit }) {
     let response = await api.getContentBlocks()
@@ -50,6 +56,7 @@ const actions = {
   }
 }
 
+//Registered Getters, return the collection arrays to components that have registered the getter in ...mapgetters
 const getters = {
   getContentBlocks (state) {
     return state.contentBlocks

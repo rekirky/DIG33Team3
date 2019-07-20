@@ -5,6 +5,7 @@
         <div class="left-gutter">
         </div>
       </div>
+      <!-- Social Event Informaiton -->
       <div class="col-9 center-content" :style="{ backgroundImage: 'url(' + require(`@/assets/img/events/${event.bgImage}`) + ')' }">
         <h4>{{event.subTitle}}</h4>
         <h1>{{event.title}}</h1>
@@ -30,9 +31,6 @@ export default {
   name: 'SocialEvent',
   props:{
     event: Object
-  },
-  computed:{
-
   }
 }
 </script>

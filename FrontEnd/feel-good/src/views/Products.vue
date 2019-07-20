@@ -64,6 +64,7 @@ export default {
   },
   mounted () {
 
+    //Slide in Animation
     setTimeout( function(){
     var upElements = document.getElementsByClassName("up-move")
       while(upElements.length > 0){
@@ -82,7 +83,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
   .right-gutter{

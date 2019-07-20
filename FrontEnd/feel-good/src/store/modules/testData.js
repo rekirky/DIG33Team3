@@ -1,3 +1,4 @@
+//Placeholder Data
 export const productGroups = [ 
   {
     "id": 1,
