@@ -1,4 +1,6 @@
 # Curtin University SP2 2019 - DIG33 - Internet Project Development
+Assignment 2 Submission version.
+This is a static submission of the website as it was delivered within the assignment 2 submission.
 
 DIG33 - Team3 - Endgame Digital Team
 
