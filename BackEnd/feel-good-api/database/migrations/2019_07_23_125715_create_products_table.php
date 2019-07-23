@@ -34,7 +34,7 @@ class CreateProductsTable extends Migration
             $table->string('fruit2Image');
             $table->string('fruit2Description');
 
-            $table->foreign('productGroup')->references('id')->on('product_group');
+            $table->foreign('productGroup')->references('id')->on('product_groups');
 
         });
     }
