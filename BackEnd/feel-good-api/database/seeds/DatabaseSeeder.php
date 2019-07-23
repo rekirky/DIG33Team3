@@ -12,5 +12,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call('ProductGroupSeeder');
+        $this->call('EventSeeder');
+        $this->call('ProductSeeder');
     }
 }
