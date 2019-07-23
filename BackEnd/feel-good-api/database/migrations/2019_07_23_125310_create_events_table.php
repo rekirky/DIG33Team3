@@ -21,7 +21,7 @@ class CreateEventsTable extends Migration
             $table->string('title');
             $table->string('subTitle');
             $table->string('tagline');
-            $table->string('details');
+            $table->longText('details');
             $table->string('date');
             $table->string('register');
             $table->string('video');
