@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests;
+use App\Product;
+use App\Http\Resources\Product as ProductResource;
 
-class ProductContoller extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +16,9 @@ class ProductContoller extends Controller
      */
     public function index()
     {
-        //
+        $products = Product::all();
+
+        return ProductResource::collection($products);
     }
 
     /**
@@ -24,6 +29,8 @@ class ProductContoller extends Controller
      */
     public function show($id)
     {
-        //
+        $product = Product::findOrFail($id);
+
+        return new ProductResource($product);
     }
 }

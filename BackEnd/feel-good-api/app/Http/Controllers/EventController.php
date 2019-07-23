@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests;
+use App\Event;
+use App\Http\Resources\Event as EventResource;
 
-class EventContoller extends Controller
+class EventController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +16,9 @@ class EventContoller extends Controller
      */
     public function index()
     {
-        //
+        $events = Event::all();
+
+        return EventResource::collection($events);
     }
 
     /**
@@ -24,6 +29,8 @@ class EventContoller extends Controller
      */
     public function show($id)
     {
-        //
+        $event = Event::findOrFail($id);
+
+        return new EventResource($event);
     }
 }
