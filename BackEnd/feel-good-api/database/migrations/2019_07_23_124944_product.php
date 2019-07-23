@@ -22,10 +22,14 @@ class Product extends Migration
             $table->string('description');
             $table->string('energy',20);
             $table->string('fat',10);
+            $table->string('sugar',10);
             $table->string('carbohydrate',10);
             $table->string('protein',10);
             $table->string('salt',10);
             $table->string('ingredients');       
+            $table->string('tooltip1');       
+            $table->string('tooltip2');
+            $table->string('tooltip3');
         });
     }
 
