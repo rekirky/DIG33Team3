@@ -11,20 +11,20 @@ class Api {
   }
 
   async getProductGroups (params) {
-    //let { data } = await http.get('/content-blocks', { params })
-    let data = placeholder.productGroups
+    let { data } = await http.get('/product-groups', { params })
+    //let data = placeholder.productGroups
     return data
   }
 
   async getEvents (params) {
-    //let { data } = await http.get('/content-blocks', { params })
-    let data = placeholder.events
+    let { data } = await http.get('/events', { params })
+    //let data = placeholder.events
     return data
   }
 
   async getProducts (params) {
-    //let { data } = await http.get('/content-blocks', { params })
-    let data = placeholder.products
+    let { data } = await http.get('/products', { params })
+    //let data = placeholder.products
     return data
   }
 }

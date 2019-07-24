@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Videos extends Migration
+class CreateProductGroupTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class Videos extends Migration
      */
     public function up()
     {
-        Schema::create('videos', function (Blueprint $table) {
-            $table->integer('videoid')->unique();
-            $table->string('title');
-            $table->string('summary');
-            $table->string('description');
-            $table->string('youtubeurl');
+        Schema::create('product_groups', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->timestamps();
+            $table->string('name');
+            $table->string('accentColor');
+            $table->string('tagLine');
         });
     }
 
@@ -29,6 +29,6 @@ class Videos extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('videos');
+        Schema::dropIfExists('product_groups');
     }
 }
