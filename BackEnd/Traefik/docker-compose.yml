@@ -1,0 +1,33 @@
+version: '3.3'
+
+services:
+  traefik:
+    restart: always
+    container_name: traefik
+    image: traefik # The official Traefik docker image
+    # command: --docker --api # Enables the web UI and tells Traefik to listen to docker
+    ports:
+      - "80:80"     # The HTTP port
+      - "443:443"   # For HTTPs redirect
+    expose: 
+      - 8888
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock 
+      - $PWD/traefik.toml:/traefik.toml
+      - $PWD/acme.json:/acme.json
+    networks:
+      traefik:
+    labels:
+      - "traefik.enable=true"
+      - "traefik.port=8888"
+      - "traefik.frontend.rule=Host:monitor.endgame-feelgood.com"
+      # - "traefik.frontend.auth.basic= Put authentication here  "
+      # - "traefik.docker.network=traefik"
+      # - "traefik.protocol=http"
+      # - "traefik.frontend=traefik"
+      # - "traefik.backend=traefik"
+
+
+networks:
+  traefik:
+    external: true
