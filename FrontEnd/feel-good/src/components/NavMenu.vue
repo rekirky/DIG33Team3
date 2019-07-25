@@ -48,6 +48,8 @@
         <router-link to="/footprint" class="nav-link" id="footprint" v-on:click.native="togglePoint">Our Footprint</router-link>
       </div>
     </div>
+    <div id="close-container" v-on:click="toggleMenu">
+    </div>
   </div>
 </template>
 
@@ -73,9 +75,11 @@ export default {
       var hamburger = document.getElementById("icon")
       var wrapper = document.getElementById("wrapper")
       var menu = document.getElementById("menu-container")
+      var close = document.getElementById("close-container")
       hamburger.classList.toggle("cross")
       wrapper.classList.toggle("cross")
       menu.classList.toggle("cross")
+      close.classList.toggle("cross")
     },
 
     //Added the Active link marker to the Selected Link.
@@ -213,6 +217,17 @@ export default {
 
   .child-link{
     margin-left: 4rem;
+  }
+
+  #close-container{
+    width: calc(100vw - 300px);
+    height: 100%;
+    left: -100vw;
+    position: absolute;
+  }
+
+  #close-container.cross{
+    left: 300px;
   }
 
 </style>
