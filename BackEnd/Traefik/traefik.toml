@@ -1,0 +1,220 @@
+################################################################
+# Global configuration
+################################################################
+
+# Enable debug mode
+#
+# Optional
+# Default: false
+#
+# debug = true
+
+# Log level
+#
+# Optional
+# Default: "ERROR"
+#
+# logLevel = "DEBUG"
+
+################################################################
+# Entrypoints configuration
+################################################################
+
+# Entrypoints definition
+#
+# Optional
+# Default:
+defaultEntryPoints = ["http", "https"]
+
+[entryPoints]
+  [entryPoints.http]
+  address = ":80"
+  compress = true
+    [entryPoints.http.redirect]
+    entryPoint = "https"
+  
+  [entryPoints.https]
+  address = ":443"
+  compress = true
+  [entryPoints.https.tls]
+  
+  [entryPoints.traefik]
+  address = ":8888"
+    # [entryPoints.traefik.auth]
+      [entryPoint.traefik.auth.basic]
+        users = ["Auth Here"]
+   #
+[retry]
+
+[acme]
+email = "email.com"
+storage = "acme.json"
+# caServer = "https://acme-staging-v02.api.letsencrypt.org/directory"
+entryPoint = "https"
+onHostRule = true
+onDemand = false
+    [acme.httpChallenge]
+  entryPoint = "http"
+
+################################################################
+# Traefik logs configuration
+################################################################
+
+# Traefik logs
+# Enabled by default and log to stdout
+#
+# Optional
+#
+# [traefikLog]
+
+# Sets the filepath for the traefik log. If not specified, stdout will be used.
+# Intermediate directories are created if necessary.
+#
+# Optional
+# Default: os.Stdout
+#
+# filePath = "log/traefik.log"
+
+# Format is either "json" or "common".
+#
+# Optional
+# Default: "common"
+#
+# format = "common"
+
+################################################################
+# Access logs configuration
+################################################################
+
+# Enable access logs
+# By default it will write to stdout and produce logs in the textual
+# Common Log Format (CLF), extended with additional fields.
+#
+# Optional
+#
+# [accessLog]
+
+# Sets the file path for the access log. If not specified, stdout will be used.
+# Intermediate directories are created if necessary.
+#
+# Optional
+# Default: os.Stdout
+#
+# filePath = "/path/to/log/log.txt"
+
+# Format is either "json" or "common".
+#
+# Optional
+# Default: "common"
+#
+# format = "common"
+
+################################################################
+# File configuration
+################################################################
+
+[file]
+
+[backends]
+  [backends.drivebolt]
+    [backends.drivebolt.servers]
+      [backends.drivebolt.servers.server0]
+        url = "http://loving-lamport-cf6ea8.netlify.com"
+        
+
+[frontends]
+  [frontends.drivebolt]
+    backend = "drivebolt"
+  [frontends.drivebolt.routes.test_1]
+      rule = "Host:endgame-feelgood.com"
+  
+  # [frontends.dashboard]
+  # # entryPoints = ["dashboard"]
+  #     backend = "dashboard"
+  #       [frontends.dashboard.routes.test_1]
+  #       rule = "Host:monitor.endgame-feelgood.com"
+
+################################################################
+# API and dashboard configuration
+################################################################
+
+# Enable API and dashboard
+[api]
+entryPoint = "traefik"
+dashboard = true
+
+  # Name of the related entry point
+  #
+  # Optional
+  # Default: "traefik"
+  #
+  # entryPoint = "traefik"
+
+  # Enabled Dashboard
+  #
+  # Optional
+  # Default: true
+  #
+  # dashboard = false
+
+# enable setup for the web dashboard when on server.
+# [web]
+# address = ":8888"
+# [web.auth.basic]
+# users = ["Auth Here"]
+
+################################################################
+# Ping configuration
+################################################################
+
+# Enable ping
+[ping]
+
+  # Name of the related entry point
+  #
+  # Optional
+  # Default: "traefik"
+  #
+  # entryPoint = "traefik" 
+
+################################################################
+# Docker configuration backend
+################################################################
+
+# Enable Docker configuration backend
+[docker]
+
+# Docker server endpoint. Can be a tcp or a unix socket endpoint.
+#
+# Required
+# Default: "unix:///var/run/docker.sock"
+#
+endpoint = "unix:///var/run/docker.sock"
+
+# Default domain used.
+# Can be overridden by setting the "traefik.domain" label on a container.
+#
+# Optional
+# Default: ""
+#
+domain = "endgame-feelgood.com"
+
+# Expose containers by default in traefik
+#
+# Optional
+# Default: true
+#
+exposedByDefault = false
+
+# Enable watch docker changes.
+#
+# Optional
+#
+watch = true
+
+# Define a default docker network to use for connections to all containers.
+# Can be overridden by the traefik.docker.network label.
+#
+# Optional
+#
+network = "traefik"
