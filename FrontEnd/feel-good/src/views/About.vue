@@ -4,6 +4,7 @@
 
        <!-- Bootstrap and custom classes to style elements -->
     <article class="about-main">     
+       <!--display property used to hide right sidebar on mobile and tablet view-->
       <div class="right-bar d-none d-lg-block img-fluid container">
       <img class="pattern" src="@/assets/img/patternside.png" alt="side-bar pattern">
       <div class="section-label">about</div>
