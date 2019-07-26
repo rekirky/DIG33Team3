@@ -2,9 +2,13 @@
 
   <div class="about">
 
-    <article class="about-main"> 
+       <!-- Bootstrap and custom classes to style elements -->
+    <article class="about-main">     
+      <div class="right-bar d-none d-lg-block img-fluid container">
+      <img class="pattern" src="@/assets/img/patternside.png" alt="side-bar pattern">
+      <div class="section-label">about</div>
+        </div>    
 
-      <!-- Bootstrap and custom classes to style elements -->
       <section class="about-header d-flex align-item-center text-center">       
       <div class="container">
 
@@ -14,6 +18,7 @@
        </div>
       </section>
 
+   
     <section> 
       <Section class="about-text text-left">
          <!-- Bootstrap container -->
@@ -62,11 +67,11 @@
               </div>
                 </div>
                   </div>
-        <div class="side-bar container d-none d-lg-block">
+        <div class="side-bar container d-none d-lg-block">      
           </div>       
+         
            </section>
               </section>
-
     </article> 
            
 
@@ -101,6 +106,7 @@ export default {
   margin-top: 30px;
     
 }
+
 .about-header{
   margin-left: 10%;
 }
@@ -111,7 +117,7 @@ h6{
 }
 .about-text{
   width: 60%;
-  margin-left: 24%;
+  margin-left: 20%;
   margin-top: 20px;
   line-height: 1.8em
 }
@@ -124,13 +130,39 @@ h6{
 }
 
 .image-grid.container {
-  width:70%;
+  width:80%;
   margin-left: 40px
 }
 
 .side-bar.container {
   width:20%
 }
+
+.pattern{
+  height: 1500px;
+  position: relative;
+}
+
+.right-bar{
+  width:10%;
+  height: 1500px;
+  overflow: hidden;
+  background-color: var(--beige-sidebar);
+  float: right;
+  position: relative;
+}
+
+/*Paul's CSS for right-bar label*/
+ .section-label{
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  position: absolute;
+  bottom:400px;
+  left: 50%;
+  transform: translate(-50%, -100%) rotate(90deg);
+  padding-right: 100px;
+  }
+
 
 .about-image img{
   margin: 10px
