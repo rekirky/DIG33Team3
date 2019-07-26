@@ -96,7 +96,7 @@
             <p><small> The No Added Sugar products in our squash range now account for 50.5% of all purchases and 42% of our Vimto still range in the
                 UK, with Vimto Minis and Squeezy products only available as no added sugar. We are committed to looking for healthier alternatives
                 and a good example of this is our continued support of the Feel Good brand, which contains no added sugars and 100%
-                natural ingredients" (Feel Good Drinks 2019). </small></p>
+                natural ingredients"  (Nichols PLC 2019, para 1). </small></p>
                 </div>
                </div>   
     </section>
