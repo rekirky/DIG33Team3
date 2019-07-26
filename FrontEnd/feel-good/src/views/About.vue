@@ -12,12 +12,15 @@
       <section class="about-header d-flex align-item-center text-center">       
       <div class="container">
 
+        <!--mobile and tablet view header logo display-->
+        <div class="mobile-header container">
+         <img class="img-fluid d-lg-none" src="@/assets/img/logo_247.png" alt="feel good drinks logo">
+          </div>
+
       <h2 class="about-title"><small> THE HEART OF OUR COMPANY </small></h2>
       <h2><b>LET'S TALK ABOUT US</b></h2>
-
        </div>
       </section>
-
    
     <section> 
       <Section class="about-text text-left">
