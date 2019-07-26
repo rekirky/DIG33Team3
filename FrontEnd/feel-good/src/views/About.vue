@@ -74,16 +74,26 @@
               </section>
     </article> 
            
-
 <section>
     <div class="consumer-notice d-flex align-items-left">
        <div class="consumer-logo">     
-        <img class="img-fluid float-left" src="@/assets/img/logo_247.png" alt="feel good drinks logo">
-          </div> 
-          <div class="consumer-info">
-            <h6 class="text-light text-left">Consumers</h6>
-            <p class="text-light text-left">Consumer notice text here</p>
-              </div>
+        <img class="img float-left d-none d-lg-block" src="@/assets/img/logo_247.png" alt="feel good drinks logo">
+              </div> 
+          <div class="consumer-info text-light text-left">
+            <h6>Consumers</h6>
+            <p><small> "We take our responsibility towards the issue of obesity and sugar consumption very seriously. Our marketing strategy continues
+                to revolve around promoting no added sugar choices in order to achieve our aim of overall sugar reduction across our range of
+                products. As a result, we continue to reduce our total sugar usage. The Added Sugar in our UK products continues to fall from
+                8,002 tonnes in 2015 to 7,908 tonnes in 2016. </small></p>
+
+            <p><small> We are making further commitments to reduce sugar in all of our sugar containing products in line with UK Government guidelines
+                and have a robust plan of reformulation.</small></p>
+                
+            <p><small> The No Added Sugar products in our squash range now account for 50.5% of all purchases and 42% of our Vimto still range in the
+                UK, with Vimto Minis and Squeezy products only available as no added sugar. We are committed to looking for healthier alternatives
+                and a good example of this is our continued support of the Feel Good brand, which contains no added sugars and 100%
+                natural ingredients" (Feel Good Drinks 2019). </small></p>
+                </div>
                </div>   
     </section>
        
@@ -103,12 +113,15 @@ export default {
 
 .about-title{
   color:  var(--orange-primary);
-  margin-top: 30px;
-    
+  margin-top: 30px
 }
 
 .about-header{
-  margin-left: 10%;
+  margin-left: 10%
+}
+
+.mobile-header{
+  width:60%
 }
 
 h6{
@@ -140,7 +153,7 @@ h6{
 
 .pattern{
   height: 1500px;
-  position: relative;
+  position: relative
 }
 
 .right-bar{
@@ -149,7 +162,7 @@ h6{
   overflow: hidden;
   background-color: var(--beige-sidebar);
   float: right;
-  position: relative;
+  position: relative
 }
 
 /*Paul's CSS for right-bar label*/
@@ -160,9 +173,8 @@ h6{
   bottom:400px;
   left: 50%;
   transform: translate(-50%, -100%) rotate(90deg);
-  padding-right: 100px;
+  padding-right: 100px
   }
-
 
 .about-image img{
   margin: 10px
@@ -179,12 +191,14 @@ h6{
 
 .consumer-notice{
   background-color: var(--purple-primary);
-  height: 350px;
-  margin-top: 20px
+  height: 10%;
+  margin-top: 20px;
+  padding-top: 30px
 }
 
 .consumer-info{
-  padding:40px 20px
+  margin-right: 70px;
+  margin-bottom: 50px
 }
 
 </style>
