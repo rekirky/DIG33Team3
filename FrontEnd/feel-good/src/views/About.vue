@@ -35,7 +35,7 @@
     </Section>
 
     <Section class="about-images d-flex align-item-center"> 
-     <div class="about-logo container">
+     <div class="about-logo container d-none d-lg-block">
         <div class="about-logo-sm">
         <img class="img-fluid float-left" src="@/assets/img/sm_logo.png" alt="feel good drinks logo small">
         </div>
@@ -53,7 +53,7 @@
         <img class="img-fluid" src="@/assets/img/family.png" alt="family at beach image">
           </div>
         <div class="about-image col-6">
-        <img class="img-fluid"src="@/assets/img/bottles_1.png" alt="multiple drink bottle image">
+        <img class="img-fluid" src="@/assets/img/bottles_1.png" alt="multiple drink bottle image">
           </div> 
         <div class="about-image col-6">     
         <img class="img-fluid" src="@/assets/img/beach.png" alt="aerial beach view image">
@@ -62,7 +62,7 @@
               </div>
                 </div>
                   </div>
-        <div class="side-bar container">
+        <div class="side-bar container d-none d-lg-block">
           </div>       
            </section>
               </section>
