@@ -10,7 +10,7 @@
 
     <p class="date text-center">Effective date: July 11, 2019</p>
 
-    <p> Feel-Good Drinks—Team 3 operates the http://[url] (the "Service").</p>
+    <p> Feel-Good Drinks—Team 3 operates the https://endgame-feelgood.com/ (the "Service").</p>
 
     <p>This page informs you of our policies regarding the collection, use, and disclosure of personal data
     when you use our Service and the choices you have associated with that data. Our Privacy Policy 
