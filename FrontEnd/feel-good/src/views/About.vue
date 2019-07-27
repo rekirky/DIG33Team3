@@ -54,7 +54,7 @@
         <!-- Bootstrap grid for image layout -->
       <div id="about-image-grid">
         <div class="image-grid">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center mx-auto">
         <div class="about-image col-6">
         <img class="img-fluid" src="@/assets/img/footprint.png" alt="footprint on beach image">
           </div>
