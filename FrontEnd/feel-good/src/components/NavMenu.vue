@@ -230,4 +230,11 @@ export default {
     left: 300px;
   }
 
+  @media only screen and (max-width: 1024px) {
+    #wrapper{
+      top: calc(20px + 4vw); 
+      left: calc(20px + 1vw);
+    }
+  }
+
 </style>
