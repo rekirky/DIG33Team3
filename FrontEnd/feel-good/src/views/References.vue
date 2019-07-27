@@ -7,7 +7,7 @@
 
     <!--mobile and tablet view header logo display-->
     <div class="mobile-header d-flex align-item-center text-center container">
-      <img class="img-fluid d-lg-none" src="@/assets/img/logo_247.png" alt="feel good drinks logo">
+      <img class="img-fluid d-lg-none mx-auto" src="@/assets/img/logo_247.png" alt="feel good drinks logo">
         </div>
       
     <h2>References</h2>
