@@ -191,7 +191,7 @@
     
     <h5>Contact Us</h5>
 
-    <p>If you have any questions about this Privacy Policy, please contact us: info@feelgooddrinks.com</p>
+    <p>If you have any questions about this Privacy Policy, please contact us: info@feelgood.com</p>
 
     </div>
   </section>
