@@ -62,7 +62,7 @@
       <div class="hand">
         <img src="@/assets/img/hand_2.png">
       </div>
-      <div class="hand plant">
+      <div class="plant">
         <img src="@/assets/img/plants_gif_placeholder.png">
       </div>
     </div>
@@ -314,7 +314,7 @@ export default {
 
   .bottle>img{
     transition: all ease-in .5s;
-    height: 50vh;
+    max-height: 50vh;
   }
 
   .bottle.active>img{
@@ -344,7 +344,7 @@ export default {
   .top-tag{
     color: var(--orange-primary);
     font-family: 'Holtwood One SC', sans-serif;
-    font-size: 6rem;
+    font-size: 5vw;
     line-height: 1;
     transition: all ease-out .3s;
     user-select: none;
@@ -353,7 +353,7 @@ export default {
   .name-tag{
     color: var(--orange-primary);
     font-family: 'Open Sans', sans-serif;
-    font-size: 5rem;
+    font-size: 4vw;
     font-weight: 700;
     line-height: 1;
     padding-bottom: 1rem;
@@ -364,7 +364,7 @@ export default {
   .bottom-tag{
     color: var(--orange-secondary);
     font-family: 'Open Sans', sans-serif;
-    font-size: 2.2rem;
+    font-size: 2vw;
     font-weight: 700;
     transition: all ease-out .3s;
     user-select: none;
@@ -437,7 +437,7 @@ export default {
 
   .two-third-title{
     font-family: 'Open Sans', sans-serif;
-    font-size: 3rem;
+    font-size: calc(.5rem + 2.2vw);
     color: var(--orange-primary);
     padding: 10px 0px;
   }
@@ -450,7 +450,7 @@ export default {
     line-height: 1.4;
   }
 
-  .hand{
+  .hand, .plant{
     position: absolute;
     bottom: 0%;
     left: 50%;
@@ -460,18 +460,27 @@ export default {
     width: 100%
   }
 
-  .hand.active{
+  .hand.active, .plant{
     height: 50%;
   }
 
-  .hand>img{
+  .hand>img, .plant>img{
     position: absolute;
     bottom: -100%;
     transform: translate(-50%, 5%);
     transition: all ease-in .5s;
   }
 
-  .hand.active>img{
+  .hand>img{
+    height: calc(200px + 12vw);
+  }
+
+
+  .plant>img{
+    height: calc(50px + 12vw);
+  }
+
+  .hand.active>img, .plant.active>img{
     position: absolute;
     bottom: 0;
   }
@@ -624,12 +633,12 @@ export default {
   }
 
   .fruit-bottle-container img{
-    height: 250px;
+    height: calc(120px + 6vw);
     object-fit: contain;
   }
 
   .fruit-bottle-container>.right-bottle>img, .fruit-bottle-container>.left-bottle>img{
-    transform: scale(2,2)
+    transform: scale(2,2);
   }
 
   .fruit-bottle-container:last-of-type{
@@ -711,7 +720,9 @@ export default {
     opacity: 1;    
   }
 
-  
+  button{
+    margin: 20px;
+  }
 
 
 </style>
