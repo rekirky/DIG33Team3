@@ -3,8 +3,14 @@
 
 <article class="privacy-policy">
 
+<!-- Bootstrap and custom classes to style elements -->
 <section class="policy-intro">
   <div class="container">
+
+  <!--mobile and tablet view header logo display-->
+  <div class="mobile-header d-flex align-item-center text-center container">
+  <img class="img-fluid d-lg-none mx-auto" src="@/assets/img/logo_247.png" alt="feel good drinks logo">
+      </div>
 
     <h2> Privacy Policy </h2>
 
@@ -243,7 +249,6 @@ h6{
 h6{
 text-align: center;
 }
-
 
 p {
   line-height: 1.5;
