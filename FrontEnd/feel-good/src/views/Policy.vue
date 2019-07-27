@@ -8,9 +8,9 @@
   <div class="container">
 
   <!--mobile and tablet view header logo display-->
-  <div class="mobile-header d-flex align-item-center text-center container">
-  <img class="img-fluid d-lg-none mx-auto" src="@/assets/img/logo_247.png" alt="feel good drinks logo">
-      </div>
+  <div class="mobile-header text-center container">
+   <a href="https://endgame-feelgood.com/"> <img class="img-fluid mx-auto d-lg-none" src="@/assets/img/logo_247.png" alt="feel good drinks logo"></a> 
+    </div>
 
     <h2> Privacy Policy </h2>
 
