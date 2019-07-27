@@ -15,7 +15,7 @@
 
         <!--mobile and tablet view header logo display-->
         <div class="mobile-header container">
-         <img class="img-fluid d-lg-none" src="@/assets/img/logo_247.png" alt="feel good drinks logo">
+        <a href="https://endgame-feelgood.com/"> <img class="img-fluid d-lg-none" src="@/assets/img/logo_247.png" alt="feel good drinks logo"></a>
           </div>
 
       <h2 class="about-title"><small> THE HEART OF OUR COMPANY </small></h2>
