@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     resize() {
-      if(window.innerWidth < 1025){
+      if(window.innerWidth < 1200){
         this.mobile = true
       }
       else{

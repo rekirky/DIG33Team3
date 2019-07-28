@@ -106,6 +106,7 @@ export default {
     top: 0;
     z-index: 3;
     height: 100%;
+    
   }
 
   #menu-container{
@@ -113,10 +114,11 @@ export default {
     width: 300px;
     height: 100%;
     background-color: rgba(255,255,255,.9);
-    left: -300px;
+    left: -310px;
     top: 0;
     transition: all ease-out .5s;
     padding-top: 100px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   }
 
   #menu-container.cross{

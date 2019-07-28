@@ -163,11 +163,15 @@ export default {
     //Expands the Background of the selected section
     bottomBarGrow(event){
       event.target.getElementsByClassName("bottom-bar")[0].classList.add("grow")
+      event.target.getElementsByClassName("top-tag")[0].classList.add("grow")
+      event.target.getElementsByClassName("name-tag")[0].classList.add("grow")
     },
 
     //Returns the background of the select section back to its orginal size
     bottomBarShrink(event){
       event.target.getElementsByClassName("bottom-bar")[0].classList.remove("grow")
+      event.target.getElementsByClassName("top-tag")[0].classList.remove("grow")
+      event.target.getElementsByClassName("name-tag")[0].classList.remove("grow")
     },
 
     //When the Feel section is selected, active Classes are added to reveal the section
@@ -350,6 +354,10 @@ export default {
     user-select: none;
   }
 
+  .top-tag.grow{
+    font-size: 5.5vw;
+  }
+
   .name-tag{
     color: var(--orange-primary);
     font-family: 'Open Sans', sans-serif;
@@ -359,6 +367,10 @@ export default {
     padding-bottom: 1rem;
     transition: all ease-out .3s;
     user-select: none;
+  }
+
+  .name-tag.grow{
+    font-size: 4.5vw;
   }
 
   .bottom-tag{
