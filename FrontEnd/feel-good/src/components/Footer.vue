@@ -69,6 +69,8 @@ export default {
     position: absolute;
     bottom: -120px;
     left: 0;
+    width: 25vw;
+    max-width:400px;
   }
 
   .footer-links{
@@ -93,7 +95,7 @@ export default {
     padding: 0px 5px;
   }
 
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 991px) {
     .footer-bottles {
       display: none;
     }

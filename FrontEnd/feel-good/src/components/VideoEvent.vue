@@ -1,11 +1,11 @@
 <template>
   <div class="video-event">
     <div class="row no-gutters">
-      <div class="col-2">
+      <div class="col-2 hidden-mobile">
         <div class="left-gutter">
         </div>
       </div>
-      <div class="col-9 center-content" :style="{ backgroundImage: 'url(' + require(`@/assets/img/events/${event.bgImage}`) + ')' }">
+      <div class="col-12 col-xl-9 center-content" :style="{ backgroundImage: 'url(' + require(`@/assets/img/events/${event.bgImage}`) + ')' }">
         <div class="">
           <img :src="require(`@/assets/img/events/${event.logoImage}`)" :alt="event.title" class="d-block">
         </div>
@@ -20,7 +20,7 @@
           <p>{{event.details}}</p>
         </div>
       </div>
-      <div class="col-1">
+      <div class="col-1 hidden-mobile">
         <div class="right-gutter">
           <img src="@/assets/img/patternside.png">
           <div class="section-label">{{event.title}}</div>
@@ -43,7 +43,7 @@ export default {
 <style scoped lang="scss">
 
   .video-event{
-    height: 100vh;
+    //height: 100vh;
   }
 
   .right-gutter{
@@ -94,6 +94,41 @@ export default {
 
   .center-content p, .center-content h3{
     margin: 20px 100px 30px 100px;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    
+    .hidden-mobile{
+      display: none;
+    }
+
+    .center-content{
+      min-height: 900px;
+      height: 60vh;
+      padding: 10px;
+    }
+
+    h3{
+      font-size: 5vw !important;
+      margin: 3vw !important;
+      text-align: center;
+    }
+
+    p{
+      margin: 1vw 6vw !important;
+      text-align: justify;
+    }
+
+    .video-player-container{
+      width: 80%;
+      max-height: 30vh;
+      margin: auto;
+    }
+
+    .center-content img{
+      max-width: 70vw;
+    }
+
   }
 
 </style>
