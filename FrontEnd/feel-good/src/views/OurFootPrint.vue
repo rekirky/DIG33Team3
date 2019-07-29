@@ -38,7 +38,7 @@
           <div class="globe-text col-6"><p class="globe-item">How we are making a stand against plastic pollution. 
               The oceans of the Earth are in danger from the disastrous effects of plastics. 
               The Feel Good Drinks Co. has adopted a new sustainable packaging solution, 
-              developed by world leading BillerudKorsnäs in Stockholm ( BillerudKorsnäs” 2019). </p>
+              developed by world leading BillerudKorsnäs in Stockholm ( BillerudKorsnäs 2019). </p>
               <h3 class="globe-text">The Paper Bottle Project </h3>
                 <p class="globe-item">The Paper Bottle project has provided an opportunity for the Feel Good Drinks Co. to align 
                our packaging to be 100% fully bio-based. Our recyclable paper bottle, is a world-first according 
