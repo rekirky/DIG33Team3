@@ -291,7 +291,7 @@ export default {
     }
 
     .left-fruit>img{
-      width: 50vw;
+      width: 60vw;
     }
 
     .bottle-group{
