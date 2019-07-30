@@ -174,7 +174,7 @@ h6{
   font-size: 1.5rem;
   text-transform: uppercase;
   position: absolute;
-  bottom:400px;
+  bottom: 410px;
   left: 50%;
   transform: translate(-50%, -100%) rotate(90deg);
   padding-right: 100px
