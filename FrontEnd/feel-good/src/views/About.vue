@@ -51,7 +51,7 @@
           </div>
 
        <div class="image-grid container">
-        <!-- Bootstrap grid for image layout -->
+        <!-- Bootstrap grid for responsive image layout -->
       <div id="about-image-grid">
         <div class="image-grid">
         <div class="row justify-content-center mx-auto">
