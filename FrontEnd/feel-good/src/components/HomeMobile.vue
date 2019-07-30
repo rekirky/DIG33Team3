@@ -18,9 +18,11 @@
       </div>
     </div>
     <div class="row no-gutters">
-      <img class="feature-img" src="@/assets/img/baby-beautiful.png">
+      <div class="feature-img">
+        <img src="@/assets/img/baby-beautiful.png">
+      </div>
     </div>
-    <div class="row bg-light-blue">
+    <div class="row no-gutters bg-light-blue">
       <div class="col-12 feature-title">
         We want you to feel the benefits of a healthy lifestyle and clean environment.
       </div>
@@ -59,9 +61,11 @@
       </div>
     </div>
     <div class="row no-gutters">
-      <img class="feature-img" src="@/assets/img/animal-bottlenose-dolphin.png">
+      <div class="feature-img">
+        <img src="@/assets/img/animal-bottlenose-dolphin.png">
+      </div>
     </div>
-    <div class="row bg-orange ">
+    <div class="row no-gutters bg-orange ">
       <div class="col-12 feature-title txt-white">
         You can become part of the crusade to protect our oceans for future generations
       </div>
@@ -113,9 +117,12 @@ export default {
     background-color: var(--orange-secondary);
   }
 
+  .logo{
+    padding-right: 1rem !important;
+  }
+
   .logo>img{
     margin-top: 1rem;
-    margin-right: 1rem;
     max-width: 125px;
     width: 15vw;
   }
@@ -142,20 +149,25 @@ export default {
   }
 
   .feature-img{
-    width: 140%;
-    margin-left: -20%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .feature-img>img{
+    width: 100%;
+    margin-left: 0%;
   }
 
   .feature-title{
     font-size: 8vw;
-    padding: 5vw 10vw;
+    padding: 5vw 10vw !important;
     font-weight: 700;
     color: var(--orange-primary);
   }
 
   .feature-text{
     font-size: 4vw;
-    padding: 0 10vw;
+    padding: 0 10vw !important;
     text-align: justify;
   }
 
