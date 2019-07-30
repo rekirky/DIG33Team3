@@ -4,12 +4,19 @@
   <!-- Bootstrap and custom classes to style elements -->
   <section class="reference-list text-center">
     <div class="container">
+
+    <!--mobile and tablet view header logo display-->
+    <div class="mobile-header text-center container">
+      <a href="https://endgame-feelgood.com/"> <img class="img-fluid d-lg-none mx-auto" src="@/assets/img/logo_247.png" 
+        alt="feel good drinks logo"></a>
+        </div>
       
     <h2>References</h2>
 
       <div>
         <h6>Build tools, frameworks and libraries</h6>
           <ul>   
+           <li>Adobe CC Dimension - https://www.adobe.com/au/products/dimension.html.</li>
            <li> Adobe CC Illustrator - https://www.adobe.com/au/products/illustrator.html.</li>
            <li> Adobe CC Photoshop - https://www.adobe.com/au/products/photoshop.html.</li>
            <li> Amazon Lightsail - https://lightsail.aws.amazon.com/.</li>
@@ -49,13 +56,10 @@
           <div> <p class="list-entry"> Brown, Deborah. 2019. ‘3D world illustration’. </p></div>
           <div> <p class="list-entry"> Creation Hill.  2019. Pexels.com. ‘Baby, beautiful, carefree’. https://www.pexels.com/photo/woman-carrying-baby-near-grass-1261909/. Accessed 20 June 2019.</p> </div>
           <div> <p class="list-entry"> Diamant24.  2019. ‘Mango’. https://www.123rf.com/photo_16258723_ripe-red-mango-fruit-on-white-background.html. Accessed 20 June 2019. </p></div>
-          <div> <p class="list-entry"> Eriksen M, Lebreton LCM, Carson HS, Thiel M, Moore CJ, et al. 2014. Plastic Pollution in the World’s Oceans: More than 5 Trillion PlasticPieces Weighing over 250,000 Tons Afloat at Sea. PLoS ONE 9(12): e111913. doi:10.1371/journal.pone.0111913. </p></div>
           <div> <p class="list-entry"> Feel Good Drinks Co. 2019. Feel Good Drinks Co. logo. http://www.feelgooddrinks.co.uk/. Accessed 10 June 2019. </p></div>
           <div> <p class="list-entry"> ImgBin. 2019. ‘Elderberry flower’. https://imgbin.com/png/tYxr8eYc/elderflower-cordial-elderberry-shrub-lemon-syrup-png. Accessed 20 June 2019. </p> </div>
           <div> <p class="list-entry"> Hellgram. 2017. Fruits patterns set. https://creativemarket.com/Hellgram/1358737-Fruits-patterns-set. Accessed 20 June 2019. </p> </div>
-          <div> <p class="list-entry"> Juliann. 2019. ‘Political map of the world. Gray world map-countries. Vector illustration - Vector'. https://www.shutterstock.com/image-vector/political-map-world-gray-mapcountries-vector-545606905?studio=1. Accessed 20 June 2019. </p></div>
           <div> <p class="list-entry"> Lukas. 2019. ‘Lemons’. https://www.pexels.com/photo/close-up-photo-of-sliced-yellow-lemon-on-white-surface-1414110/. Accessed 20 June 2019. </p></div>
-          <div> <p class="list-entry"> Mr. Anaked. 2019. Plastic bottle in the ocean sea water – Image. https://www.shutterstock.com/image-photo/plastic-bottle-ocean-sea-water-1101428288?. Accessed 20 June 2019. </p></div>
           <div> <p class="list-entry"> Pixelbay. 2019. ‘Blue Body Water’. https://www.pexels.com/photo/beach-foam-landscape-nature-533923/. Accessed 20 June 2019.</p> </div>
           <div> <p class="list-entry"> Pixelbay. 2019. ‘White and Gray Dolphin on Blue Water’. https://www.pexels.com/photo/white-and-gray-dolphin-on-blue-water-64219/. Accessed 20 June 2019.</p></div>
           <div> <p class="list-entry"> Pngimg.com. 2019. 'Pomegranate’ https://www.crazypng.com/18-pomegranate-png-images-downloaded-free-charge.html. Accessed 20 June 2019. </p> </div>
@@ -66,12 +70,12 @@
 
        <div class="reference-list-entries">
        <h6>Text-content</h6>
-          <div><p class="list-entry">BillerudKorsnäs. 2019. "Innovative Packaging Solutions for Sustainable Companies – BillerudKorsnäs.” https://www.billerudkorsnas.com/our-offer/packaging-solutions.</p></div>    
+          <div><p class="list-entry">BillerudKorsnäs. 2019. Innovative Packaging Solutions for Sustainable Companies – BillerudKorsnäs. https://www.billerudkorsnas.com/our-offer/packaging-solutions. Accessed 11 July 2019.</p></div>    
           <div><p class="list-entry"> Feel Good Drinks Co. 2019. Feel Good Drinks Co. http://www.feelgooddrinks.co.uk/. Accessed 10 June 2019. </p></div>     
-          <div><p class="list-entry"> FreePrivacyPolicy.com. 2019. Create a Free Privacy Policy. https://app.freeprivacypolicy.com/builder/download/retrieve?token=e1ea5d874ab4a48bc805b108d23b9fdb. Accessed 11 July 2019</p></div>
+          <div><p class="list-entry"> FreePrivacyPolicy.com. 2019. Create a Free Privacy Policy. https://app.freeprivacypolicy.com/builder/download/retrieve?. Accessed 11 July 2019.</p></div>
           <div><p class="list-entry">Geronimo. 2018. “More Plastic Replacement Initiatives: The Paper Bottle Project.” Earth Buddies. October 18, 2018. https://earthbuddies.net/paper-bottle-project/.</p></div>  
-          <div><p class="list-entry">Plasticadrift.Org. 2019. “Plastic Adrift.” http://plasticadrift.org/.</p></div>
-          <div><p class="list-entry">Product nutrition and descriptive information sourced July 14, 2019 for bottle hotspots for all pages from https://paperwaterbottle.com/from and multiple sources as follows: </p></div>
+          <div><p class="list-entry">Nichols PLC. 2019. Nichols PLC. - Corporate Responsibility. https://www.nicholsplc.co.uk/Home/CorporateResponsibility. Accessed 26 July 2019.</p></div>
+          <div><p class="list-entry">Product nutrition and descriptive information sourced July 14, 2019 for bottle products for all pages from https://paperwaterbottle.com/ and multiple sources as follows: </p></div>
    
         <div><p class="product-entries"> <em>Product Page - Refreshingly Still drinks</em></p>
         <ul>
@@ -132,8 +136,8 @@ export default {
 h2{
   color: var(--orange-primary);
   font-weight: bold;
+  text-align: center;
   margin-top: 40px;
-  padding: 20px
 }
 
 h6{

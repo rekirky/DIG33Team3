@@ -3,14 +3,20 @@
 
 <article class="privacy-policy">
 
+<!-- Bootstrap and custom classes to style elements -->
 <section class="policy-intro">
   <div class="container">
+
+  <!--mobile and tablet view header logo display-->
+  <div class="mobile-header text-center container">
+   <a href="https://endgame-feelgood.com/"> <img class="img-fluid mx-auto d-lg-none" src="@/assets/img/logo_247.png" alt="feel good drinks logo"></a> 
+    </div>
 
     <h2> Privacy Policy </h2>
 
     <p class="date text-center">Effective date: July 11, 2019</p>
 
-    <p> Feel-Good Drinks—Team 3 operates the http://[url] (the "Service").</p>
+    <p> Feel-Good Drinks—Team 3 operates the https://endgame-feelgood.com/ (the "Service").</p>
 
     <p>This page informs you of our policies regarding the collection, use, and disclosure of personal data
     when you use our Service and the choices you have associated with that data. Our Privacy Policy 
@@ -191,7 +197,7 @@
     
     <h5>Contact Us</h5>
 
-    <p>If you have any questions about this Privacy Policy, please contact us: info@feelgooddrinks.com</p>
+    <p>If you have any questions about this Privacy Policy, please contact us: info@feelgood.com</p>
 
     </div>
   </section>
@@ -243,7 +249,6 @@ h6{
 h6{
 text-align: center;
 }
-
 
 p {
   line-height: 1.5;
