@@ -1,11 +1,16 @@
 <template>
   <div class="products">
     <div class="row no-gutters">
-      <div class="col-2">
+      <div class="col-2 hidden-mobile">
         <div class="left-gutter">
         </div>
       </div>
-      <div class="col-9 center-content">
+      <div class="col-12 col-xl-9 center-content">
+        <div class="row no-gutters">
+          <div class="col-2"></div>
+          <div class="col-8 mobile-title">THE FEEL GOOD DRINK CO</div>
+          <div class="col-2 mobile-logo"><img src="@/assets/img/FGD_Logo_full.png"></div>
+        </div>
         <div class="logo down-move">
           <img src="@/assets/img/greenlogo_1.png">
         </div>
@@ -23,30 +28,32 @@
         <div class="natural-text up-move">
           100% NATURAL
         </div>
-        <div class="hero-bottle up-move">
-          <img src="@/assets/img/bottles/orangebottle_big.png">
-          <router-link to="/product/1">
-          <div class="plus-button">
-            <div class="circle">
-              <span class="bar"></span>
-              <span class="bar bar-vertical"></span>
+        <div class="hero-bottle-group">
+          <div class="hero-bottle up-move">
+            <img src="@/assets/img/bottles/orangebottle_big.png">
+            <router-link to="/product/1">
+            <div class="plus-button">
+              <div class="circle">
+                <span class="bar"></span>
+                <span class="bar bar-vertical"></span>
+              </div>
             </div>
+            </router-link>
           </div>
-          </router-link>
-        </div>
-        <div class="hero-bottle up-move">
-          <img src="@/assets/img/bottles/pinkbottle_big.png">
-          <router-link to="/product/2">
-          <div class="plus-button">
-            <div class="circle">
-              <span class="bar"></span>
-              <span class="bar bar-vertical"></span>
+          <div class="hero-bottle up-move">
+            <img src="@/assets/img/bottles/pinkbottle_big.png">
+            <router-link to="/product/2">
+            <div class="plus-button">
+              <div class="circle">
+                <span class="bar"></span>
+                <span class="bar bar-vertical"></span>
+              </div>
             </div>
+            </router-link>
           </div>
-          </router-link>
         </div>
       </div>
-      <div class="col-1">
+      <div class="col-1 hidden-mobile">
         <div class="right-gutter">
           <img src="@/assets/img/patternside.png">
           <div class="section-label">products</div>
@@ -85,6 +92,10 @@ export default {
 
 <style scoped lang="scss">
 
+  .center-content{
+    min-height: calc(100vh - 160px);
+  }
+
   .right-gutter{
     min-height: calc(100vh - 160px);
     background-color: var(--beige-sidebar);
@@ -112,9 +123,15 @@ export default {
     padding-right: 100px;
   }
 
+  .hero-bottle-group{
+    height: 100%;
+    max-height: calc(100vh - 160px);
+  }
+
   .hero-bottle{
     height: 100%;
-    max-width: 300px;
+    max-height: calc(100vh - 160px);
+    width: 15vw;
     float: right;
     position: relative;
     z-index: 2;
@@ -122,8 +139,12 @@ export default {
   }
 
   .hero-bottle>img{
-    height: 100%;
-    object-fit: contain;
+    max-height: 100%;
+    max-width: 15vw;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
   }
 
   .plus-button{
@@ -194,30 +215,39 @@ export default {
     height: 100%;
   }
 
+  .left-fruit>img{
+    width: 20vw;
+  }
+
   .bottle-group{
     position: absolute;
-    bottom: 100px;
+    bottom: 5.5vw;
     left: 25%;
     width: 50%;
     height: 100%;
     z-index: 1;
   }
 
+  .bottle-group>img{
+    width: 20vw;
+  }
+
   .right-fruit{
     position: absolute;
     bottom: 0px;
     right: 0px;
-    width: 50%;
+    max-width: 20vw;
     height: 100%;    
   }
 
-  .fruits-bottles img{
+  .right-fruit>img{
+    width: 20vw;
   }
 
   .natural-text{
     position: absolute;
     color: var(--green-primary);
-    font-size: 4rem;
+    font-size: 3.5vw;
     font-weight:700;
     padding: 1rem;
     bottom: 0px;
@@ -235,6 +265,76 @@ export default {
 
   .center-content{
     overflow: hidden;
+  }
+
+  .mobile-title, .mobile-logo>img{
+    display: none;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    
+    .hidden-mobile, .logo{
+      display: none;
+    }
+
+    .center-content{
+      width: 100vw;
+      overflow: hidden;
+    }
+
+    .left-fruit{
+      position: absolute;
+      bottom: 0px;
+      left: -25%;
+      width: 50%;
+      height: 100%;
+    }
+
+    .left-fruit>img{
+      width: 50vw;
+    }
+
+    .bottle-group{
+      position: absolute;
+      bottom: 5.5vw;
+      left: 25%;
+      width: 50%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .bottle-group>img{
+      width: 20vw;
+    }
+
+    .right-fruit{
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      max-width: 20vw;
+      height: 100%;    
+    }
+
+    .right-fruit>img{
+      width: 20vw;
+    }
+
+    .mobile-title{
+      font-size: 4.5vw;
+      font-weight: 700;
+      padding-top: 2.5rem;
+      color: var(--orange-primary);
+      display: block;
+    }
+
+    .mobile-logo>img{
+      margin-top: 1rem;
+      margin-right: 1rem;
+      max-width: 125px;
+      width: 15vw;
+      display: inline;
+    }
+
   }
 
 </style>
