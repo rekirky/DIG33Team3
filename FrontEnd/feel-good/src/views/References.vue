@@ -59,6 +59,7 @@
           <div> <p class="list-entry"> Feel Good Drinks Co. 2019. Feel Good Drinks Co. logo. http://www.feelgooddrinks.co.uk/. Accessed 10 June 2019. </p></div>
           <div> <p class="list-entry"> ImgBin. 2019. ‘Elderberry flower’. https://imgbin.com/png/tYxr8eYc/elderflower-cordial-elderberry-shrub-lemon-syrup-png. Accessed 20 June 2019. </p> </div>
           <div> <p class="list-entry"> Hellgram. 2017. Fruits patterns set. https://creativemarket.com/Hellgram/1358737-Fruits-patterns-set. Accessed 20 June 2019. </p> </div>
+          <div> <p class="list-entry"> Juliann. 2019. ‘Political map of the world. Gray world map-countries. Vector illustration - Vector'.  https://www.shutterstock.com/image-vector/political-map-world-gray-mapcountries-vector-545606905?. Accessed 20 June 2019. </p></div>
           <div> <p class="list-entry"> Lukas. 2019. ‘Lemons’. https://www.pexels.com/photo/close-up-photo-of-sliced-yellow-lemon-on-white-surface-1414110/. Accessed 20 June 2019. </p></div>
           <div> <p class="list-entry"> Pixelbay. 2019. ‘Blue Body Water’. https://www.pexels.com/photo/beach-foam-landscape-nature-533923/. Accessed 20 June 2019.</p> </div>
           <div> <p class="list-entry"> Pixelbay. 2019. ‘White and Gray Dolphin on Blue Water’. https://www.pexels.com/photo/white-and-gray-dolphin-on-blue-water-64219/. Accessed 20 June 2019.</p></div>
