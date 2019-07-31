@@ -8,27 +8,32 @@
            <div class="col-2 logo img-fluid"><img src="@/assets/img/FGD_Logo_full.png"></div>
             </div>
 
+<!-- Bootstrap and custom classes to style elements -->
  <article class="our-footprint">
-    <div col class="right-bar img-fluid container">
+   <!--display property used to hide right sidebar on mobile and tablet view using bootstrap breakpoints-->
+     <div class="right-bar d-none d-lg-block img-fluid container">
       <img class="pattern" src="@/assets/img/patternside.png" alt="side-bar pattern">
-        </div>    
-       
+        <div class="section-label">Our Gloabal Footprint</div>
+         </div>    
+
 <section class="footprint-main d-flex align-items-center text-center"> 
-   <div class="footprint-side-logo"> 
+   <div class="footprint-side-logo d-none d-lg-block"> 
     <div class="footprint-logo container">
       <img class="img-fluid" src="@/assets/img/sm_logo.png" alt="feel good drinks logo small">
         </div>
           </div> 
-  <div class="footprint-bar">
+          
+  <div class="footprint-bar d-none d-lg-block d-md-block">
     <div class="footprint-gif container">
       <img class="img-fluid float-left" src="@/assets/img/feet.gif" alt="footprint animation">
         </div>
           </div>
+
     <div class="footprint-overview"> 
       <div class="footprint-header d-flex align-items-center">       
         <div class="container text-center">
-          <div class="row">
-            <h1 class="text-light col-12">Our Footprint</h1>
+          <div class="row no-gutters">
+            <h1 class="text-light col-12"><small>Our Footprint</small></h1>
               <div class="header-text col-12">
                 <hr>
                   <h6 class="text-center col-12">This is how we are making a stand against plastic pollution.</h6>
@@ -218,7 +223,15 @@ hr{
 }
 
 .footprint-bar{
-  width:20%
+  width:20%;
+  padding: 0px;
+  margin: 0px
+}
+
+.pattern{
+  height: 1500px;
+  float: right;
+  position: relative
 }
 
 .right-bar{
