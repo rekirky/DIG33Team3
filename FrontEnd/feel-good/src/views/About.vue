@@ -8,9 +8,8 @@
          <div class="col-8 title">THE FEEL GOOD DRINK CO</div>
            <div class="col-2 logo img-fluid"><img src="@/assets/img/FGD_Logo_full.png"></div>
             </div>
-
-    
-       <!-- Bootstrap and custom classes to style elements -->
+            
+       <!--Bootstrap and custom classes to style elements -->
     <article class="about-main">     
        <!--display property used to hide right sidebar on mobile and tablet view-->
       <div class="right-bar d-none d-lg-block img-fluid container">
