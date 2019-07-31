@@ -1,12 +1,12 @@
 <template>
   <div class="social-event">
     <div class="row no-gutters">
-      <div class="col-2">
+      <div class="col-2 hidden-mobile">
         <div class="left-gutter">
         </div>
       </div>
       <!-- Social Event Informaiton -->
-      <div class="col-9 center-content" :style="{ backgroundImage: 'url(' + require(`@/assets/img/events/${event.bgImage}`) + ')' }">
+      <div class="col-xl-9 col-12 center-content" :style="{ backgroundImage: 'url(' + require(`@/assets/img/events/${event.bgImage}`) + ')' }">
         <h4>{{event.subTitle}}</h4>
         <h1>{{event.title}}</h1>
         <div class="event-details-container" :style="'background-color: ' + event.accentColor">
@@ -15,7 +15,7 @@
           <router-link :to="this.event.register" tag="button">Register Now!</router-link>
         </div>
       </div>
-      <div class="col-1">
+      <div class="col-1 hidden-mobile">
         <div class="right-gutter">
           <img src="@/assets/img/patternside.png">
           <div class="section-label">{{event.title}}</div>
@@ -37,12 +37,9 @@ export default {
 
 <style scoped lang="scss">
 
-  .social-event{
-    height: 100vh;
-  }
-
   .right-gutter{
-    min-height: 100vh;
+    min-height: 100%;
+    height: 100vh;
     background-color: var(--beige-sidebar);
     overflow: hidden;
     position: relative;
@@ -64,10 +61,10 @@ export default {
     position: absolute;
     bottom:0;
     left: 50%;
-    width: 400%;
-    transform: translate(-50%, -100%) rotate(90deg);
-    padding-right: 100px;
-    text-align: left;
+    width: 100vh;
+    transform: translate(-50%, -50vh) rotate(90deg);
+    padding-right: 50px;
+    text-align: right;
   }
 
   .center-content{
@@ -85,6 +82,34 @@ export default {
   .event-details-container{
     margin: 20px 5% 20px 40%;
     padding: 30px;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    
+    .hidden-mobile{
+      display: none;
+    }
+
+    .event-details-container{
+      margin: 20px 0px;
+      text-align: justify;
+      -moz-text-align-last: center;
+      text-align-last: center;
+      padding:3vw;
+    }
+
+    h1{
+      font-size: 6vw !important;
+      margin: 10px;
+      text-align: center;
+    }
+
+    h4{
+      font-size: 5vw !important;
+      margin: 10px;
+      text-align: center;
+    }
+
   }
 
 </style>
