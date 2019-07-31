@@ -1,5 +1,6 @@
 <template>
 <div class="our-foot-print">
+
 <!--Modified Paul's html for mobile view header title and logo-->
   <div class="row no-gutters d-lg-none d-md-none">
       <div class="col-12 top-bar"></div>
@@ -32,7 +33,7 @@
     <div class="footprint-overview"> 
       <div class="footprint-header d-flex align-items-center">       
         <div class="container text-center">
-          <div class="row no-gutters">
+          <div class="row">
             <h1 class="text-light col-12"><small>Our Footprint</small></h1>
               <div class="header-text col-12">
                 <hr>
@@ -42,25 +43,27 @@
                           </div>
                             </div>
                         
-
  <section class="footprint-info">
     <div class=" d-flex align-items-center">      
-      <div class="container text-left">
-        <div class="row no-gutters">
+      <div class="container">
+        <div class="row">
         <!--bootstrap grid used to stack columns based on breakpoints/screen size-->
           <div class="globe-text col-lg-6"><p class="globe-item text-sm-justify text-lg-left">How we are making a stand against plastic pollution. 
               The oceans of the Earth are in danger from the disastrous effects of plastics. 
               The Feel Good Drinks Co. has adopted a new sustainable packaging solution, 
               developed by world leading BillerudKorsnäs in Stockholm (BillerudKorsnäs 2019). </p>
               <h3 class="globe-text">The Paper Bottle Project </h3>
-                <p class="globe-item text-sm-justify text-lg-left">The Paper Bottle project has provided an opportunity for the Feel Good Drinks Co. to align 
+                <p class="globe-item text-lg-left">The Paper Bottle project has provided an opportunity for the Feel Good Drinks Co. to align 
                our packaging to be 100% fully bio-based. Our recyclable paper bottle, is a world-first according 
                to Earth Buddies (Geronimo 2018) and the catalyst for our exciting and positive change.</p>
             <!--bootstrap css used to align text based on breakpoints/screen size-->
-               <p class=" text-sm-center text-lg-right"><b>The most exciting fact is that this bottle is 100% biodegradable and recyclable.</b></p>
+               <p class="text-lg-right"><b>The most exciting fact is that this bottle is 100% biodegradable and recyclable.</b></p>
                   </div>
                     <div class="globe col-lg-6">      
-                      <img class="img-fluid" src="@/assets/img/globe.png" alt="global plastic pollution image">
+                      <div id="earth">
+                      <div><h3 class="globe">All the trash in the ocean could circle the Earth 425 times. </h3>
+		                    </div>
+                          </div>	            
                         </div>          
                           </div>   
                             </div>
@@ -69,7 +72,7 @@
       </div> <!--end footprint overview-->
    </section><!--end footprint main-->
 
-  <section class="Bottles-main"> 
+  <section class="bottles-main"> 
     <div class="paper-bottles d-flex align-items-left container">       
  	    <div class="row">
        <div class="col-12">
@@ -95,7 +98,7 @@
               
  	         <div class="specs-mobile d-lg-none">
             <p class="specs text-justify"><b>The bottles are made from 100% organic and renewable moulded fibre. They are designed to look 
-              beautiful and be functional with a structural integrity comparable to plastic bottles and ecofriendly printable coating</b></p>
+              beautiful and be functional with a structural integrity comparable to plastic bottles.</b></p>
             <hr class="mobile-line text-center">
              </div> 
               </div> 
@@ -161,7 +164,7 @@
        </div> <!--end paper bottles container-->
     </section>  <!--end bottles-main section-->
  </article>
-   
+
 </div>
 </template>
 
@@ -283,12 +286,8 @@ h3.globe-text{
   padding-bottom: 10px
 }
 
-.globe{
-  margin-top:5%;
-}
-
 img.globe{
-  padding:50px;
+  padding:40px;
   float: left
 }
 
@@ -373,6 +372,72 @@ p.specs{
   margin-bottom: 25px;
   color: var(--green-secondary);
   text-align: left
+}
+
+/*Deb's code to style globe statistic text */
+h3.globe{
+text-align: center; 
+vertical-align: middle; 
+color: #fff;
+padding: 55px;
+text-shadow: 3px 3px 6px #000;
+}
+
+/*Start code snippet and comments for Earth Spin animation sourced by Deb from W3Bits.(2019). Create a 3d Earth with Rotating Animation
+ with CSS. [online] Available at: https://w3bits.com/css-earth/ [Accessed 28 Jul. 2019].*/
+
+#earth {
+  /* [1] Allow it to contain the absolutely positions pseudo-elements*/
+  position: relative;
+
+  /* [2] Set-up the dimensions and spacing */
+  width: 350px;
+  height: 350px;
+  margin: 3em auto;
+
+  /* [3] Prepare the animation effects */
+  transition: transform 2000ms linear;
+  animation: rotate 25s linear infinite; /* This is going to be defined in the next step */
+
+  /* [4] Tweak the appearance, and give it a nice background i.e. the world map */
+  color: #000;
+  border-radius: 50%;
+  background: url(../assets/img/worldmap_base.png) 0 0 repeat;
+  box-shadow: inset 20px 0 80px 6px rgba(0, 0, 0, 1);
+
+  /* [5] Position things in a 3d space */
+  transform-style: preserve-3d;
+}
+
+#earth:before {
+  /* [1] Again, break the flow to show this as an overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* [2] Again, give it all the available space */
+  width: 100%;
+  height: 100%;
+
+  /* [3] Duh. */
+  content: '';
+
+  /* [4] Add some shape and overlay effect to it */
+  opacity: .2;
+  border-radius: 50%;
+  background: radial-gradient(circle at 100px 100px, #fff, #000);
+}
+
+/*End code snippet and comments for Earth Spin animation sourced by Deb from W3Bits.(2019). Create a 3d Earth with Rotating Animation
+ with CSS. [online] Available at: https://w3bits.com/css-earth/ [Accessed 28 Jul. 2019].*/
+
+/*Code snippet for Earth Spin animation keyframes sourced from 
+Stack Overflow.(2017). Rotating globe in CSS. [online] Available at:
+ https://stackoverflow.com/questions/27781634/rotating-globe-in-css [Accessed 31 Jul. 2019].*/
+
+@keyframes rotate {
+  from { background-position:  100%  0; }
+  to {   background-position:    0   0; }
 }
 
 </style>
