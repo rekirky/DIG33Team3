@@ -5,7 +5,7 @@
   <section class="reference-list text-center">
     <div class="container">
 
-    <!--mobile and tablet view header logo display-->
+    <!--mobile and tablet view header logo display using bootstrap CSS-->
     <div class="mobile-header text-center container">
       <a href="https://endgame-feelgood.com/"> <img class="img-fluid d-lg-none mx-auto" src="@/assets/img/logo_247.png" 
         alt="feel good drinks logo"></a>
@@ -75,6 +75,7 @@
           <div><p class="list-entry"> FreePrivacyPolicy.com. 2019. Create a Free Privacy Policy. https://app.freeprivacypolicy.com/builder/download/retrieve?. Accessed 11 July 2019.</p></div>
           <div><p class="list-entry">Geronimo. 2018. “More Plastic Replacement Initiatives: The Paper Bottle Project.” Earth Buddies. October 18, 2018. https://earthbuddies.net/paper-bottle-project/.</p></div>  
           <div><p class="list-entry">Nichols PLC. 2019. Nichols PLC. - Corporate Responsibility. https://www.nicholsplc.co.uk/Home/CorporateResponsibility. Accessed 26 July 2019.</p></div>
+          <div><p class="list-entry">Plasticadrift.Org. 2019. “Plastic Adrift.” http://plasticadrift.org/.  Accessed 10 June 2019.</p></div>
           <div><p class="list-entry">Product nutrition and descriptive information sourced July 14, 2019 for bottle products for all pages from https://paperwaterbottle.com/ and multiple sources as follows: </p></div>
    
         <div><p class="product-entries"> <em>Product Page - Refreshingly Still drinks</em></p>
@@ -99,8 +100,8 @@
             </div> 
           
       </div>
-  </div>             
-</section> 
+  </div>      
+</section> <!--end reference list section-->    
 
 <section>
     <div class="student-notice">
@@ -185,7 +186,6 @@ p.product-entries{
   margin-top:30px;
   margin-bottom: 10px
 }
-
 
 p{
   margin-left: 15%;
