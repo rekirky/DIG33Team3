@@ -59,13 +59,56 @@
     <div class="paper-bottles d-flex align-items-left container">       
  	    <div class="row">
        <div class="col-12">
-         <h5 class="spec-header text-left"><small><b> How we went Green</b></small></h5>
+         <h5 class="spec-header text-left d-none d-lg-block"><small><b> How we went Green</b></small></h5>
            </div>
-            <div class="bottle-image">
-	           <img class="img-fluid float-right" src="@/assets/img/bottles/Paper-Bottle_apple_499px.png" alt="apple flavour paper bootle image">
+
+    <!--mobile and tablet bottle specs section-->
+    <div class="d-lg-none"> 
+      <div class="container">
+        <div class="col-12">
+         <hr class="mobile-line text-center">
+         <h5><b> How we went Green</b></h5>
+           </div>
+      <div>
+       <div class="container">
+        <div class="row">
+          <div class="col-4 logo-mobile img-fluid align-self-end"><img src="@/assets/img/sm_logo.png"></div>
+           <div>
+	           <img class="img-fluid col" src="@/assets/img/bottles/Paper-Bottle_apple_499px.png" alt="apple flavour paper bootle image">
               </div>
-  
-            <div class="bottle-specifications">
+                </div>
+                  </div>
+              
+ 	         <div class="specs-mobile d-lg-none">
+            <p class="specs text-justify"><b>The bottles are made from 100% organic and renewable moulded fibre. They are designed to look 
+              beautiful and be functional with a structural integrity comparable to plastic bottles and ecofriendly printable coating</b></p>
+            <hr class="mobile-line text-center">
+             </div> 
+              </div> 
+              <div class="paper-bottle-mobile d-lg-none">
+              <div class="col">
+                <h5 class="bottle-text text-left">The size of it?</h5>
+                  <p class="plastic-free text-justify">The oceans and coastlines of the Earth are in threat of plastic pollution.
+                    As plastic is lighter than water it floats quite easily on the currents and eddies, 
+                    driven by wind and sun. The plastics don't only sit on the surface of the ocean,
+                    they move in three-dimensional motion rising from the deepest parts of the ocean and 
+                    affecting the quality of marine life and threatening to endanger many marine species (Plastic Adrift 2019).</p>
+                <h5 class="bottle-text text-left">How we have changed our packaging</h5>
+                  <p class="plastic-free text-justify">The structure of the bottles is developed using virgin pulp harvested from Scandinavian forests (Geronimo 2018). 
+                    The 100% organic and renewable moulded fibre (derived from bamboo, bulrushes, and sugar cane) forms the outside part of the bottle and 
+                    the inner lining is coated in recyclable resins.</p>
+                  <p class="plastic-free text-justify">The bottle's design properties are developed from a pulp recipe by BillerudKorsnäs and can withstand high pressures. The bottles are 100% recyclable and this makes us Feel Good. </p>
+                  <hr class="mobile-line-blue text-center">
+                    </div>
+                      </div>
+            </div>
+             </div> 
+    
+           <!--desktop view bottle specs section-->
+            <div class="bottle-image d-none d-lg-block">
+	           <img class="logo img-fluid float-right" src="@/assets/img/bottles/Paper-Bottle_apple_499px.png" alt="apple flavour paper bootle image">
+              </div>
+            <div class="bottle-specifications d-none d-lg-block">
              <div class="container">
               <div class="row">
                <div class="info-tag-lines col align-self-end">
@@ -84,7 +127,7 @@
                          </div> <!--end bottle info tags row-->
                           </div>
 
-            <div class="paper-bottle-text text-left">
+            <div class="paper-bottle-text text-left d-none d-lg-block">
               <div class="col">
               <h5 class="bottle-text">The size of it?</h5>
                 <p class="plastic-free">The oceans and coastlines of the Earth are in threat of plastic pollution.
@@ -145,7 +188,7 @@ hr{
 .footprint-info{
   width:100%;
   background-color: var(--blue-secondary);
-  height: 550px
+  height: 60%
 }
 
 .footprint-bar{
@@ -189,7 +232,7 @@ h3.globe-text{
 }
 
 .globe{
-  margin-top:60px;
+  margin-top:5%;
 }
 
 img.globe{
@@ -198,7 +241,7 @@ img.globe{
 }
 
 .bottles.main{
-  width:100%;
+  width:100%
 }
 
 .paper-bottle-text{
@@ -216,11 +259,15 @@ h5.spec-header{
   color: var(--green-primary);
   margin-top: 10px;
   margin-left: 110px;
-  margin-bottom: 0px;
+  margin-bottom: 0px
 }
 
 .spec-header{
   width: 30%;
+}
+
+h5{
+  color: var(--green-secondary);
 }
 
 h5.bottle-text{
@@ -230,7 +277,33 @@ h5.bottle-text{
 .bottle-specifications{
   width:28%;
 }
+.specs-mobile{
+  padding: 20px;
+  padding-bottom: 0px
+}
+.paper-bottle-mobile{
+padding: 20px
+}
 
+.logo-mobile>img{
+  max-width: 125px;
+  width: 20vw;
+  margin-bottom: 30%;
+  margin-left:20%
+  }
+
+  hr.mobile-line{
+  border: 1.5px solid var(--green-secondary);
+  width: 100%;
+  margin-top: 5%;
+}
+  
+hr.mobile-line-blue{
+  border: 1.5px solid var(--blue-primary);
+  width: 100%;
+  margin-top: 5%;
+}
+  
 hr.info-lines{
   width: 100%;
   border: 1px solid var(--green-secondary);
@@ -240,7 +313,7 @@ hr.info-lines{
 }
 
 .bottle-image{
-  width:20%;
+  width:20%
 }
 
 p.specs{
