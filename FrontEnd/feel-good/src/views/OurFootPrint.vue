@@ -1,5 +1,12 @@
 <template>
 <div class="our-foot-print">
+<!--Modified Paul's html for mobile view header title and logo-->
+  <div class="row no-gutters d-lg-none d-md-none">
+      <div class="col-12 top-bar"></div>
+       <div class="col-2"></div>
+         <div class="col-8 title">THE FEEL GOOD DRINK CO</div>
+           <div class="col-2 logo img-fluid"><img src="@/assets/img/FGD_Logo_full.png"></div>
+            </div>
 
  <article class="our-footprint">
     <div col class="right-bar img-fluid container">
@@ -164,19 +171,38 @@ export default {
 
 .footprint-header {
   background-color: var(--blue-primary);
-  height: 220px;
+  height: 270px;
   margin-top: 0px;
   padding-bottom: 30px;
 }
 
 .header-text{ 
-  width: 50%;
+  padding-left: 20px;
+  padding-right: 20px
 }
 
 h1{
  text-align: center;
  padding-top: 20px;
 }
+
+/*Paul's CSS for mobile view header title and logo*/
+.title{
+  font-size: 4.5vw;
+  font-weight: 700;
+  padding-top: 2.5rem;
+  color: var(--orange-primary);
+  }
+
+.logo{
+  padding-right: 1rem !important;
+  }
+
+.logo>img{
+  margin-top: 1rem;
+  max-width: 125px;
+  width: 15vw;
+  }
 
 hr{
   border: 1px solid white;
@@ -198,12 +224,23 @@ hr{
 .right-bar{
   width:10%;
   height: 1500px;
+  overflow: hidden;
   background-color: var(--beige-sidebar);
   float: right;
-}
-.pattern{
-  height: 1500px;
-}
+  position: relative
+} 
+
+/*Paul's CSS for right-bar label*/
+ .section-label{
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  width: 500px;
+  position: absolute;
+  bottom: 790px;
+  left: 50%;
+  transform: translate(-50%, -100%) rotate(90deg);
+  padding-right: 100px
+  } 
 
 .footprint-side-logo {
   padding-left: 10px;
@@ -221,7 +258,7 @@ hr{
 
 p{
  color: var(--blue-primary);
- line-height: 1.4;
+ line-height: 1.4
 }
 
 h3.globe-text{
