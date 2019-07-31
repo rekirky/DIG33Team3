@@ -17,67 +17,43 @@
         </div>
         <!-- Product Carousel  -->
         <div class="row no-gutters carousel-container">
-          <div id="productSelector" class="carousel slide">
+          <div id="productSelector" class="carousel">
             <div v-if="this.filteredProducts.length != 0">
               <ol class="carousel-indicators">
                 <!-- Carousel Indicators generated from the number of events in the array. -->
-                <div v-for="(product, index) in filteredProducts" :key="index">
-                  <li v-if="index == 0" :id="'indicator-' + index" class="active" v-on:click="activeProduct(index)" :style="'background-color: ' + currentProductGroup.accentColor"></li>
-                  <li v-else :id="'indicator-' + index" v-on:click="activeProduct(index)" :style="'background-color: ' + currentProductGroup.accentColor"></li>
+                <div v-for="(product, index) in filteredProducts" :key="index" class="col-4">
+                  <li v-if="index == 0" :id="'indicator-' + index" class="indicator active" v-on:click="activeProduct(index)" :style="'background-color: ' + currentProductGroup.accentColor"></li>
+                  <li v-else :id="'indicator-' + index" class="indicator" v-on:click="activeProduct(index)" :style="'background-color: ' + currentProductGroup.accentColor "></li>
                 </div>
               </ol>
 
 
               <div class="carousel-inner">
                 <!-- Carousel Product content generated from the number of events in the array. -->
-                <div v-for="(product, index) in filteredProducts" :key="index">
-                  <div v-if="index == 0" class="carousel-item active" :id="'item-' + index">
-                    <div class="row">
-                      <div class="col-4 offset-1">
-                        <img  :src="require(`@/assets/img/products/${product.bottleGroupImage}`)" :alt="product.name" class="d-block">
+                <div class="row no-gutters">
+                  <div v-for="(product, index) in filteredProducts" :key="index" class="col-4">
+                    <div v-if="index == 0" class="product-select active" :id="'item-' + index" v-on:click="activeProduct(index)">
+                      <div class="row">
+                          <img  :src="require(`@/assets/img/products/${product.bottleGroupImage}`)" :alt="product.name" class="d-block">
                       </div>
-                      <div class="col-5">
-                        <div class="row">
-                          <div class="" :style="'color: ' + currentProductGroup.accentColor">
-                            <h3>{{product.name}}</h3>
-                            <p>*100% naturally occuring fruit sugars</p>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <img :src="require(`@/assets/img/products/${product.fruitGroupImage}`)" :alt="product.name" class="d-block">
+                      <div class="row">
+                        <div class="" :style="'color: ' + currentProductGroup.accentColor">
+                          <h3>{{product.name}}</h3>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div v-else class="carousel-item" :id="'item-' + index">
-                    <div class="row">
-                      <div class="col-4 offset-1">
-                        <img  :src="require(`@/assets/img/products/${product.bottleGroupImage}`)" :alt="product.name" class="d-block">
+                    <div v-else class="product-select" :id="'item-' + index" v-on:click="activeProduct(index)">
+                      <div class="row">
+                          <img  :src="require(`@/assets/img/products/${product.bottleGroupImage}`)" :alt="product.name" class="d-block">
                       </div>
-                      <div class="col-5">
-                        <div class="row">
-                          <div class="" :style="'color: ' + currentProductGroup.accentColor">
-                            <h3>{{product.name}}</h3>
-                            <p>*100% naturally occuring fruit sugars</p>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <img :src="require(`@/assets/img/products/${product.fruitGroupImage}`)" :alt="product.name" class="d-block">
+                      <div class="row">
+                        <div class="" :style="'color: ' + currentProductGroup.accentColor">
+                          <h3>{{product.name}}</h3>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-
-              <!-- Next and Previous Selectors -->
-              <div class="carousel-control-prev" role="button" :style="'color: ' + currentProductGroup.accentColor" v-on:click="prevProduct">
-                <span class="fas fa-angle-left" aria-hidden="true" :style="'color: ' + currentProductGroup.accentColor" ></span>
-                <span class="sr-only">Previous</span>
-              </div>
-              <div class="carousel-control-next" role="button" :style="'color: ' + currentProductGroup.accentColor" v-on:click="nextProduct">
-                <span class="fas fa-angle-right" aria-hidden="true" :style="'color: ' + currentProductGroup.accentColor" ></span>
-                <span class="sr-only">Next</span>
               </div>
             </div>
           </div>
@@ -231,6 +207,23 @@ export default {
     margin: 0; 
   }
 
+  .carousel-indicators{
+    margin: 20px 0px;
+  }
+
+  .indicator{
+    margin: auto;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+  }
+
+  .carousel-inner{
+    position: absolute;
+    top: 50%;
+    transform: translate( 0, -50%);
+  }
+
   .carousel-container{
     height: calc(85vh - 160px);
     background-image: url('../assets/img/bgpattern2.png');    
@@ -241,35 +234,28 @@ export default {
 
   .carousel{
     background-color: white;
-    width: 60%;
+    width: 80%;
     height: 80%;
     margin: auto;
   }
 
-  .carousel{
-    font-size: 2.5rem;
+  .carousel h3{
+    font-size: 1vw;
   }
 
-  .carousel-item>.row{
-    margin-top:2%;
+  .product-select{
+    padding: 20px;
   }
 
-  .carousel-item>div>div>.row{
-    margin-top: 4%;
+  .product-select:hover h3{
+    text-shadow: 0px 2px 20px rgba(50,50,50,0.5);
   }
 
   .carousel img{
-    width: 100%;
-  }
-
-  .carousel-item{
-    transition: all ease-out 1s;
-    display: block;
-    opacity: 0;
-  }
-
-  .carousel-item.active{
-    opacity: 1;
+    max-width: 70%;
+    max-height: 50%;
+    margin: auto;
+    transition: all cubic-bezier(0.26, 0.1, 0.27, 1.5) 0.35s;
   }
 
   .section-label{
