@@ -14,7 +14,7 @@
    <!--display property used to hide right sidebar on mobile and tablet view using bootstrap breakpoints-->
      <div class="right-bar d-none d-lg-block img-fluid container">
       <img class="pattern" src="@/assets/img/patternside.png" alt="side-bar pattern">
-        <div class="section-label">Our Gloabal Footprint</div>
+        <div class="section-label">Our Global Footprint</div>
          </div>    
 
 <section class="footprint-main d-flex align-items-center text-center"> 
