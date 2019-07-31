@@ -5,7 +5,7 @@
   <section class="reference-list text-center">
     <div class="container">
 
-    <!--mobile and tablet view header logo display-->
+    <!--mobile and tablet view header logo display using bootstrap CSS-->
     <div class="mobile-header text-center container">
       <a href="https://endgame-feelgood.com/"> <img class="img-fluid d-lg-none mx-auto" src="@/assets/img/logo_247.png" 
         alt="feel good drinks logo"></a>
@@ -100,8 +100,8 @@
             </div> 
           
       </div>
-  </div>             
-</section> 
+  </div>      
+</section> <!--end reference list section-->    
 
 <section>
     <div class="student-notice">
