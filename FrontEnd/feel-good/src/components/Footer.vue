@@ -2,12 +2,12 @@
   <div class="footer">
     <div class="footer-content">
       <div class="row no-gutters">
-        <div class="col-12 col-lg-5">
+        <div class="col-12 col-xl-5">
           <div class="footer-bottles">
             <img src="@/assets/img/SmallBottles.png">
           </div>
         </div>
-        <div class="col-9 col-lg-6">
+        <div class="col-9 col-xl-6">
           <div class="footer-links">
             <div>
               <!-- Social Media Icons -->
@@ -27,7 +27,7 @@
             </div>
           </div>
         </div>
-        <div class="col-3 col-lg-1">
+        <div class="col-3 col-xl-1">
           <div class="footer-logo">
             <img src="@/assets/img/FGD_Logo_full.png">
           </div>
@@ -95,7 +95,7 @@ export default {
     padding: 0px 5px;
   }
 
-  @media only screen and (max-width: 991px) {
+  @media only screen and (max-width: 1199px) {
     .footer-bottles {
       display: none;
     }
@@ -107,7 +107,7 @@ export default {
     }
 
     .footer-content{
-      width: 90%;
+      width: 95%;
       height: 80%;
       top: 5px;
       left: 15px
