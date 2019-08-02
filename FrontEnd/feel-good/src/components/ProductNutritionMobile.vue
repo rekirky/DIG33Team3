@@ -11,6 +11,7 @@
 
             <!-- Bottle Information -->
             <div class="info bottle-info" :style="'background-color: ' + product.color">
+              <h5>Our New Bottle</h5>
               <div>Paper bottle designed for strength</div>
               <div>80% compostable</div>
               <div>Composition: wheat, straw, bamboo, husks, sugar cane, and/or bulrush. </div>
@@ -25,6 +26,7 @@
 
             <!-- Fruit Descriptiona-->
             <div class="info fruit-info" :style="'background-color: ' + product.color">
+              <h5>Nutritious Fruit</h5>
               <div class="marker fruit-1-marker">
                 <div class="circle-text">{{product.fruit1Description}}</div>
               </div>
@@ -157,13 +159,13 @@ export default {
   .natural-sugar{
     top: 160vh;
     left: 20%;
-    font-size: calc(8px + 1vw);
+    font-size: calc(7px + 1vw);
   }
 
   .energy{
     top: 140vh;
     left: 5%;
-    font-size: calc(14px + 1vw);
+    font-size: calc(12px + 1vw);
   }
 
   .carbs{
@@ -190,7 +192,11 @@ export default {
   .protein{
     top: 135vh;
     left: 65%;
-    font-size: calc(10px + 1vw);
+    font-size: calc(9px + 1vw);
+  }
+
+  .protein .water-drop-text{
+    top: 25%;
   }
 
   h3, h5, p{
@@ -255,7 +261,7 @@ export default {
     z-index: 2;
     width: 100vw;
     position: absolute;
-    padding: 1vw 5vw;
+    padding: 0 5vw;
     color: white;
     opacity: 0.9; 
     box-shadow: 0px 0px 20px RGBA(0,0,0,0.2);
@@ -263,8 +269,12 @@ export default {
   }
 
   .info>div{
-    padding: 10px;
-    font-size: calc(10px + 2vw);
+    padding: 5px;
+    font-size: calc(8px + 2vw);
+  }
+
+  .info>h5{
+    padding-top: 10px;
   }
 
   .bottle-info{
