@@ -27,7 +27,7 @@
                   <div v-if="this.events.length != 0">
                     <!-- Loop through the event array and add Child links-->
                     <div v-for="(event, index) in events" :key="index">
-                      <router-link :to="'/event#event-detail-' + index" class="child-link" :id="'event-' + event.id" v-on:click.native="togglePoint">{{event.name}}</router-link>
+                      <router-link :to="'/event#event-detail-' + index" class="child-link" :id="'event-' + event.id" >{{event.name}}</router-link>
                     </div>
                   </div>
                   <router-link to="/about" class="">About</router-link>
@@ -37,7 +37,7 @@
                   <div v-if="this.productGroups.length != 0">
                     <!-- Loop through the product group array and add Child links-->
                     <div v-for="(group, index) in productGroups" :key="index">
-                      <router-link :to="'/product/' + group.id" class="child-link" :id="'product-group-' + group.id" v-on:click.native="togglePoint">{{group.name}}</router-link>
+                      <router-link :to="'/product/' + group.id" class="child-link" :id="'product-group-' + group.id" >{{group.name}}</router-link>
                     </div>
                   </div>
                 </div>
