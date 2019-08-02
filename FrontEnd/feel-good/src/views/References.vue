@@ -72,8 +72,8 @@
        <div class="reference-list-entries">
        <h6>Text-content</h6>
           <div><p class="list-entry">BillerudKorsnäs. 2019. Innovative Packaging Solutions for Sustainable Companies – BillerudKorsnäs. https://www.billerudkorsnas.com/our-offer/packaging-solutions. Accessed 11 July 2019.</p></div>    
-          <div><p class="list-entry"> Feel Good Drinks Co. 2019. Feel Good Drinks Co. http://www.feelgooddrinks.co.uk/. Accessed 10 June 2019. </p></div>     
-          <div><p class="list-entry"> FreePrivacyPolicy.com. 2019. Create a Free Privacy Policy. https://app.freeprivacypolicy.com/builder/download/retrieve?. Accessed 11 July 2019.</p></div>
+          <div><p class="list-entry">Feel Good Drinks Co. 2019. Feel Good Drinks Co. http://www.feelgooddrinks.co.uk/. Accessed 10 June 2019. </p></div>     
+          <div><p class="list-entry">FreePrivacyPolicy.com. 2019. Create a Free Privacy Policy. https://app.freeprivacypolicy.com/builder/download/retrieve?. Accessed 11 July 2019.</p></div>
           <div><p class="list-entry">Geronimo. 2018. “More Plastic Replacement Initiatives: The Paper Bottle Project.” Earth Buddies. October 18, 2018. https://earthbuddies.net/paper-bottle-project/.</p></div>  
           <div><p class="list-entry">Nichols PLC. 2019. Nichols PLC. - Corporate Responsibility. https://www.nicholsplc.co.uk/Home/CorporateResponsibility. Accessed 26 July 2019.</p></div>
           <div><p class="list-entry">Plasticadrift.Org. 2019. “Plastic Adrift.” http://plasticadrift.org/.  Accessed 10 June 2019.</p></div>
@@ -93,6 +93,7 @@
         <div> <p class="product-entries"> <em>Product Page - Bit Bubbly </em> </p>
           <ul>
           <li> Orange, https://lemonconcentrate.com/orange-fruit-concentrate</li>
+          <li> Passionfruit, https://www.crfg.org/pubs/ff/passionfruit.html</li>
           <li> Cranberry, https://www.healthline.com/nutrition/foods/cranberries  </li>
           <li> Lime, https://www.britannica.com/plant/lime</li>
           <li> Apple, https://www.stemilt.com/stem-blog/all-about-granny-smith-apples/ </li>
