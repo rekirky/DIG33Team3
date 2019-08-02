@@ -69,6 +69,11 @@
             </div>
       </div>
 
+        <div class="reference-list-entries">
+        <h6>Code Snippets</h6>
+          <div><p class="list-entry">Code snippets are referenced in the page and section code comments</p></div>
+            </div>
+
        <div class="reference-list-entries">
        <h6>Text-content</h6>
           <div><p class="list-entry">BillerudKorsnäs. 2019. Innovative Packaging Solutions for Sustainable Companies – BillerudKorsnäs. https://www.billerudkorsnas.com/our-offer/packaging-solutions. Accessed 11 July 2019.</p></div>    
@@ -100,7 +105,7 @@
           <li> Elderflower, https://www.huffingtonpost.com.au/entry/what-is-elderflower_n_5afd85d7e4b0a59b4e013e92</li>
           </ul>
             </div> 
-          
+         
       </div>
   </div>      
 </section> <!--end reference list section-->    
