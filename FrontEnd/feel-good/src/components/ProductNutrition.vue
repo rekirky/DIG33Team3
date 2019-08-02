@@ -21,7 +21,7 @@
           <div class="marker fruit-2-marker">
             <div class="circle-surround">
               <div class="circle"></div>
-              <div class="circle-line left">
+              <div class="circle-line right">
                 <div class="circle-text">{{product.fruit2Description}}</div>
               </div>
             </div>
@@ -33,7 +33,7 @@
             <div class="circle-surround">
               <div class="circle"></div>
               <div class="circle-line left">
-                <div class="circle-text">Innovative paper bottle shape built for functionality and strength</div>
+                <div class="circle-text">Paper bottle designed for strength</div>
               </div>
             </div>
           </div>
@@ -51,7 +51,7 @@
             <div class="circle-surround">
               <div class="circle"></div>
               <div class="circle-line left">
-                <div class="circle-text">A blended combination of wheat straw, bamboo, husks, sugar cane, and/or bulrush.</div>
+                <div class="circle-text">Composition: wheat, straw, bamboo, husks, sugar cane, and/or bulrush. </div>
               </div>
             </div>
           </div>
@@ -200,6 +200,7 @@ export default {
     border-radius: 50%;
     border-top-left-radius: 0;
     transform: rotate(45deg);
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
   }
 
   .water-drop-text{
@@ -253,6 +254,10 @@ export default {
     color: white;
   }
 
+  h3, h5{
+    font-size: 1.5vw !important;
+  }
+
   .product-name{
     width: 30%;
     padding: 50px 80px;
@@ -261,29 +266,31 @@ export default {
 
   .hero-bottle{
     position: absolute;
-    top: -15%;
-    left: 10%;
+    top: -9vw;
+    left: 10vw;
     transform: rotate(25deg);
   }
 
   .hero-bottle img{
-    height: 138vh;
+    max-height: 130vh;
+    max-width: 30vw;
   }
 
   .fruit img{
-    width: 400px;
+    width: 300px;
+    max-width: 20vw;
   }
 
   .fruit-1{
     position: absolute;
-    top: 33%;
-    left: 57%;
+    top: 35%;
+    left: 62%;
   }
 
   .fruit-2{
     position: absolute;
     top: 10%;
-    left: 67%;
+    left: 80%;
   }
 
   .circle{
@@ -309,7 +316,8 @@ export default {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
-    width: 200px;
+    min-width: 210px;
+    width: 10w;
     height: 5px;
     background-color: white;
   }
@@ -326,11 +334,19 @@ export default {
     position: absolute;
     width: 200px;
     padding: 15px;
-    font-size: .9rem;
+    font-size: .8rem;
+    font-weight: 700;
     color: white;
     bottom: 0;
-    left: 50%;
     transform: translate(-50%, 0);
+  }
+
+  .right>.circle-text{
+    left: 30%;
+  }
+
+  .left>.circle-text{
+    left: 70%;
   }
 
   .marker{
@@ -339,38 +355,43 @@ export default {
   }
 
   .fruit-1-marker{
-    top: 40%;
+    top: 43%;
     left: 63%;
   }
 
   .fruit-2-marker{
     top: 25%;
-    left: 85%;
+    left: 80%;
   }
 
   .bottle-top-marker{
     top: 10%;
-    left: 37%;
+    left: calc(300px + 13vw);
   }
 
   .bottle-mid-marker{
     top: 40%;
-    left: 13%;
+    left: 15vw;
   }
 
   .bottle-bottom-marker{
-    top: 80%;
-    left: 25%;
+    top: 83%;
+    left: 19%;
   }
 
   .ingredients{
     position: absolute;
     right: 0;
     bottom: 0;
-    margin: 0px 50px 50px 0px;
-    width: 20%;
-    height: 20%;
+    margin: 0px 40px 40px 0px;
+    width: 13vw;
+    height: 15vw;
     text-align: left;
+  }
+
+  .ingredients>p{
+    font-size: 1vw !important;
+    font-weight: 700;
   }
 
 </style>

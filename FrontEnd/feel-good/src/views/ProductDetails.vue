@@ -1,12 +1,24 @@
 <template>
   <div class="product-details">
     <div class="row no-gutters">
-      <div class="col-2">
+      <div class="col-2 hidden-mobile">
         <div class="left-gutter">
           <img src="@/assets/img/fgCo.png">
         </div>
       </div>
-      <div class="col-9">
+      <div class="col-xl-9 col-12">
+        <div class="row no-gutters visible-mobile">
+          <div class="product-group-label">
+            <div class="row no-gutters">
+              <div class="col-12 top-bar"></div>
+              <div class="col-2"></div>
+              <div class="col-8 title">products</div>
+              <div class="col-2 logo"><img src="@/assets/img/FGD_Logo_full.png"></div>
+            </div>
+          </div>
+        <div>
+        </div>
+        </div>
         <div class="row no-gutters">
           <!-- Product Group header -->
           <div class="product-group-header" :style="'background-color: ' + currentProductGroup.accentColor">
@@ -38,7 +50,7 @@
                       </div>
                       <div class="row">
                         <div class="" :style="'color: ' + currentProductGroup.accentColor">
-                          <h3>{{product.name}}</h3>
+                          <h3 class="hidden-mobile">{{product.name}}</h3>
                         </div>
                       </div>
                     </div>
@@ -48,7 +60,7 @@
                       </div>
                       <div class="row">
                         <div class="" :style="'color: ' + currentProductGroup.accentColor">
-                          <h3>{{product.name}}</h3>
+                          <h3 class="hidden-mobile">{{product.name}}</h3>
                         </div>
                       </div>
                     </div>
@@ -59,7 +71,7 @@
           </div>
         </div>
       </div>
-      <div class="col-1">
+      <div class="col-1 hidden-mobile">
         <div class="right-gutter">
           <img src="@/assets/img/patternside.png">
           <div class="section-label">products</div>
@@ -70,8 +82,14 @@
       <div class="product-nutrition-container">
         <!-- Generate product nutrition for each product in the array. -->
         <div v-for="(product, index) in filteredProducts" :key="index">
-          <product-nutrition v-if="index == 0" v-bind:product="product" class="active" :id="'nutrition-' + index"/>
+          <div v-if="mobile">
+          <product-nutrition-mobile v-if="index == currentProductIndex" v-bind:product="product" class="active" :id="'nutrition-' + index"/>
+          <product-nutrition-mobile v-else v-bind:product="product" :id="'nutrition-' + index"/>
+          </div>
+        <div v-else>
+          <product-nutrition v-if="index == currentProductIndex" v-bind:product="product" class="active" :id="'nutrition-' + index"/>
           <product-nutrition v-else v-bind:product="product" :id="'nutrition-' + index"/>
+        </div>
         </div>
       </div>
     </div>
@@ -85,19 +103,29 @@ import { mapGetters } from 'vuex'
 import { GET_PRODUCTS } from '@/store/types'
 //Import of components
 import ProductNutrition from '@/components/ProductNutrition.vue'
+import ProductNutritionMobile from '@/components/ProductNutritionMobile.vue'
 
 export default {
   name: 'ProductDetails',
   components:{
-    ProductNutrition
+    ProductNutrition,
+    ProductNutritionMobile
   },
   props: {
 
   },
   data () {
     return{
-      currentProductIndex: 0
+      currentProductIndex: 0,
+      mobile: Boolean
     }
+  },
+  created() {
+    window.addEventListener('resize', this.resize)
+    this.resize();
+  },
+  destroyed() {
+    window.removeEventListener('resize', this.resize)
   },
   computed:{
     ...mapGetters({
@@ -163,9 +191,19 @@ export default {
       $(".carousel-indicators li").removeClass("active")
       $(".carousel-inner .carousel-item").removeClass("active")
       $(".product-nutrition").removeClass("active")
+      $(".product-nutrition-mobile").removeClass("active")
       $("#indicator-" + this.currentProductIndex).addClass("active")
       $("#item-" + this.currentProductIndex).addClass("active")
       $("#nutrition-" + this.currentProductIndex).addClass("active")
+    },
+
+    resize() {
+      if(window.innerWidth < 1200){
+        this.mobile = true
+      }
+      else{
+        this.mobile = false
+      }
     }
   }
 }
@@ -209,6 +247,7 @@ export default {
 
   .carousel-indicators{
     margin: 20px 0px;
+    z-index: 1;
   }
 
   .indicator{
@@ -235,7 +274,7 @@ export default {
   .carousel{
     background-color: white;
     width: 80%;
-    height: 80%;
+    height: 30vw;
     margin: auto;
   }
 
@@ -248,11 +287,11 @@ export default {
   }
 
   .product-select:hover h3{
-    text-shadow: 0px 2px 20px rgba(50,50,50,0.5);
+    text-shadow: 0px 10px 20px rgba(50,50,50,0.3);
   }
 
   .carousel img{
-    max-width: 70%;
+    max-width: 50%;
     max-height: 50%;
     margin: auto;
     transition: all cubic-bezier(0.26, 0.1, 0.27, 1.5) 0.35s;
@@ -283,7 +322,7 @@ export default {
 
   .product-nutrition-container{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url('../assets/img/bgpattern2.png');    
     background-position: center;
     background-repeat: no-repeat;
@@ -300,8 +339,117 @@ export default {
     top: 0;
   }
 
-  .product-nutrition .active{
+  .product-nutrition .active, .product-nutrition-mobile .active{
     bottom: 0;
+  }
+  
+  h1{
+    font-size: 2.5vw !important;
+  }
+
+  .visible-mobile{
+    display: none;
+  }
+
+  .product-group-label{
+    font-size: 5vw;
+    min-height: 100px;
+    height: 15vw;
+    color: var(--orange-primary);
+    text-transform: uppercase;
+    font-family: 'Holtwood One SC', sans-serif;
+    letter-spacing: 4px;
+  }
+
+  @media only screen and (max-width: 1199px) {
+    
+    .hidden-mobile{
+      display: none;
+    }
+
+    .visible-mobile{
+      display: block;
+    }
+
+    .product-group-header{
+      padding: 20px 10vw;
+      min-height: 140px;
+      height: 15vw;
+    }
+
+    h1{
+      font-size: calc(6px + 4vw) !important;
+      text-align: center;
+    }
+
+    p{
+      font-size: calc(8px + 1vw) !important;
+    }
+
+    .logo{
+      padding-right: 1rem !important;
+    }
+
+    .logo>img{
+      margin-top: 1rem;
+      min-height: 70px;
+      height: 10vw;
+    }
+
+    .title{
+      font-size: 4.5vw;
+      font-weight: 700;
+      padding-top: 2.5rem;
+      color: var(--orange-primary);
+    }
+
+    .carousel{
+      background-color: white;
+      width: 90%;
+      height: 90%;
+      margin: auto;
+    }
+
+    .carousel img{
+      max-width: 20vw;
+
+    }
+
+    .carousel-indicators{
+      margin: 10px 0px;
+    }
+
+    .indicator{
+      max-height: 30px;
+      height: 6vw;
+      max-width: 30px;
+      width: 6vw;
+    }
+
+    .carousel-inner{
+      position: absolute;
+      top: 10%;
+      transform: translate( 0, 0);
+    }
+
+    .carousel-container{
+      height: 70vw;
+      max-height: 600px;
+      background-image: url('../assets/img/bgpattern2.png');    
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .top-bar{
+      height: 10px;
+      background-color: var(--orange-secondary);
+    }
+
+    .product-nutrition-container{
+      min-height: 220vh;
+    }
+
   }
 
 </style>
