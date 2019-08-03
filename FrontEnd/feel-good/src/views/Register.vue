@@ -31,16 +31,22 @@
             <div class="col-12 col-lg-6">
               <div class="card">
                 <h5>Register for {{this.event.title}}</h5>
-                <form>
+                <form @submit.prevent="newEnquiry()">
                   <div class="form-group">
                     <label for="emailField">Email</label>
                     <input v-model="email" required type="text" class="form-control" id="emailField" placeholder="Email">
+                    <div class="invalid-feedback">
+                      {{this.emailError}}
+                    </div>
                   </div>
                   <div class="form-group">
                     <label for="nameField">Name</label>
                     <input v-model="name" required type="text" class="form-control" id="nameField" placeholder="Name">
+                    <div class="invalid-feedback">
+                      {{this.nameError}}
+                    </div>
                   </div>
-                  <button @click="newEnquiry()" class="btn btn-orange">Register Now</button>
+                  <button class="btn btn-orange">Register Now</button>
                 </form>
               </div>
             </div>
@@ -69,7 +75,9 @@ export default {
       eventRouteId: this.$route.params.eventId,
       event:{},
       email: '',
-      name: ''
+      name: '',
+      emailError: '',
+      nameError: ''
     }
   },
   computed:{
@@ -86,15 +94,25 @@ export default {
 
   methods: {
     async newEnquiry () {
-      try {
-        await this.$store.dispatch(NEW_ENQUIRY, {
-          email: this.startTime,
-          name: this.endTime,
-          message: "Register me for " + this.event.title
-        })
-        this.$router.push('/registeredSuccess')
-      } catch (e) {
-        alert("Sorry it looks like we can't register you are this time, Please try again later")
+      if(this.email == '' || this.name == ''){
+        if(this.emailError == ''){
+          this.emailError = 'You must submit an email to register'
+        }
+        if(this.nameError == ''){
+          this.nameError = 'You must submit your name to register'
+        }
+      }
+      else{
+        try {
+          await this.$store.dispatch(NEW_ENQUIRY, {
+            email: this.email,
+            name: this.name,
+            message: "Register me for " + this.event.title
+          })
+          this.$router.push('/registeredSuccessfully')
+        } catch (e) {
+          alert("Sorry it looks like we can't register you are this time, Please try again later")
+        }
       }
     }
   }
@@ -143,6 +161,7 @@ export default {
 
   .right-gutter{
     min-height: calc(100vh - 160px);
+    height:100%;
     background-color: var(--beige-sidebar);
     margin: 0px -15px;
     overflow: hidden;
