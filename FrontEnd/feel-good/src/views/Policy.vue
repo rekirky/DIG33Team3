@@ -3,33 +3,35 @@
 
 <article class="privacy-policy">
 
-<!-- Bootstrap and custom classes to style elements -->
+<!-- bootstrap and custom classes to style elements -->
 <section class="policy-intro">
   <div class="container">
 
   <!--mobile and tablet view header logo display-->
   <div class="mobile-header text-center container">
+  <!--mobile/tablet logo homepage link-->
    <a href="https://endgame-feelgood.com/"> <img class="img-fluid mx-auto d-lg-none" src="@/assets/img/logo_247.png" alt="feel good drinks logo"></a> 
     </div>
 
     <h2> Privacy Policy </h2>
-
+    <!--bootstrap class to centre align date-->
     <p class="date text-center">Effective date: July 11, 2019</p>
 
-    <p> Feel-Good Drinks—Team 3 operates the https://endgame-feelgood.com/ (the "Service").</p>
+    <p> Feel Good Drinks—Team 3 operates the https://endgame-feelgood.com/ (the "Service").</p>
 
+    <!--privacy policy text-content sourced from FreePrivacyPolicy.com. (2019), see reference page-->
     <p>This page informs you of our policies regarding the collection, use, and disclosure of personal data
     when you use our Service and the choices you have associated with that data. Our Privacy Policy 
-    Feel-Good Drinks—Team 3 is created with the help of the <a href="https://www.freeprivacypolicy.com/free-privacy-policy-generator.php">
+    Feel Good Drinks—Team 3 is created with the help of the <a href="https://www.freeprivacypolicy.com/free-privacy-policy-generator.php">
     Free Privacy Policy Generator</a>.</p>
 
     <p>We use your data to provide and improve the Service. By using the Service, you agree to the collection 
     and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, 
     terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, 
-    accessible from http://[url]</p>
+    accessible from https://endgame-feelgood.com/dummy-terms</p>
 
-    </div>
-  </section>
+    </div> <!--end policy-introduction container-->
+  </section> <!--end policy-introduction section-->
 
 
 <section class="info-collection">
@@ -38,8 +40,8 @@
 
     <p>We collect several different types of information for various purposes to provide and improve our Service to you.</p>
   
-  </div>
-</section>
+  </div> <!--end info collection container-->
+</section> <!--end info collection section-->
 
 
 <section class="data-types">
@@ -59,8 +61,8 @@
     <li>Cookies and Usage Data</li>
     </ul>
 
-</div>
-</section>
+</div> <!--end data collection types container-->
+</section> <!--end data collection types section-->
 
 
 <section class="data-use">
@@ -101,8 +103,8 @@
         <li>To detect, prevent and address technical issues</li>
     </ul>
 
-</div>
-</section>
+</div> <!--end data use container-->
+</section> <!--end data use section-->
 
 
 <section class="data-transfer">
@@ -118,7 +120,9 @@
     <h5>Disclosure Of Data</h5>
 
     <h5 class="legal">Legal Requirements</h5>
-    <p>Feel-Good Drinks may disclose your Personal Data in the good faith belief that such action is necessary to:</p>
+
+    <p>Feel Good Drinks-Team 3 may disclose your Personal Data in the good faith belief that such action is necessary to:</p>
+
     <ul class="policy-list">
         <li>To comply with a legal obligation</li>
         <li>To protect and defend the rights or property of Feel-Good Drinks</li>
@@ -126,8 +130,9 @@
         <li>To protect the personal safety of users of the Service or the public</li>
         <li>To protect against legal liability</li>
     </ul>
-  </div>
-</section>
+
+  </div> <!--end data transfer container-->
+</section> <!--end data transfer section-->
 
 
 <section class="data-security">
@@ -156,8 +161,9 @@
     <p>We have no control over and assume no responsibility for the content, privacy policies or practices of any third party 
       sites or services.</p>
 
-     </div>
-  </section>
+     </div> <!--end data security container-->
+  </section> <!--end data security section-->
+
 
 <section class="children">
   <div class="container">
@@ -170,8 +176,8 @@
         If we become aware that we have collected Personal Data from children without verification of parental consent,
         we take steps to remove that information from our servers.</p>
 
-    </div>
-  </section>
+    </div> <!--end children's privacy container-->
+  </section> <!--end children's privacy section-->
 
 
 <section class="policy-changes">
@@ -188,8 +194,8 @@
     <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are
       effective when they are posted on this page.</p>
 
-  </div>
-</section>
+  </div><!--end policy changes container-->
+</section><!--end policy changes section-->
 
 
 <section class="contact">
@@ -199,12 +205,12 @@
 
     <p>If you have any questions about this Privacy Policy, please contact us: info@feelgood.com</p>
 
-    </div>
-  </section>
+    </div> <!--end contact container-->
+  </section> <!--end contact section-->
 
-</article>
+</article> <!--end privacy policy article-->
+</div> <!--end privacy policy page component-->
  
-  </div>
 </template>
 
 <script>
@@ -218,6 +224,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
+/*Width and margins for page content*/
 .privacy-policy{
  width:60%;
  margin: 0 20% 10% 20%
@@ -227,6 +234,7 @@ export default {
   text-align: left
 }
 
+/*Custom heading colour for privacy page, i.e. different from global styles*/
 h2{
   color: var(--orange-primary);
   margin-top: 40px;
@@ -236,18 +244,17 @@ h2{
 h5{
   margin-top: 50px
 }
-h5.legal{
-  color: var(--orange-primary);
-  margin:10px
-}
 
 h6{
   color: var(--orange-primary);
   margin: 20px;
+  text-align: center;
 }
 
-h6{
-text-align: center;
+/*Custom sub heading colour for data transfer section */
+h5.legal{
+  color: var(--orange-primary);
+  margin:10px
 }
 
 p {
@@ -255,7 +262,7 @@ p {
   display: block;
   text-align: left;
   margin-top: 1em;
-  margin-bottom: 1 em;
+  margin-bottom: 1em;
   margin-left: 0;
   margin-right: 0;
   padding-bottom: 10px;
