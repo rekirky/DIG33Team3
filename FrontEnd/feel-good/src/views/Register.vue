@@ -109,7 +109,7 @@ export default {
             name: this.name,
             message: "Register me for " + this.event.title
           })
-          this.$router.push('/registeredSuccessfully')
+          this.$router.push('/registered-successfully')
         } catch (e) {
           alert("Sorry it looks like we can't register you are this time, Please try again later")
         }

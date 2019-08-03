@@ -61,10 +61,15 @@ export default new Router({
       component: () => import('./views/Register.vue')
     },
     {
-      path: '/registeredSuccessfully',
-      name: 'register',
+      path: '/registered-successfully',
+      name: 'register-success',
       component: () => import('./views/RegisterSuccess.vue')
-    },    
+    },
+    {
+      path: '/contact-successful',
+      name: 'contact-success',
+      component: () => import('./views/ContactSuccessful.vue')
+    },     
     {
       path: '/sitemap',
       name: 'sitemap',
