@@ -21,3 +21,4 @@ $router->get('events', 'EventController@index');
 $router->get('event/{id}', 'EventController@show');
 $router->get('products', 'ProductController@index');
 $router->get('product/{id}', 'ProductController@show');
+$router->post('enquiry', 'EnquiryController@store');
