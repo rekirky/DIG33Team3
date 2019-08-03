@@ -6,7 +6,7 @@
           <img src="@/assets/img/fgCo.png">
         </div>
       </div>
-      <div class="col-12 col-sm-9">
+      <div class="col-12 col-md-9">
         <div class="row">
           <div class="title-container">
             <h1>site map</h1>
@@ -15,13 +15,13 @@
         <div class="center-content">
           <div class="row mobile-overlay">
             <div class="col-1"></div>
-            <div class="col-11 col-sm-8">
+            <div class="col-11 col-md-8">
               <div class="row">
                 <h5>MAIN</h5> 
                 <hr>
               </div>
               <div class="row">
-                <div class="col-11 col-sm-4">
+                <div class="col-11 col-md-4">
                   <router-link to="/home" class="">Home</router-link>
                   <router-link to="/event" class="">Events</router-link>
                   <div v-if="this.events.length != 0">
@@ -32,7 +32,7 @@
                   </div>
                   <router-link to="/about" class="">About</router-link>
                 </div>
-                <div class="col-11 col-sm-4">
+                <div class="col-11 col-md-4">
                   <router-link to="/products" class="">Products</router-link>
                   <div v-if="this.productGroups.length != 0">
                     <!-- Loop through the product group array and add Child links-->
@@ -41,13 +41,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-11 col-sm-4">
+                <div class="col-11 col-md-4">
                   <router-link to="/footprint" class="">Our Footprint</router-link>
                 </div>
               </div>
             </div>
             <div class="col-1 visible-mobile"></div>
-            <div class="col-11 col-sm-3">
+            <div class="col-11 col-md-3">
               <div class="row">
                 <h5>LEGAL</h5> 
                 <hr size="2">
@@ -136,7 +136,7 @@ export default {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100%;    
+    min-height: 100%;  
     margin: 0px -15px;
   }
 
@@ -217,7 +217,6 @@ export default {
 
     .center-content{
       min-height: calc(100vh - 110px);    
-      margin: 0px -15px;
     }
 
     .center-content div{
