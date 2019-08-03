@@ -34,18 +34,24 @@
             <div class="col-12 col-lg-6">
               <div class="card">
                 <h5>Send us a Message!</h5>
-                <form>
+                <form @submit.prevent="newEnquiry()">
                   <div class="form-group">
                     <label for="emailField">Email</label>
-                    <input type="text" class="form-control" id="emailField" placeholder="Email">
+                    <input v-model="email" required type="text" class="form-control" id="emailField" placeholder="Email">
+                    <div class="invalid-feedback">
+                      {{this.emailError}}
+                    </div>
                   </div>
                   <div class="form-group">
                     <label for="nameField">Name</label>
-                    <input type="text" class="form-control" id="nameField" placeholder="Name">
+                    <input v-model="name" required type="text" class="form-control" id="nameField" placeholder="Name">
+                    <div class="invalid-feedback">
+                      {{this.nameError}}
+                    </div>
                   </div>
                   <div class="form-group">
                     <label for="messageField">Message</label>
-                    <textarea class="form-control" id="messageField"></textarea>
+                    <textarea v-model="message" class="form-control" id="messageField"></textarea>
                   </div>
                   <button type="submit" class="btn btn-orange">Contact Us</button>
                 </form>
@@ -64,9 +70,45 @@
 </template>
 
 <script>
+
+//Import of types to be accessed via despatches
+import { NEW_ENQUIRY } from '@/store/types'
+
 export default {
   name: 'Contact',
-  props: {
+  data () {
+    return {
+      email: '',
+      name: '',
+      message: '',
+      emailError: '',
+      nameError: ''
+    }
+  },
+
+  methods: {
+    async newEnquiry () {
+      if(this.email == '' || this.name == ''){
+        if(this.emailError == ''){
+          this.emailError = 'You must submit an email to register'
+        }
+        if(this.nameError == ''){
+          this.nameError = 'You must submit your name to register'
+        }
+      }
+      else{
+        try {
+          await this.$store.dispatch(NEW_ENQUIRY, {
+            email: this.email,
+            name: this.name,
+            message: this.message
+          })
+          this.$router.push('/contact-successful')
+        } catch (e) {
+          alert("Sorry it looks like we can't register you are this time, Please try again later")
+        }
+      }
+    }
   }
 }
 </script>
