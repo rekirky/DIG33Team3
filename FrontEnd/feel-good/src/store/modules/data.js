@@ -53,7 +53,14 @@ const actions = {
   async [types.GET_PRODUCTS] ({ commit, state }) {
     let response = await api.getProducts()
     commit(types.SET_PRODUCTS, response)
-  }
+  },
+  async [types.NEW_ENQUIRY] (context, payload) {
+    try {
+      await api.newEnquiry(payload)
+    } catch (err) {
+      throw new Error('There was an error making your Enquiry')
+    }
+  },
 }
 
 //Registered Getters, return the collection arrays to components that have registered the getter in ...mapgetters
@@ -69,6 +76,9 @@ const getters = {
   },
   getProducts (state) {
     return state.products
+  },
+  getEvent: ({ events }) => (eventId) => {
+    return events.find(el => el.id === eventId)
   }
 }
 
