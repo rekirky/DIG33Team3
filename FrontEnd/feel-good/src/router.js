@@ -54,7 +54,12 @@ export default new Router({
       path: '/product/:productId',
       name: 'product-details',
       component: () => import('./views/ProductDetails.vue')
-    },   
+    },
+    {
+      path: '/register/:eventId',
+      name: 'register',
+      component: () => import('./views/Register.vue')
+    },    
     {
       path: '/sitemap',
       name: 'sitemap',
