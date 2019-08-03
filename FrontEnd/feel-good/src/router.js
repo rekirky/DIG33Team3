@@ -59,6 +59,11 @@ export default new Router({
       path: '/register/:eventId',
       name: 'register',
       component: () => import('./views/Register.vue')
+    },
+    {
+      path: '/registeredSuccessfully',
+      name: 'register',
+      component: () => import('./views/RegisterSuccess.vue')
     },    
     {
       path: '/sitemap',
