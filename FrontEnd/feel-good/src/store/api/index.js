@@ -29,7 +29,7 @@ class Api {
   }
 
   async newEnquiry (body) {
-    let { data } = await http.post('/enquire', body)
+    let { data } = await http.post('/enquiry', body)
     return data
   }
 }

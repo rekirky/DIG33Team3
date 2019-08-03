@@ -56,6 +56,7 @@ const actions = {
   },
   async [types.NEW_ENQUIRY] (context, payload) {
     try {
+      console.log(payload)
       await api.newEnquiry(payload)
     } catch (err) {
       throw new Error('There was an error making your Enquiry')
