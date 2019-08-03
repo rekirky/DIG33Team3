@@ -13,3 +13,5 @@ export const SET_PRODUCTS = 'SET_PRODUCTS'
 //Getter and Setter Types for Events
 export const GET_EVENTS = 'GET_EVENTS'
 export const SET_EVENTS = 'SET_EVENTS'
+
+export const NEW_ENQUIRY = 'NEW_ENQUIRY'

@@ -27,6 +27,11 @@ class Api {
     //let data = placeholder.products
     return data
   }
+
+  async newEnquiry (body) {
+    let { data } = await http.post('/enquiry', body)
+    return data
+  }
 }
 
 export default Api

@@ -1,5 +1,5 @@
 <template>
-  <div class="contact">
+  <div class="register">
     <div class="row">
       <div class="col-2 hidden-mobile">
         <div class="left-gutter">
@@ -9,22 +9,19 @@
       <div class="col-12 col-lg-9">
         <div class="row">
           <div class="title-container">
-            <h1>contact us</h1>
+            <h1>Register</h1>
           </div>
         </div>
         <div class="center-content">
           <div class="row no-gutters">
             <div class="col-12 col-lg-6">
-              <div class="card">
-                <h5>What's on Your Mind!</h5>
-                <p class="tagline">Here at Feel Good Drink Co we love feedback!</p>
-                <p>Good or Bad we are always interested in hearing from 
-                   our customers and learning about their experience with 
-                   our products. Feel free to send us what you love about our products
-                   and what we could be improving.
+              <div class="card event-info">
+                <h5>Come join us on the {{this.event.date}}</h5>
+                <p class="tagline">{{this.event.subTitle}}</p>
+                <p>{{this.event.details}}
                 </p>
                 <div class="bottle left-bottle">
-                  <img src="@/assets/img/bottles/Paper-Bottle_orange_499px.png">
+                <img src="@/assets/img/bottles/Paper-Bottle_orange_499px.png">
                 </div>
                 <div class="bottle right-bottle">
                   <img src="@/assets/img/bottles/Paper-Bottle_crnlime_499px.png">
@@ -33,7 +30,7 @@
             </div>
             <div class="col-12 col-lg-6">
               <div class="card">
-                <h5>Send us a Message!</h5>
+                <h5>Register for {{this.event.title}}</h5>
                 <form @submit.prevent="newEnquiry()">
                   <div class="form-group">
                     <label for="emailField">Email</label>
@@ -49,11 +46,7 @@
                       {{this.nameError}}
                     </div>
                   </div>
-                  <div class="form-group">
-                    <label for="messageField">Message</label>
-                    <textarea v-model="message" class="form-control" id="messageField"></textarea>
-                  </div>
-                  <button type="submit" class="btn btn-orange">Contact Us</button>
+                  <button class="btn btn-orange">Register Now</button>
                 </form>
               </div>
             </div>
@@ -70,20 +63,33 @@
 </template>
 
 <script>
-
+//Import for vuex local storage
+import { mapGetters } from 'vuex'
 //Import of types to be accessed via despatches
-import { NEW_ENQUIRY } from '@/store/types'
+import { GET_EVENTS, NEW_ENQUIRY } from '@/store/types'
 
 export default {
-  name: 'Contact',
+  name: 'Register',
   data () {
     return {
+      eventRouteId: this.$route.params.eventId,
+      event:{},
       email: '',
       name: '',
-      message: '',
       emailError: '',
       nameError: ''
     }
+  },
+  computed:{
+    ...mapGetters({
+      getEvent: "getEvent"
+    })
+  },
+  async mounted(){
+    //Get event information when the page components is mounted to the application
+    await this.$store.dispatch(GET_EVENTS)
+    
+    this.event = this.getEvent(parseInt(this.eventRouteId))
   },
 
   methods: {
@@ -101,22 +107,23 @@ export default {
           await this.$store.dispatch(NEW_ENQUIRY, {
             email: this.email,
             name: this.name,
-            message: this.message
+            message: "Register me for " + this.event.title
           })
-          this.$router.push('/contact-successful')
+          this.$router.push('/registered-successfully')
         } catch (e) {
           alert("Sorry it looks like we can't register you are this time, Please try again later")
         }
       }
     }
   }
+
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
-  .contact{
+  .register{
     padding: 0px 15px;
   }
 
@@ -154,6 +161,7 @@ export default {
 
   .right-gutter{
     min-height: calc(100vh - 160px);
+    height:100%;
     background-color: var(--beige-sidebar);
     margin: 0px -15px;
     overflow: hidden;
@@ -177,11 +185,14 @@ export default {
   .card{
     margin: 1vw;
     padding: 20px 2vw;
-    height: 500px;
     overflow: hidden;
   }
 
   form{
+    text-align: center;
+  }
+
+  .form-group{
     text-align: left;
   }
 
@@ -189,12 +200,6 @@ export default {
     background-color: var(--orange-primary);
     font-size: 1rem !important;
     color: white;
-    float: right;
-  }
-
-  textarea {
-    resize: none;
-    height: 8rem;
   }
 
   .tagline{
@@ -207,27 +212,27 @@ export default {
   .bottle{
     position: absolute;
     bottom: -10%;
-    transition: all ease-out 1s;
   }
 
   .bottle>img{
-    transition: all ease-in .5s;
-    min-height: 250px;
-    max-height: 350px;
-    height: 20vw;
+    height: 350px;
   }
 
   .left-bottle{
-    left: 35%;
+    left: 30%;
     transform: rotate(-10deg)
   }
 
   .right-bottle{
-    right: 35%;
+    right: 30%;
     transform: rotate(10deg)
   }
 
-  @media only screen and (max-width: 992px) {
+  .event-info{
+    padding-bottom: 300px;
+  }
+
+  @media only screen and (max-width: 768px) {
     
     .hidden-mobile{
       display: none;
@@ -250,10 +255,6 @@ export default {
       min-height: calc(100vh - 110px);    
       margin: 0px -15px;
       padding: 10px;
-    }
-
-    textarea {
-      height: 100px;
     }
     
   }

@@ -7,6 +7,7 @@
       </div>
       <div class="col-12 col-xl-9 center-content">
         <div class="row no-gutters">
+          <div class="col-12 top-bar"></div>
           <div class="col-2"></div>
           <div class="col-8 mobile-title">THE FEEL GOOD DRINK CO</div>
           <div class="col-2 mobile-logo"><img src="@/assets/img/FGD_Logo_full.png"></div>
@@ -39,6 +40,7 @@
               </div>
             </div>
             </router-link>
+            <div class="product-group-label">A BIT BUBBLY</div>
           </div>
           <div class="hero-bottle up-move">
             <img src="@/assets/img/bottles/pinkbottle_big.png">
@@ -50,6 +52,7 @@
               </div>
             </div>
             </router-link>
+            <div class="product-group-label">REFRESHINGLY STILL</div>
           </div>
         </div>
       </div>
@@ -267,7 +270,7 @@ export default {
     overflow: hidden;
   }
 
-  .mobile-title, .mobile-logo>img{
+  .mobile-title, .mobile-logo>img, .product-group-label{
     display: none;
   }
 
@@ -283,40 +286,34 @@ export default {
     }
 
     .left-fruit{
-      position: absolute;
-      bottom: 0px;
-      left: -25%;
-      width: 50%;
-      height: 100%;
+      top: 15vw;
+      left: -15%;
     }
 
     .left-fruit>img{
-      width: 50vw;
+      width: 60vw;
     }
 
     .bottle-group{
       position: absolute;
-      bottom: 5.5vw;
-      left: 25%;
+      bottom: none;
+      left: 15vw;
       width: 50%;
       height: 100%;
       z-index: 1;
     }
 
     .bottle-group>img{
-      width: 20vw;
+      width: 70vw;
     }
 
     .right-fruit{
-      position: absolute;
-      bottom: 0px;
-      right: 0px;
-      max-width: 20vw;
-      height: 100%;    
+      top: 15vw;
+      right: 15%;   
     }
 
     .right-fruit>img{
-      width: 20vw;
+      width: 60vw;
     }
 
     .mobile-title{
@@ -333,6 +330,72 @@ export default {
       max-width: 125px;
       width: 15vw;
       display: inline;
+    }
+
+    .top-bar{
+      height: 10px;
+      background-color: var(--orange-secondary);
+    }
+
+    .fruits-bottles{
+      position: relative;
+      width: 100%;
+      max-height: none;
+      height: 60vw;
+      top: 0;
+    }
+
+    .natural-text{
+      position: relative;
+      font-size: 10vw;
+      top: 0;
+      width: 100%;
+      transition: all ease-out 1s;
+    }
+
+    .hero-bottle-group{
+      position: relative;
+      width: 100%;
+      height: 70vw;
+      overflow: hidden;
+      background: var(--green-primary);
+    }
+
+    .hero-bottle{
+      height: 100%;
+      width: 50vw;
+    }
+
+    .hero-bottle>img{
+      max-height: none;
+      max-width: none;
+      width: 40vw;
+      bottom: 10vw;
+    }
+
+    .plus-button{
+      border-width: 0.5vw;
+      bottom: 15vw;
+    }
+
+    .circle{
+      width: 8vw;
+      height: 8vw;
+    }
+
+    .bar{
+      height: 0.5vw;
+    }
+
+    .product-group-label{
+      display: block;
+      font-size: 4vw;
+      color: white;
+      width: 100%;
+      position: absolute;
+      bottom: 5vw;
+      left: 50%;
+      transform: translate(-50%, 0%);
     }
 
   }
