@@ -28,7 +28,7 @@ class EnquiryController extends Controller
         $enquiry->save();
 
         if($enquiry->save()){
-            return new EnquiryResource($enquiry);
+            return response(["Enquiry successfully added"],201);
         }
 
     }
