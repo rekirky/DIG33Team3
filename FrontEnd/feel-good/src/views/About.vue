@@ -1,8 +1,15 @@
 <template>
 
   <div class="about">
-
-       <!-- Bootstrap and custom classes to style elements -->
+      <!--Modified Paul's html for mobile view header title and logo-->
+    <div class="row no-gutters d-lg-none d-md-none">
+      <div class="col-12 top-bar"></div>
+       <div class="col-2"></div>
+         <div class="col-8 title">THE FEEL GOOD DRINK CO</div>
+           <div class="col-2 logo img-fluid"><img src="@/assets/img/FGD_Logo_full.png"></div>
+            </div>
+            
+       <!--Bootstrap and custom classes to style elements -->
     <article class="about-main">     
        <!--display property used to hide right sidebar on mobile and tablet view-->
       <div class="right-bar d-none d-lg-block img-fluid container">
@@ -12,12 +19,6 @@
 
       <section class="about-header d-flex align-item-center text-center">       
       <div class="container">
-
-        <!--mobile and tablet view header logo display-->
-        <div class="mobile-header container">
-        <a href="https://endgame-feelgood.com/"> <img class="img-fluid d-lg-none" src="@/assets/img/logo_247.png" alt="feel good drinks logo"></a>
-          </div>
-
       <h2 class="about-title"><small> THE HEART OF OUR COMPANY </small></h2>
       <h2><b>LET'S TALK ABOUT US</b></h2>
        </div>
@@ -51,7 +52,7 @@
           </div>
 
        <div class="image-grid container">
-        <!-- Bootstrap grid for image layout -->
+        <!-- Bootstrap grid for responsive image layout -->
       <div id="about-image-grid">
         <div class="image-grid">
         <div class="row justify-content-center mx-auto">
@@ -72,8 +73,7 @@
                 </div>
                   </div>
         <div class="side-bar container d-none d-lg-block">      
-          </div>       
-         
+          </div>            
            </section>
               </section>
     </article> 
@@ -124,8 +124,22 @@ export default {
   margin-left: 10%
 }
 
-.mobile-header{
-  width:60%
+/*Paul's CSS for mobile view header title and logo*/
+.title{
+  font-size: 4.5vw;
+  font-weight: 700;
+  padding-top: 2.5rem;
+  color: var(--orange-primary);
+  }
+
+.logo{
+  padding-right: 1rem !important;
+  }
+
+.logo>img{
+  margin-top: 1rem;
+  max-width: 125px;
+  width: 15vw;
 }
 
 h6{
@@ -174,7 +188,7 @@ h6{
   font-size: 1.5rem;
   text-transform: uppercase;
   position: absolute;
-  bottom:400px;
+  bottom: 420px;
   left: 50%;
   transform: translate(-50%, -100%) rotate(90deg);
   padding-right: 100px
