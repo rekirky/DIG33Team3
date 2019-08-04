@@ -3,8 +3,9 @@
     <div class="footer-content">
       <div class="row no-gutters">
         <div class="col-12 col-xl-5">
+          <!-- Product and Fruit Images -->
           <div class="footer-bottles">
-            <img src="@/assets/img/SmallBottles.png">
+            <img src="@/assets/img/SmallBottles.png" alt="Group of bottles and fruit">
           </div>
         </div>
         <div class="col-9 col-xl-6">
@@ -28,8 +29,9 @@
           </div>
         </div>
         <div class="col-3 col-xl-1">
+          <!-- Feel Good Logo -->
           <div class="footer-logo">
-            <img src="@/assets/img/FGD_Logo_full.png">
+            <img src="@/assets/img/FGD_Logo_full.png" alt="Feel Good Logo">
           </div>
         </div>
       </div>
@@ -38,7 +40,9 @@
 </template>
 
 <script>
+
 export default {
+  // Exporting the name of the component so that it can be referenced.
   name: 'Footer'
 }
 </script>
