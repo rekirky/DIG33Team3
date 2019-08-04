@@ -1,6 +1,7 @@
 <template>
   <div class="home-desktop">
     <!-- 100% Feel Section -->
+    <!-- One third section of the Feel section that is the target for the rest of the sectino to be revealed -->
     <div id="feel-container" class="third-container" @mouseenter="bottomBarGrow" @mouseleave="bottomBarShrink" @click="feelActive">
       <div class="top-bar"></div>
       <div class="center-content">
@@ -8,19 +9,24 @@
         <div class="name-tag">FEEL</div>
         <div class="bottom-tag">THE BENEFITS</div>
       </div>
+      <!-- Bottom bar with grow to the top when the section is active -->
       <div class="bottom-bar"></div>
+      <!-- Tilted bottles -->
       <div class="bottle left-bottle">
         <img src="@/assets/img/bottles/Paper-Bottle_passion_499px.png">
       </div>
       <div class="bottle right-bottle">
         <img src="@/assets/img/bottles/Paper-Bottle_pom_499.png">
       </div>
+      <!-- Hand image that comes out of the bottom of the section when the section is active -->
       <div class="hand">
-        <img src="@/assets/img/hand_1.png">
+        <svg-img :name="okhand"/>
       </div>
     </div>
+    <!-- 2/3 Container for the feel section, is slide into view when the section is selected -->
     <div id="feel-content-container">
       <div id="feel-content">
+        <!-- Close button slides into view when section is selected and closes section when pressed -->
         <div class="close-button" v-on:click="feelDeactive">
           <div class="circle hamburger">
             <span class="bar top"></span>
@@ -44,6 +50,7 @@
     </div>
 
     <!-- 100% Natural Section -->
+    <!-- One third section of the Natural section that is the target for the rest of the section to be revealed -->
     <div id="natural-container" class="third-container" @mouseenter="bottomBarGrow" @mouseleave="bottomBarShrink" @click="naturalActive">
       <div class="top-bar"></div>
       <div class="logo"><img src="@/assets/img/FGD_Logo_full.png"></div>
@@ -52,18 +59,17 @@
         <div class="name-tag">NATURAL</div>
         <div class="bottom-tag">FIND YOUR FLAVOUR</div>
       </div>
+      <!-- Bottom bar with grow to the top when the section is active -->
       <div class="bottom-bar"></div>
+      <!-- Tilted bottles -->
       <div class="bottle left-bottle">
         <img src="@/assets/img/bottles/Paper-Bottle_orange_499px.png">
       </div>
       <div class="bottle right-bottle">
         <img src="@/assets/img/bottles/Paper-Bottle_crnlime_499px.png">
       </div>
-      <div class="hand">
-        <img src="@/assets/img/hand_2.png">
-      </div>
-      <div class="plant">
-        <img src="@/assets/img/plants_gif_placeholder.png">
+      <div class="hand natural-hand">
+        <svg-img :name="thumbup"/>
       </div>
     </div>
     <div id="natural-content-container-left" class="natural-content-container">
@@ -123,10 +129,7 @@
         <img src="@/assets/img/bottles/Paper-Bottle_lemonmy-499px.png">
       </div>
       <div class="hand good-hand">
-        <img src="@/assets/img/2hands.png">
-      </div>
-      <div class="good-fish">
-        <img src="@/assets/img/fish.png">
+        <svg-img :name="twohands"/>
       </div>
     </div>
      <div id="good-content-container">
@@ -156,9 +159,19 @@
 </template>
 
 <script>
+import thumbup from '@/assets/img/svg/hands-thumbsup2.svg'
+import okhand from '@/assets/img/svg/hand-ok2.svg'
+import twohands from '@/assets/img/svg/hands2.svg'
 
 export default {
   name: 'HomeDesktop',
+  data () {
+    return {
+      thumbup: thumbup.id,
+      okhand: okhand.id,
+      twohands: twohands.id
+    }
+  },
   methods: {
     //Expands the Background of the selected section
     bottomBarGrow(event){
@@ -210,7 +223,7 @@ export default {
       goodContainer.getElementsByClassName("bottom-tag")[0].classList.add("active")
       goodContainer.getElementsByClassName("name-tag")[0].classList.add("active")
       goodContainer.getElementsByClassName("hand")[0].classList.add("active")
-      goodContainer.getElementsByClassName("good-fish")[0].classList.add("active")
+      //goodContainer.getElementsByClassName("good-fish")[0].classList.add("active")
       $( "#good-content-container" ).animate({width: "67%"}, 0,);
       document.getElementById("good-content").classList.add("active")
     },
@@ -223,7 +236,7 @@ export default {
       goodContainer.getElementsByClassName("bottom-tag")[0].classList.remove("active")
       goodContainer.getElementsByClassName("name-tag")[0].classList.remove("active")
       goodContainer.getElementsByClassName("hand")[0].classList.remove("active")
-      goodContainer.getElementsByClassName("good-fish")[0].classList.remove("active")
+      //goodContainer.getElementsByClassName("good-fish")[0].classList.remove("active")
       $( "#good-content-container" ).delay(1000).animate({width: "0%"}, 0);
       document.getElementById("good-content").classList.remove("active")
     },
@@ -238,7 +251,7 @@ export default {
       naturalContainer.getElementsByClassName("left-bottle")[0].setAttribute("style", "opacity: 0;")
       naturalContainer.getElementsByClassName("right-bottle")[0].setAttribute("style", "opacity: 0;")
       naturalContainer.getElementsByClassName("hand")[0].classList.add("active")
-      naturalContainer.getElementsByClassName("plant")[0].classList.add("active")
+      //naturalContainer.getElementsByClassName("plant")[0].classList.add("active")
       $( "#natural-content-container-left" ).animate({width: "33%"}, 0,);
       $( "#natural-content-container-right" ).animate({width: "33%"}, 0,);
       document.getElementById("natural-content-left").classList.add("active")
@@ -255,7 +268,7 @@ export default {
       naturalContainer.getElementsByClassName("left-bottle")[0].setAttribute("style", "opacity: 1;")
       naturalContainer.getElementsByClassName("right-bottle")[0].setAttribute("style", "opacity: 1;")
       naturalContainer.getElementsByClassName("hand")[0].classList.remove("active")
-      naturalContainer.getElementsByClassName("plant")[0].classList.remove("active")
+      //naturalContainer.getElementsByClassName("plant")[0].classList.remove("active")
       $( "#natural-content-container-left" ).delay(1000).animate({width: "0%"}, 0,);
       $( "#natural-content-container-right" ).delay(1000).animate({width: "0%"}, 0,);
       document.getElementById("natural-content-left").classList.remove("active")
@@ -462,6 +475,10 @@ export default {
     line-height: 1.4;
   }
 
+  .natural-hand{
+    transform: translate(-25%, 0) !important;
+  }
+
   .hand, .plant{
     position: absolute;
     bottom: 0%;
@@ -473,17 +490,17 @@ export default {
   }
 
   .hand.active, .plant{
-    height: 50%;
+    height: 40%;
   }
 
-  .hand>img, .plant>img{
+  .hand>svg, .plant>img{
     position: absolute;
     bottom: -100%;
     transform: translate(-50%, 5%);
     transition: all ease-in .5s;
   }
 
-  .hand>img{
+  .hand>svg{
     height: calc(200px + 12vw);
   }
 
@@ -492,7 +509,7 @@ export default {
     height: calc(50px + 12vw);
   }
 
-  .hand.active>img, .plant.active>img{
+  .hand.active>svg, .plant.active>img{
     position: absolute;
     bottom: 0;
   }
@@ -720,6 +737,11 @@ export default {
 
   #good-content .two-third-body{
     color: white;
+  }
+
+  .good-hand{
+    width: 45vw !important;
+    height: 22vw !important;
   }
 
   .good-fish{
