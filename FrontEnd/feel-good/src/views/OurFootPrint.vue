@@ -45,12 +45,12 @@
                           </div>
                             </div>
 
-  <!--global footprint information section-->   
+ <!--global footprint information section-->   
  <section class="footprint-info">
     <div class=" d-flex align-items-center">      
       <div class="container">
         <div class="row">
-        <!--bootstrap grid used to stack columns based on breakpoints/screen size-->
+         <!--bootstrap grid used to stack columns based on breakpoints/screen size-->
           <div class="globe-text col-lg-6"><p class="globe-item text-sm-justify text-lg-left">How we are making a stand against plastic pollution. 
               The oceans of the Earth are in danger from the disastrous effects of plastics. 
               The Feel Good Drinks Co. has adopted a new sustainable packaging solution, 
@@ -59,7 +59,7 @@
                 <p class="globe-item text-lg-left">The Paper Bottle project has provided an opportunity for the Feel Good Drinks Co. to align 
                our packaging to be 100% fully bio-based. Our recyclable paper bottle is a world-first according 
                to Earth Buddies (Geronimo 2018) and the catalyst for our exciting and positive change.</p>
-            <!--bootstrap css used to align text based on breakpoints/screen size-->
+               <!--bootstrap css used to align text based on breakpoints/screen size-->
                <p class="text-lg-right"><b>The most exciting fact is that this bottle is 100% biodegradable and recyclable.</b></p>
                   </div>
                     <div class="globe col-lg-6">      
@@ -73,7 +73,7 @@
                               </div>
         </section> <!--end footprint info section-->
       </div> <!--end footprint overview-->
-   </section><!--end footprint main-->
+   </section> <!--end footprint main-->
 
   <!--plastic alternative bottle main section-->
   <section class="bottles-main"> 
