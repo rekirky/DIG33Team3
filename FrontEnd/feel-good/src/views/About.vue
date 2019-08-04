@@ -33,7 +33,7 @@
 
         <h6 class="lead">The heart of our company is to create a completely 100% good product. The passion of 
           the Feel Good Drinks Co., lead our team of engineers to the development of all new and innovative 
-          packaging which aligns with the company ethos — all-natural ingredients inside and outside the 
+          packaging which aligns with the company ethos — all natural ingredients inside and outside the 
           bottle.</h6>
 
         <p class="about-feel-good">The Feel Good Drinks premium range of 100% natural still and sparkling drinks designed 
