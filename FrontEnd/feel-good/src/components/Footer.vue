@@ -99,6 +99,7 @@ export default {
     padding: 0px 5px;
   }
 
+// Styling for the mobile version of the footer.
   @media only screen and (max-width: 1199px) {
     .footer-bottles {
       display: none;
