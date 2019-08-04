@@ -1,22 +1,24 @@
 <template>
 
+      <!--see reference page for 3rd party content references-->
+
   <div class="about">
-      <!--Modified Paul's html for mobile view header title and logo-->
+      <!--modified Paul's html for mobile view header title and logo-->
     <div class="row no-gutters d-lg-none d-md-none">
       <div class="col-12 top-bar"></div>
        <div class="col-2"></div>
          <div class="col-8 title">THE FEEL GOOD DRINK CO</div>
-           <div class="col-2 logo img-fluid"><img src="@/assets/img/FGD_Logo_full.png"></div>
+           <div class="col-2 logo img-fluid"><img src="@/assets/img/FGD_Logo_full.png" alt="feel good drinks logo"></div>
             </div>
             
-       <!--Bootstrap and custom classes to style elements -->
+       <!--bootstrap and custom classes to style elements -->
     <article class="about-main">     
        <!--display property used to hide right sidebar on mobile and tablet view-->
       <div class="right-bar d-none d-lg-block img-fluid container">
       <img class="pattern" src="@/assets/img/patternside.png" alt="side-bar pattern">
       <div class="section-label">about</div>
         </div>    
-
+      <!--respoonsive bootstrap flexbox container-->
       <section class="about-header d-flex align-item-center text-center">       
       <div class="container">
       <h2 class="about-title"><small> THE HEART OF OUR COMPANY </small></h2>
@@ -25,13 +27,13 @@
       </section>
    
     <section> 
-      <Section class="about-text text-left">
-         <!-- Bootstrap container -->
+      <section class="about-text text-left">
+         <!-- bootstrap container -->
          <div class="container">
 
         <h6 class="lead">The heart of our company is to create a completely 100% good product. The passion of 
           the Feel Good Drinks Co., lead our team of engineers to the development of all new and innovative 
-          packaging which aligns with the company ethos — all-natural ingredients inside and outside the 
+          packaging which aligns with the company ethos — all natural ingredients inside and outside the 
           bottle.</h6>
 
         <p class="about-feel-good">The Feel Good Drinks premium range of 100% natural still and sparkling drinks designed 
@@ -42,9 +44,9 @@
           women to join together to help fight the plastic pollution problem, making a difference globally. 
           We want you to FEEL GOOD!</p>
       </div>
-    </Section>
+    </section> <!--end about text section-->
 
-    <Section class="about-images d-flex align-item-center"> 
+    <section class="about-images d-flex align-item-center"> 
      <div class="about-logo container d-none d-lg-block">
         <div class="about-logo-sm">
         <img class="img-fluid float-left" src="@/assets/img/sm_logo.png" alt="feel good drinks logo small">
@@ -52,7 +54,7 @@
           </div>
 
        <div class="image-grid container">
-        <!-- Bootstrap grid for responsive image layout -->
+        <!-- bootstrap grid for responsive image layout -->
       <div id="about-image-grid">
         <div class="image-grid">
         <div class="row justify-content-center mx-auto">
@@ -68,17 +70,18 @@
         <div class="about-image col-6">     
         <img class="img-fluid" src="@/assets/img/beach.png" alt="aerial beach view image">
           </div>
-            </div>
+            </div> <!--end image grid rows-->
               </div>
                 </div>
-                  </div>
+                  </div> <!--end image grid container-->
         <div class="side-bar container d-none d-lg-block">      
           </div>            
-           </section>
-              </section>
-    </article> 
+           </section> <!--end about images section-->
+              </section> <!--end about content section-->
+    </article> <!--end about main article-->
            
 <section>
+      <!--responsive bootstrap flexbox container-->
     <div class="consumer-notice d-flex align-items-left">
        <div class="consumer-logo">     
         <img class="img float-left d-none d-lg-block" src="@/assets/img/logo_247.png" alt="feel good drinks logo">
@@ -99,9 +102,9 @@
                 natural ingredients"  (Nichols PLC 2019, para 1). </small></p>
                 </div>
                </div>   
-    </section>
+    </section> <!--end about consumer notice section-->
        
-  </div>
+  </div> <!--end about us page component-->
 </template>
 
 <script>
@@ -160,11 +163,21 @@ h6{
   display: block
 }
 
+.about-image img{
+  margin: 10px
+}
+
+.about-logo-sm img{
+  margin: 10px;
+  margin-right: 220px
+}
+
 .image-grid.container {
   width:80%;
   margin-left: 40px
 }
 
+/*side bars styling*/
 .side-bar.container {
   width:20%
 }
@@ -194,15 +207,7 @@ h6{
   padding-right: 100px
   }
 
-.about-image img{
-  margin: 10px
-}
-
-.about-logo-sm img{
-  margin: 10px;
-  margin-right: 220px
-}
-
+/*consumer notice section styling*/
 .consumer-logo{
   padding: 40px
 }
