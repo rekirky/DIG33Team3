@@ -7,6 +7,7 @@
         <span class="bar bottom"></span>
       </div>
     </div>
+
     <!-- Navigation Links -->
     <div id="menu-container">
       <div class="link-container" id="home-link">
@@ -17,7 +18,8 @@
         <div class="bullet-point"></div>
         <router-link to="/event" class="nav-link" id="events" v-on:click.native="togglePoint">Events</router-link>
       </div>
-      <!-- If there and events, loop through them to add their links -->
+
+      <!-- If there are events, loop through them to add their links -->
       <div v-if="this.events.length != 0">
         <div v-for="(event, index) in events" :key="index">
           <div class="link-container child-link" :id="'event-' + event.id + '-link'">
@@ -34,7 +36,8 @@
         <div class="bullet-point"></div>
         <router-link to="/products" class="nav-link" id="products" v-on:click.native="togglePoint">Products</router-link>
       </div>
-      <!-- If there and products groups, loop through them to add their links -->
+
+      <!-- If there are products groups, loop through them to add their links -->
       <div v-if="this.productGroups.length != 0">
       <div v-for="(group, index) in productGroups" :key="index">
         <div class="link-container child-link" :id="'product-group-' + group.id + '-link'">
@@ -48,6 +51,9 @@
         <router-link to="/footprint" class="nav-link" id="footprint" v-on:click.native="togglePoint">Our Footprint</router-link>
       </div>
     </div>
+
+    <!-- Overlay that fills the rest of the screen, if clicked it will close the nav menu,
+         Implemented based on feedback from Cam -->
     <div id="close-container" v-on:click="toggleMenu">
     </div>
   </div>
@@ -84,14 +90,18 @@ export default {
 
     //Added the Active link marker to the Selected Link.
     togglePoint(event){
+
+      //Removes the bullet point from all links.
       var points = document.getElementsByClassName("bullet-point active")
       while(points.length > 0){
         points[0].classList.remove('active');
       }
 
+      //Adds the bullet point to the selected link.
       var pointId = event.target.id.concat("-link")
       var activePoint = document.getElementById(pointId)
       activePoint.getElementsByClassName("bullet-point")[0].classList.toggle("active")
+      this.toggleMenu()
     }
   }
 }
