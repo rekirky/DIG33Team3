@@ -5,6 +5,7 @@
         <img class="img-fluid logo" src="@/assets/img/logo_247.png" alt="feel good drinks logo">
         <h1>Thank You for registering!</h1>
         <h2>We will see you there!</h2>
+        <router-link to="/home" tag="button">Return Home</router-link>
       </div>
     </div>
   </div>
