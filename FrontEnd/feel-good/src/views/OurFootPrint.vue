@@ -1,29 +1,31 @@
 <template>
-<div class="our-foot-print">
 
-<!--Modified Paul's html for mobile view header title and logo-->
+<!--see reference page for 3rd party content references-->
+
+<div class="our-foot-print">
+  <!--modified Paul's html for mobile view header title and logo-->
   <div class="row no-gutters d-lg-none d-md-none">
       <div class="col-12 top-bar"></div>
        <div class="col-2"></div>
          <div class="col-8 title">THE FEEL GOOD DRINK CO</div>
-           <div class="col-2 logo img-fluid"><img src="@/assets/img/FGD_Logo_full.png"></div>
+           <div class="col-2 logo img-fluid"><img src="@/assets/img/FGD_Logo_full.png" alt="feel good drinks logo"></div>
             </div>
 
-<!-- Bootstrap and custom classes to style elements -->
+ <!-- bootstrap and custom classes to style elements -->
  <article class="our-footprint">
    <!--display property used to hide right sidebar on mobile and tablet view using bootstrap breakpoints-->
      <div class="right-bar d-none d-lg-block img-fluid container">
       <img class="pattern" src="@/assets/img/patternside.png" alt="side-bar pattern">
         <div class="section-label">Our Global Footprint</div>
          </div>    
-
+<!--footprint main section using responsive bootstrap flex containers-->
 <section class="footprint-main d-flex align-items-center text-center"> 
    <div class="footprint-side-logo d-none d-lg-block"> 
     <div class="footprint-logo container">
       <img class="img-fluid" src="@/assets/img/sm_logo.png" alt="feel good drinks logo small">
         </div>
           </div> 
-          
+  <!--left sidebar footprint animation-->     
   <div class="footprint-bar d-none d-lg-block d-md-block">
     <div class="footprint-gif container">
       <img class="img-fluid float-left" src="@/assets/img/feet.gif" alt="footprint animation">
@@ -42,7 +44,8 @@
                         </div>
                           </div>
                             </div>
-                        
+
+  <!--global footprint information section-->   
  <section class="footprint-info">
     <div class=" d-flex align-items-center">      
       <div class="container">
@@ -68,10 +71,11 @@
                           </div>   
                             </div>
                               </div>
-        </section> 
+        </section> <!--end footprint info section-->
       </div> <!--end footprint overview-->
    </section><!--end footprint main-->
 
+  <!--plastic alternative bottles main section-->
   <section class="bottles-main"> 
     <div class="paper-bottles d-flex align-items-left container">       
  	    <div class="row">
@@ -79,7 +83,7 @@
          <h5 class="spec-header text-left d-none d-lg-block"><small><b> How we went Green</b></small></h5>
            </div>
 
-    <!--mobile and tablet bottle specs section-->
+    <!--mobile and tablet bottle specs-->
     <div class="d-lg-none"> 
       <div class="container">
         <div class="col-12">
@@ -89,11 +93,11 @@
       <div>
        <div class="container">
         <div class="row">
-          <div class="col-4 logo-mobile img-fluid align-self-end"><img src="@/assets/img/sm_logo.png"></div>
+          <div class="col-4 logo-mobile img-fluid align-self-end"><img src="@/assets/img/sm_logo.png" alt="feel good drinks logo"></div>
            <div>
 	           <img class="img-fluid col" src="@/assets/img/bottles/Paper-Bottle_apple_499px.png" alt="apple flavour paper bootle image">
               </div>
-                </div>
+                </div> <!--end mobile bottle specs row-->
                   </div>
               
  	         <div class="specs-mobile d-lg-none">
@@ -119,9 +123,9 @@
                     </div>
                       </div>
             </div>
-             </div> 
+             </div> <!--end mobile and tablet bottle specs-->
     
-           <!--desktop view bottle specs section-->
+           <!--desktop view bottle specs-->
             <div class="bottle-image d-none d-lg-block">
 	           <img class="logo img-fluid float-right" src="@/assets/img/bottles/Paper-Bottle_apple_499px.png" alt="apple flavour paper bootle image">
               </div>
@@ -142,7 +146,7 @@
                     </div>
                       </div>
                          </div> <!--end bottle info tags row-->
-                          </div>
+                          </div> <!--desktop view bottle specs-->
 
             <div class="paper-bottle-text text-left d-none d-lg-block">
               <div class="col">
@@ -162,10 +166,10 @@
 
         </div> <!--end main row-->
        </div> <!--end paper bottles container-->
-    </section>  <!--end bottles-main section-->
- </article>
+    </section> <!--end plastic alternative bottles main section-->
 
-</div>
+ </article> <!--end our footprint article-->
+</div> <!--end our footprint page component-->
 </template>
 
 <script>
@@ -291,6 +295,77 @@ img.globe{
   float: left
 }
 
+/*Spinning globe animation*/
+
+/*Deb's code to style globe statistic text */
+h3.globe{
+text-align: center; 
+vertical-align: middle; 
+color: #fff;
+padding: 55px;
+text-shadow: 3px 3px 6px #000;
+}
+
+/*Start code snippet and comments for globw spin animation sourced by Deb from W3Bits.(2019). Create a 3d Earth with Rotating Animation
+ with CSS. [online] Available at: https://w3bits.com/css-earth/ [Accessed 28 Jul. 2019].*/
+
+#earth {
+  /* [1] Allow it to contain the absolutely positions pseudo-elements*/
+  position: relative;
+
+  /* [2] Set-up the dimensions and spacing */
+  width: 350px;
+  height: 350px;
+  margin: 3em auto;
+
+  /* [3] Prepare the animation effects */
+  transition: transform 2000ms linear;
+  animation: rotate 25s linear infinite; /* This is going to be defined in the next step */
+
+  /* [4] Tweak the appearance, and give it a nice background i.e. the world map */
+  color: #000;
+  border-radius: 50%;
+  background: url(../assets/img/worldmap_base.png) 0 0 repeat;
+  box-shadow: inset 20px 0 80px 6px rgba(0, 0, 0, 1);
+
+  /* [5] Position things in a 3d space */
+  transform-style: preserve-3d;
+}
+
+#earth:before {
+  /* [1] Again, break the flow to show this as an overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* [2] Again, give it all the available space */
+  width: 100%;
+  height: 100%;
+
+  /* [3] Duh. */
+  content: '';
+
+  /* [4] Add some shape and overlay effect to it */
+  opacity: .2;
+  border-radius: 50%;
+  background: radial-gradient(circle at 100px 100px, #fff, #000);
+}
+
+/*End code snippet and comments for globe spin animation sourced by Deb from W3Bits.(2019). Create a 3d Earth with Rotating Animation
+ with CSS. [online] Available at: https://w3bits.com/css-earth/ [Accessed 28 Jul. 2019].*/
+
+/*Code snippet for globe spin animation keyframes sourced from 
+Stack Overflow.(2017). Rotating globe in CSS. [online] Available at:
+ https://stackoverflow.com/questions/27781634/rotating-globe-in-css [Accessed 31 Jul. 2019].*/
+
+@keyframes rotate {
+  from { background-position:  100%  0; }
+  to {   background-position:    0   0; }
+}
+
+
+/*Plastic alternative bottle information section styling*/
+
 .bottles.main{
   width:100%
 }
@@ -372,72 +447,6 @@ p.specs{
   margin-bottom: 25px;
   color: var(--green-secondary);
   text-align: left
-}
-
-/*Deb's code to style globe statistic text */
-h3.globe{
-text-align: center; 
-vertical-align: middle; 
-color: #fff;
-padding: 55px;
-text-shadow: 3px 3px 6px #000;
-}
-
-/*Start code snippet and comments for Earth Spin animation sourced by Deb from W3Bits.(2019). Create a 3d Earth with Rotating Animation
- with CSS. [online] Available at: https://w3bits.com/css-earth/ [Accessed 28 Jul. 2019].*/
-
-#earth {
-  /* [1] Allow it to contain the absolutely positions pseudo-elements*/
-  position: relative;
-
-  /* [2] Set-up the dimensions and spacing */
-  width: 350px;
-  height: 350px;
-  margin: 3em auto;
-
-  /* [3] Prepare the animation effects */
-  transition: transform 2000ms linear;
-  animation: rotate 25s linear infinite; /* This is going to be defined in the next step */
-
-  /* [4] Tweak the appearance, and give it a nice background i.e. the world map */
-  color: #000;
-  border-radius: 50%;
-  background: url(../assets/img/worldmap_base.png) 0 0 repeat;
-  box-shadow: inset 20px 0 80px 6px rgba(0, 0, 0, 1);
-
-  /* [5] Position things in a 3d space */
-  transform-style: preserve-3d;
-}
-
-#earth:before {
-  /* [1] Again, break the flow to show this as an overlay */
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  /* [2] Again, give it all the available space */
-  width: 100%;
-  height: 100%;
-
-  /* [3] Duh. */
-  content: '';
-
-  /* [4] Add some shape and overlay effect to it */
-  opacity: .2;
-  border-radius: 50%;
-  background: radial-gradient(circle at 100px 100px, #fff, #000);
-}
-
-/*End code snippet and comments for Earth Spin animation sourced by Deb from W3Bits.(2019). Create a 3d Earth with Rotating Animation
- with CSS. [online] Available at: https://w3bits.com/css-earth/ [Accessed 28 Jul. 2019].*/
-
-/*Code snippet for Earth Spin animation keyframes sourced from 
-Stack Overflow.(2017). Rotating globe in CSS. [online] Available at:
- https://stackoverflow.com/questions/27781634/rotating-globe-in-css [Accessed 31 Jul. 2019].*/
-
-@keyframes rotate {
-  from { background-position:  100%  0; }
-  to {   background-position:    0   0; }
 }
 
 </style>
