@@ -8,7 +8,7 @@
             <p>*100% naturally occuring fruit sugars</p>
           </div>
 
-          <!-- Fruit Descriptiona-->
+          <!-- Fruit Descriptions-->
           <div class="marker fruit-1-marker">
             <div class="circle-surround">
               <div class="circle"></div>
