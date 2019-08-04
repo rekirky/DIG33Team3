@@ -1,12 +1,16 @@
 <template>
+
+  <!--see below for 3rd party content references-->
+
   <div class="references">
 
-  <!-- Bootstrap and custom classes to style elements -->
+  <!-- bootstrap and custom classes to style elements -->
   <section class="reference-list text-center">
     <div class="container">
 
-    <!--mobile and tablet view header logo display using bootstrap CSS-->
+    <!--mobile and tablet view header logo display using bootstrap CSS/breakpoints, i.e. display-none large screens-->
     <div class="mobile-header text-center container">
+      <!--responsive logo image using bootstrap CSS-->
       <a href="https://endgame-feelgood.com/"> <img class="img-fluid d-lg-none mx-auto" src="@/assets/img/logo_247.png" 
         alt="feel good drinks logo"></a>
         </div>
@@ -22,8 +26,8 @@
            <li> Amazon Lightsail - https://lightsail.aws.amazon.com/.</li>
            <li> Bootstrap -  https://getbootstrap.com/.</li>
            <li> Composer - https://getcomposer.org/.</li>
-           <li>Docker -  https://docker.com/.</li>
-           <li>Laravel - https://laravel.com/.</li>
+           <li> Docker -  https://docker.com/.</li>
+           <li> Laravel - https://laravel.com/.</li>
            <li> Laravel Artisan - https://www.laravel-artisan.com/.</li>
            <li> Lumen - https://lumen.laravel.com/.</li>
            <li> MySQL - https://mysql.com/.</li>
@@ -32,7 +36,7 @@
            <li> jQuery - https://jquery.com/. </li>
            <li> Vue - https://Vuejs.org/. </li>
             </ul>
-       </div>
+       </div> <!--end build tools, frameworks and libraries references-->
   </div> 
 
       <div class="reference-list-entries container">
@@ -41,8 +45,7 @@
            <div> <p class="list-entry"> Matteson Steve. 2019. OpenSans. Google Fonts, https://fonts.google.com/specimen/Open+Sans.</p></div>
            <div> <p class="list-entry"> Font Awesome. 2019. Social media icons. https://fontawesome.com/.</p></div>
            <div> <p class="list-entry"> Vernon Adams. 2011. Holtwood One SC. Google Fonts, https://fonts.google.com/specimen/Holtwood+One+SC.</p></div>
-            </div>
-      
+            </div> <!--end font references-->   
 
      <div class="reference-list-entries clear-fix">
         <h6>Images</h6>
@@ -67,7 +70,7 @@
           <div> <p class="list-entry"> Rawpixel.com. 2019. ‘Blue Shorts’. https://www.pexels.com/photo/barefoot-beach-blur-break-296879/. Accessed 20 June 2019. </p> </div>
           <div> <p class="list-entry"> Rawpixel.com. 2018. ‘Photo of Family On Seashore’ https://www.pexels.com/photo/photo-of-family-on-seashore-1574653/. Accessed 20 June 2019. </p></div>
             </div>
-      </div>
+      </div> <!--end image references-->
 
         <div class="reference-list-entries">
         <h6>Code Snippets</h6>
@@ -84,7 +87,7 @@
           <div><p class="list-entry">Plasticadrift.Org. 2019. “Plastic Adrift.” http://plasticadrift.org/.  Accessed 10 June 2019.</p></div>
           <div><p class="list-entry">Product nutrition and descriptive information sourced July 14, 2019 for bottle products for all pages from https://paperwaterbottle.com/ and multiple sources as follows: </p></div>
    
-        <div><p class="product-entries"> <em>Product Page - Refreshingly Still drinks</em></p>
+        <div><p class="product-entries"><em>Product Page - Refreshingly Still drinks</em></p>
         <ul>
           <li> Orange, https://lemonconcentrate.com/orange-fruit-concentrate</li>
           <li> Mango, https://www.mango.org/about-mangos/</li>
@@ -95,7 +98,7 @@
         </ul>
            </div>        
 
-        <div> <p class="product-entries"> <em>Product Page - Bit Bubbly </em> </p>
+        <div> <p class="product-entries"><em>Product Page - Bit Bubbly </em></p>
           <ul>
           <li> Orange, https://lemonconcentrate.com/orange-fruit-concentrate</li>
           <li> Passionfruit, https://www.crfg.org/pubs/ff/passionfruit.html</li>
@@ -105,9 +108,9 @@
           <li> Elderflower, https://www.huffingtonpost.com.au/entry/what-is-elderflower_n_5afd85d7e4b0a59b4e013e92</li>
           </ul>
             </div> 
-         
-      </div>
-  </div>      
+        </div> <!--end text-content references-->
+
+  </div> <!--end reference list-entries container-->   
 </section> <!--end reference list section-->    
 
 <section>
@@ -138,7 +141,7 @@ export default {
 <style scoped lang="scss">
 
 .reference-list{
- margin: 0 20% 10% 25%
+ margin: 0 20% 10% 20%
 }
 
 h2{
