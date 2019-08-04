@@ -75,7 +75,7 @@
       </div> <!--end footprint overview-->
    </section><!--end footprint main-->
 
-  <!--plastic alternative bottles main section-->
+  <!--plastic alternative bottle main section-->
   <section class="bottles-main"> 
     <div class="paper-bottles d-flex align-items-left container">       
  	    <div class="row">
@@ -146,7 +146,7 @@
                     </div>
                       </div>
                          </div> <!--end bottle info tags row-->
-                          </div> <!--desktop view bottle specs-->
+                          </div> <!--end desktop view bottle specs-->
 
             <div class="paper-bottle-text text-left d-none d-lg-block">
               <div class="col">
@@ -166,7 +166,7 @@
 
         </div> <!--end main row-->
        </div> <!--end paper bottles container-->
-    </section> <!--end plastic alternative bottles main section-->
+    </section> <!--end plastic alternative bottle main section-->
 
  </article> <!--end our footprint article-->
 </div> <!--end our footprint page component-->
@@ -306,7 +306,7 @@ padding: 55px;
 text-shadow: 3px 3px 6px #000;
 }
 
-/*Start code snippet and comments for globw spin animation sourced by Deb from W3Bits.(2019). Create a 3d Earth with Rotating Animation
+/*Start code snippet and comments for globe spin animation sourced by Deb from W3Bits.(2019). Create a 3d Earth with Rotating Animation
  with CSS. [online] Available at: https://w3bits.com/css-earth/ [Accessed 28 Jul. 2019].*/
 
 #earth {
