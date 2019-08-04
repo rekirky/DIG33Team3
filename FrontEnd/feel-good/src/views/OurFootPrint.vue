@@ -57,7 +57,7 @@
               developed by world leading BillerudKorsnäs in Stockholm (BillerudKorsnäs 2019). </p>
               <h3 class="globe-text">The Paper Bottle Project </h3>
                 <p class="globe-item text-lg-left">The Paper Bottle project has provided an opportunity for the Feel Good Drinks Co. to align 
-               our packaging to be 100% fully bio-based. Our recyclable paper bottle, is a world-first according 
+               our packaging to be 100% fully bio-based. Our recyclable paper bottle is a world-first according 
                to Earth Buddies (Geronimo 2018) and the catalyst for our exciting and positive change.</p>
             <!--bootstrap css used to align text based on breakpoints/screen size-->
                <p class="text-lg-right"><b>The most exciting fact is that this bottle is 100% biodegradable and recyclable.</b></p>
@@ -140,9 +140,9 @@
                     </div>
                 <div class="info-tag-text col align-self-end">
                   <p class="specs"><small>The 100% organic and renewable moulded fibre</small></p>
-                  <p class="specs"><small>Bottle is designed to look beautiful and functional with patterned paper designs.</small></p>
+                  <p class="specs"><small>Bottle is designed to look beautiful and functional with patterned paper design</small></p>
                   <p class="specs"><small>The structural integrity of the bottle is comparable to plastic bottle</small></p>
-                  <p class="specs"><small>Paper label’s with ecofriendly printable coating</small></p>
+                  <p class="specs"><small>Paper label with ecofriendly printable coating</small></p>
                     </div>
                       </div>
                          </div> <!--end bottle info tags row-->
