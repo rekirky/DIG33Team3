@@ -16,6 +16,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 Vue.config.productionTip = false
 
+//Import component into all components
 Vue.component('svg-img', Svg)
 
 //Initialisation of the Application
