@@ -6,6 +6,8 @@
           <img src="@/assets/img/fgCo.png">
         </div>
       </div>
+
+      <!-- Contact Content and Form Container -->
       <div class="col-12 col-lg-9">
         <div class="row">
           <div class="title-container">
@@ -15,6 +17,8 @@
         <div class="center-content">
           <div class="row no-gutters">
             <div class="col-12 col-lg-6">
+
+              <!-- Feedback primer -->
               <div class="card">
                 <h5>What's on Your Mind!</h5>
                 <p class="tagline">Here at Feel Good Drink Co we love feedback!</p>
@@ -32,6 +36,8 @@
               </div>
             </div>
             <div class="col-12 col-lg-6">
+              
+              <!-- Contact Form -->
               <div class="card">
                 <h5>Send us a Message!</h5>
                 <form @submit.prevent="newEnquiry()">
@@ -76,6 +82,8 @@ import { NEW_ENQUIRY } from '@/store/types'
 
 export default {
   name: 'Contact',
+
+  //Component Data holding the data entered into the contact form
   data () {
     return {
       email: '',
@@ -85,9 +93,13 @@ export default {
       nameError: ''
     }
   },
-
+  
   methods: {
+
+    //Contact form submission
     async newEnquiry () {
+      
+      //Check if all the required information has been entered
       if(this.email == '' || this.name == ''){
         if(this.emailError == ''){
           this.emailError = 'You must submit an email to register'
@@ -96,6 +108,8 @@ export default {
           this.nameError = 'You must submit your name to register'
         }
       }
+
+      //If all information is entered, it is dispatched to the backend to be stored in the database
       else{
         try {
           await this.$store.dispatch(NEW_ENQUIRY, {
@@ -103,8 +117,11 @@ export default {
             name: this.name,
             message: this.message
           })
+
+          //Once the information has been submitted the user is sent to the contact success page.
           this.$router.push('/contact-successful')
         } catch (e) {
+          //Notify the user if the information could not be submitted.
           alert("Sorry it looks like we can't register you are this time, Please try again later")
         }
       }
