@@ -85,6 +85,7 @@
               </div>
             </div>
 
+            <!-- ingredients -->
             <div class="ingredients" :style="'background-color: ' + product.color">
               <h5>Ingredients</h5>
               <p>{{product.ingredients}}</p>
