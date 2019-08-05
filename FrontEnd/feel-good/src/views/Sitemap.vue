@@ -12,9 +12,12 @@
             <h1>site map</h1>
           </div>
         </div>
+        <!-- Site Map Content Container -->
         <div class="center-content">
           <div class="row mobile-overlay">
             <div class="col-1"></div>
+            
+            <!-- Main site related links -->
             <div class="col-11 col-md-8">
               <div class="row">
                 <h5>MAIN</h5> 
@@ -47,6 +50,8 @@
               </div>
             </div>
             <div class="col-1 visible-mobile"></div>
+            
+            <!-- Additional pages -->
             <div class="col-11 col-md-3">
               <div class="row">
                 <h5>LEGAL</h5> 
