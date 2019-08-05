@@ -14,6 +14,7 @@ class Product extends Resource
      */
     public function toArray($request)
     {
+        //Set the information that should be returned when a request is made
         return[
             "id" => $this->id,
             "productGroup" => $this->productGroup,

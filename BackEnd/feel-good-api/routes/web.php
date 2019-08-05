@@ -15,6 +15,7 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
+//Accepted routes that return database information
 $router->get('product-groups', 'ProductGroupController@index');
 $router->get('product-group/{id}', 'ProductGroupController@show');
 $router->get('events', 'EventController@index');

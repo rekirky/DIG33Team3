@@ -57,6 +57,7 @@ $app->singleton(
 |
 */
 
+//Add cors header to the response
 $app->middleware([
     App\Http\Middleware\Cors::class
  ]);

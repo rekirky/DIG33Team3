@@ -16,8 +16,10 @@ class ProductGroupController extends Controller
      */
     public function index()
     {
+        //Gets all product groups from the database
         $productGroups = ProductGroup::all();
 
+        //Returns all the product groups in the database
         return ProductGroupResource::collection($productGroups);
     }
 
@@ -29,8 +31,10 @@ class ProductGroupController extends Controller
      */
     public function show($id)
     {
+        //Attempts to find the product group requested by id
         $productGroup = ProductGroup::findOrFail($id);
 
+        //returns the product group that was requested
         return new ProductGroupResource($productGroup);
     }
 }
