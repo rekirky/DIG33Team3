@@ -54,21 +54,27 @@
           <div> <p class="list-entry"> Aweeka. 2019.  ‘Mango and oranges’. https://www.shutterstock.com/image-photo/oranges-mango-46109116?. Accessed 20 June 2019.</p></div>
           <div> <p class="list-entry"> Bacin. 2013. ‘Passionfruit’. https://www.istockphoto.com/au/photo/passion-fruit-gm181128185-25663433. Accessed 20 June 2019.</p></div>
           <div> <p class="list-entry"> Boltneva, Valeria. 2019. ‘Photo of Foot Print on the Seashore’. https://www.pexels.com/photo/photo-of-foot-print-on-the-seashore-939046/. Accessed 20 June 2019.</p></div>
-          <div> <p class="list-entry"> Brown, Deborah. 2019. ‘Feel Good Drinks Paper Bottles’.</p> </div>
+          <div> <p class="list-entry"> Brown, Deborah. 2019. ‘Feel Good Drinks Paper Bottles’.</p></div>
           <div> <p class="list-entry"> Brown, Deborah. 2019. Hand illustrations, fish and plants.</p></div>
           <div> <p class="list-entry"> Brown, Deborah. 2019. ‘3D world illustration’. </p></div>
           <div> <p class="list-entry"> Creation Hill.  2019. Pexels.com. ‘Baby, beautiful, carefree’. https://www.pexels.com/photo/woman-carrying-baby-near-grass-1261909/. Accessed 20 June 2019.</p> </div>
           <div> <p class="list-entry"> Diamant24.  2019. ‘Mango’. https://www.123rf.com/photo_16258723_ripe-red-mango-fruit-on-white-background.html. Accessed 20 June 2019. </p></div>
-          <div> <p class="list-entry"> Feel Good Drinks Co. 2019. Feel Good Drinks Co. logo. http://www.feelgooddrinks.co.uk/. Accessed 10 June 2019. </p></div>
+          <div> <p class="list-entry"> Feel Good Drinks Co. 2019. 'Feel Good Drinks Co. Logo'. http://www.feelgooddrinks.co.uk/. Accessed 10 June 2019. </p></div>
+          <div> <p class="list-entry"> GitHub. 2019. 'GitHub Logo'. Digital Image. https://github.com/. Accessed 10 June 2019.</p></div>
           <div> <p class="list-entry"> ImgBin. 2019. ‘Elderberry flower’. https://imgbin.com/png/tYxr8eYc/elderflower-cordial-elderberry-shrub-lemon-syrup-png. Accessed 20 June 2019. </p> </div>
           <div> <p class="list-entry"> Hellgram. 2017. Fruits patterns set. https://creativemarket.com/Hellgram/1358737-Fruits-patterns-set. Accessed 20 June 2019. </p> </div>
           <div> <p class="list-entry"> Juliann. 2019. ‘Political map of the world. Gray world map-countries. Vector illustration - Vector'.  https://www.shutterstock.com/image-vector/political-map-world-gray-mapcountries-vector-545606905?. Accessed 20 June 2019. </p></div>
           <div> <p class="list-entry"> Lukas. 2019. ‘Lemons’. https://www.pexels.com/photo/close-up-photo-of-sliced-yellow-lemon-on-white-surface-1414110/. Accessed 20 June 2019. </p></div>
+          <div> <p class="list-entry"> Netlify. 2019. 'Netlify Logo'. Digital Image. https://netlify.com/. Accessed 10 June 2019.</p></div>
           <div> <p class="list-entry"> Pixelbay. 2019. ‘Blue Body Water’. https://www.pexels.com/photo/beach-foam-landscape-nature-533923/. Accessed 20 June 2019.</p> </div>
           <div> <p class="list-entry"> Pixelbay. 2019. ‘White and Gray Dolphin on Blue Water’. https://www.pexels.com/photo/white-and-gray-dolphin-on-blue-water-64219/. Accessed 20 June 2019.</p></div>
           <div> <p class="list-entry"> Pngimg.com. 2019. 'Pomegranate’ https://www.crazypng.com/18-pomegranate-png-images-downloaded-free-charge.html. Accessed 20 June 2019. </p> </div>
           <div> <p class="list-entry"> Rawpixel.com. 2019. ‘Blue Shorts’. https://www.pexels.com/photo/barefoot-beach-blur-break-296879/. Accessed 20 June 2019. </p> </div>
           <div> <p class="list-entry"> Rawpixel.com. 2018. ‘Photo of Family On Seashore’ https://www.pexels.com/photo/photo-of-family-on-seashore-1574653/. Accessed 20 June 2019. </p></div>
+          <div> <p class="list-entry"> Slack. 2019. 'Slack Logo'. Digital Image. https://slack.com/. Accessed 10 June 2019. </p></div>
+          <div> <p class="list-entry"> Trello. 2019. 'Trello Logo'. Digital Image. https://trello.com/. Accessed 10 June 2019. </p></div>
+          <div> <p class="list-entry"> Trzcacak. 2019. 'HTML, JS and CSS Logo'. Digital image. https://www.trzcacak.rs/imgm/ibRJwx_i-will-fix-your-html5-css3-javascript-jquery/. Accessed 03 August 2019. </p></div>
+          <div> <p class="list-entry"> Vue. 2019. 'Vue Logo'. Digital Image. https://Vuejs.org/. Accessed 10 June 2019.</p></div>
             </div>
       </div> <!--end image references-->
 
