@@ -5,6 +5,7 @@
         <div class="left-gutter">
         </div>
       </div>
+      <!-- Event Content container -->
       <div class="col-12 col-xl-9 center-content" :style="{ backgroundImage: 'url(' + require(`@/assets/img/events/${event.bgImage}`) + ')' }">
         <div class="">
           <img :src="require(`@/assets/img/events/${event.logoImage}`)" :alt="event.title" class="d-block">
@@ -12,6 +13,7 @@
         <div>
           <h3>{{event.tagline}}</h3>
         </div>
+
         <!-- Embed Video Player -->
         <div class="video-player-container">
           <iframe class="video-player" :src="event.video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -41,10 +43,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
-  .video-event{
-    //height: 100vh;
-  }
 
   .right-gutter{
     min-height: 100vh;

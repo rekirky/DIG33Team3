@@ -6,6 +6,8 @@
           <img src="@/assets/img/fgCo.png">
         </div>
       </div>
+
+      <!-- Register Content and Form Container -->
       <div class="col-12 col-lg-9">
         <div class="row">
           <div class="title-container">
@@ -15,6 +17,8 @@
         <div class="center-content">
           <div class="row no-gutters">
             <div class="col-12 col-lg-6">
+
+              <!-- Event information -->
               <div class="card event-info">
                 <h5>Come join us on the {{this.event.date}}</h5>
                 <p class="tagline">{{this.event.subTitle}}</p>
@@ -29,6 +33,8 @@
               </div>
             </div>
             <div class="col-12 col-lg-6">
+
+              <!-- Registration Form -->
               <div class="card">
                 <h5>Register for {{this.event.title}}</h5>
                 <form @submit.prevent="newEnquiry()">
@@ -68,6 +74,7 @@ import { mapGetters } from 'vuex'
 //Import of types to be accessed via despatches
 import { GET_EVENTS, NEW_ENQUIRY } from '@/store/types'
 
+//Component Data holding the data entered into the registration form and event information
 export default {
   name: 'Register',
   data () {
@@ -88,12 +95,16 @@ export default {
   async mounted(){
     //Get event information when the page components is mounted to the application
     await this.$store.dispatch(GET_EVENTS)
-    
+    //Set the current event using the event id passed into the route
     this.event = this.getEvent(parseInt(this.eventRouteId))
   },
 
   methods: {
+
+    //Register form submission
     async newEnquiry () {
+
+      //Check if all the required information has been entered
       if(this.email == '' || this.name == ''){
         if(this.emailError == ''){
           this.emailError = 'You must submit an email to register'
@@ -102,6 +113,8 @@ export default {
           this.nameError = 'You must submit your name to register'
         }
       }
+
+      //If all information is entered, it is dispatched to the backend to be stored in the database
       else{
         try {
           await this.$store.dispatch(NEW_ENQUIRY, {
@@ -109,6 +122,7 @@ export default {
             name: this.name,
             message: "Register me for " + this.event.title
           })
+          //Once the information has been submitted the user is sent to the register success page.
           this.$router.push('/registered-successfully')
         } catch (e) {
           alert("Sorry it looks like we can't register you are this time, Please try again later")

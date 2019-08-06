@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store/store'
+import Svg from '@/components/Svg.vue'
 
 //Import of Jquery library used under the MIT license, https://jquery.org/license/
 import jQuery from 'jquery'
@@ -14,6 +15,9 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 
 Vue.config.productionTip = false
+
+//Import component into all components
+Vue.component('svg-img', Svg)
 
 //Initialisation of the Application
 new Vue({

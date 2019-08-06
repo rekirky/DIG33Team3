@@ -5,6 +5,8 @@
         <div class="left-gutter">
         </div>
       </div>
+
+      <!-- Top bar with title that only renders on mobile -->
       <div class="col-12 col-xl-9 center-content">
         <div class="row no-gutters">
           <div class="col-12 top-bar"></div>
@@ -12,9 +14,12 @@
           <div class="col-8 mobile-title">THE FEEL GOOD DRINK CO</div>
           <div class="col-2 mobile-logo"><img src="@/assets/img/FGD_Logo_full.png"></div>
         </div>
+        <!-- Logo that moves down into view when the page loads -->
         <div class="logo down-move">
           <img src="@/assets/img/greenlogo_1.png">
         </div>
+
+        <!-- Bottles and Text moves up into view when the page loads -->
         <div class="fruits-bottles up-move">
           <div class="left-fruit">
             <img src="@/assets/img/fruit/fruit1.png">
@@ -69,9 +74,6 @@
 <script>
 export default {
   name: 'Products',
-  components: {
-
-  },
   mounted () {
 
     //Slide in Animation
@@ -87,8 +89,6 @@ export default {
     }
     }, 100);
 
-  },
-  methods: {
   }
 }
 </script>

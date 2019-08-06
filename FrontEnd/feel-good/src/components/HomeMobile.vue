@@ -1,4 +1,6 @@
 <template>
+
+  <!-- Top bar, heading and logo -->
   <div class="home-mobile">
     <div class="row no-gutters">
       <div class="col-12 top-bar"></div>
@@ -6,6 +8,8 @@
       <div class="col-8 title">THE FEEL GOOD DRINK CO</div>
       <div class="col-2 logo"><img src="@/assets/img/FGD_Logo_full.png"></div>
     </div>
+
+    <!-- Feel section -->
     <div class="row no-gutters">
       <div class="col-12 percent-title">
         100%<br>
@@ -14,7 +18,7 @@
     </div>
     <div class="row no-gutters">
       <div class="col-12 spacer-bar bg-blue">
-        the benifits
+        the benefits
       </div>
     </div>
     <div class="row no-gutters">
@@ -33,6 +37,8 @@
         <router-link to="products" tag="button">The Benefits</router-link>
       </div>
     </div>
+
+    <!-- Natural section -->
     <div class="row no-gutters">
       <div class="col-12 percent-title">
         100%<br>
@@ -49,6 +55,8 @@
         <router-link to="products" tag="button">find your flavour</router-link>
       </div>
     </div>
+
+    <!-- Good Section -->
     <div class="row no-gutters">
       <div class="col-12 percent-title">
         100%<br>
@@ -83,21 +91,8 @@
 <script>
 
 export default {
-  name: 'home',
-  components:{
-  },
-  data () {
-    return{
-    }
-  },
-  created() {
-  },
-  destroyed() {
-  },
-  methods: {
-  }
+  name: 'HomeMobile'
 }
-
 
 </script>
 

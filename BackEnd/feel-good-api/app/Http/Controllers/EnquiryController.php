@@ -18,13 +18,15 @@ class EnquiryController extends Controller
      */
     public function store(Request $request)
     {
-
+        //Creates a new enquiry object
         $enquiry = new Enquiry;
 
+        //loads in the information sent via the request
         $enquiry->name = $request->input('name');
         $enquiry->email = $request->input('email');
         $enquiry->message = $request->input('message');
 
+        //Saves the Enquiry to the database
         $enquiry->save();
 
         if($enquiry->save()){

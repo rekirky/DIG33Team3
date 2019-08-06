@@ -1,6 +1,8 @@
 <template>
   <div class="not-found">
     <div class="row no-gutters">
+
+      <!-- 404 Content Container -->
       <div class="col-2 offset-2">
         <img class="img-fluid bottle left-bottle" src="@/assets/img/bottles/Paper-Bottle_passion_499px.png">
       </div>

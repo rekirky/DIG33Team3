@@ -16,8 +16,10 @@ class EventController extends Controller
      */
     public function index()
     {
+        //Gets all events from the database
         $events = Event::all();
 
+        //Returns all the events in the database
         return EventResource::collection($events);
     }
 
@@ -29,8 +31,11 @@ class EventController extends Controller
      */
     public function show($id)
     {
+
+        //Attempts to find the event requested by id
         $event = Event::findOrFail($id);
 
+        //returns the event that was requested
         return new EventResource($event);
     }
 }

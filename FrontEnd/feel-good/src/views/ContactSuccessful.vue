@@ -2,10 +2,11 @@
   <div class="contact-successful">
     <div class="row no-gutters">
       <div class="col-12 contact-successful-content">
+        <!-- Thank you message -->
         <img class="img-fluid logo" src="@/assets/img/logo_247.png" alt="feel good drinks logo">
         <h1>Thank You!</h1>
         <h2>We Appreciate your feedback!</h2>
-         <router-link to="/home" class="nav-link" id="home" v-on:click.native="togglePoint">Return Home</router-link>
+        <router-link to="/home" tag="button">Return Home</router-link>
       </div>
     </div>
   </div>
@@ -13,9 +14,7 @@
 
 <script>
 export default {
-  name: 'ContactSuccessful',
-  props: {
-  }
+  name: 'ContactSuccessful'
 }
 </script>
 

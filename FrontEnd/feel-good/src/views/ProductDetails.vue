@@ -7,6 +7,7 @@
         </div>
       </div>
       <div class="col-xl-9 col-12">
+        <!-- top banner to be rendered on mobile -->
         <div class="row no-gutters visible-mobile">
           <div class="product-group-label">
             <div class="row no-gutters">
@@ -27,12 +28,12 @@
             <p>{{currentProductGroup.tagLine}}</p>
           </div>
         </div>
-        <!-- Product Carousel  -->
+        <!-- Product Selection Grid  -->
         <div class="row no-gutters carousel-container">
           <div id="productSelector" class="carousel">
             <div v-if="this.filteredProducts.length != 0">
               <ol class="carousel-indicators">
-                <!-- Carousel Indicators generated from the number of events in the array. -->
+                <!-- Selection Grid Indicators generated from the number of events in the array. -->
                 <div v-for="(product, index) in filteredProducts" :key="index" class="col-4">
                   <li v-if="index == 0" :id="'indicator-' + index" class="indicator active" v-on:click="activeProduct(index)" :style="'background-color: ' + currentProductGroup.accentColor"></li>
                   <li v-else :id="'indicator-' + index" class="indicator" v-on:click="activeProduct(index)" :style="'background-color: ' + currentProductGroup.accentColor "></li>
@@ -41,7 +42,7 @@
 
 
               <div class="carousel-inner">
-                <!-- Carousel Product content generated from the number of events in the array. -->
+                <!-- Selection Grid Product content generated from the number of events in the array. -->
                 <div class="row no-gutters">
                   <div v-for="(product, index) in filteredProducts" :key="index" class="col-4">
                     <div v-if="index == 0" class="product-select active" :id="'item-' + index" v-on:click="activeProduct(index)">
@@ -111,9 +112,6 @@ export default {
     ProductNutrition,
     ProductNutritionMobile
   },
-  props: {
-
-  },
   data () {
     return{
       currentProductIndex: 0,
@@ -121,10 +119,12 @@ export default {
     }
   },
   created() {
+    //Check the current width of the screen and update if the page should render mobile or desktop
     window.addEventListener('resize', this.resize)
     this.resize();
   },
   destroyed() {
+    //Remove resize event listener
     window.removeEventListener('resize', this.resize)
   },
   computed:{
@@ -133,11 +133,12 @@ export default {
       productGroups: "getProductGroups"
     }),
 
+    //Returns the current selected product group id to filter the product list
     productGroupId (){
       return this.$route.params.productId
     },
 
-    //Returns only the products that are in that product group
+    //Returns only the products that are in the current product group
     filteredProducts () {
       if(!this.products){return null}
 
@@ -147,6 +148,7 @@ export default {
       return productList
     },
 
+    //Sets the current Product group
     currentProductGroup () {
       if(!this.productGroups){return null}
 
@@ -157,6 +159,7 @@ export default {
     }
   },
   async mounted(){
+    //Updates the local product information from the backend
     await this.$store.dispatch(GET_PRODUCTS)
     
   },
@@ -197,6 +200,7 @@ export default {
       $("#nutrition-" + this.currentProductIndex).addClass("active")
     },
 
+    //Re-renders the view if it changes from Mobile to Desktop and vica versa
     resize() {
       if(window.innerWidth < 1200){
         this.mobile = true

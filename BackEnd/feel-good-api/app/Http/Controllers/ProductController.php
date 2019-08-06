@@ -16,8 +16,10 @@ class ProductController extends Controller
      */
     public function index()
     {
+        //Gets all products from the database
         $products = Product::all();
 
+        //Returns all the products in the database
         return ProductResource::collection($products);
     }
 
@@ -29,8 +31,10 @@ class ProductController extends Controller
      */
     public function show($id)
     {
+        //Attempts to find the product requested by id
         $product = Product::findOrFail($id);
 
+        //returns the product that was requested
         return new ProductResource($product);
     }
 }
