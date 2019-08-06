@@ -33,7 +33,7 @@
 
         <h6 class="lead">The heart of our company is to create a completely 100% good product. The passion of 
           the Feel Good Drinks Co., lead our team of engineers to the development of all new and innovative 
-          packaging which aligns with the company ethos — all natural ingredients inside and outside the 
+          packaging which aligns with the company ethos — all-natural ingredients inside and outside the 
           bottle.</h6>
 
         <p class="about-feel-good">The Feel Good Drinks premium range of 100% natural still and sparkling drinks designed 
@@ -93,7 +93,7 @@
                 products. As a result, we continue to reduce our total sugar usage. The Added Sugar in our UK products continues to fall from
                 8,002 tonnes in 2015 to 7,908 tonnes in 2016. </small></p>
 
-            <p><small> We are making further commitments to reduce sugar in all of our sugar containing products in line with UK Government guidelines
+            <p><small> We are making further commitments to reduce sugar in all of our sugar-containing products in line with UK Government guidelines
                 and have a robust plan of reformulation.</small></p>
                 
             <p><small> The No Added Sugar products in our squash range now account for 50.5% of all purchases and 42% of our Vimto still range in the
