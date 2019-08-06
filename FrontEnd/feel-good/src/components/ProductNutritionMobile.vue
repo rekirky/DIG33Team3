@@ -6,7 +6,7 @@
           <div class="row no-gutters bottle-container">
             <div class="product-name">
               <h3>{{product.name}}</h3>
-              <p>*100% naturally occuring fruit sugars</p>
+              <p>*100% naturally occurring fruit sugars</p>
             </div>
 
             <!-- Bottle Information -->
@@ -47,7 +47,7 @@
             <!-- Water Droplets -->
             <div class="water-drop-container natural-sugar">
               <div class="water-drop-text">
-                  *100% naturally occuring fruit sugars
+                  *100% naturally occurring fruit sugars
               </div>
               <div class="water-drop">
               </div>

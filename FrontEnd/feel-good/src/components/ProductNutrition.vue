@@ -5,7 +5,7 @@
         <div class="nutrition-content">
           <div class="product-name">
             <h3>{{product.name}}</h3>
-            <p>*100% naturally occuring fruit sugars</p>
+            <p>*100% naturally occurring fruit sugars</p>
           </div>
 
           <!-- Fruit Descriptiona-->
@@ -73,7 +73,7 @@
           <!-- Water Droplets -->
           <div class="water-drop-container natural-sugar">
             <div class="water-drop-text">
-                *100% naturally occuring fruit sugars
+                *100% naturally occurring fruit sugars
             </div>
             <div class="water-drop">
             </div>
