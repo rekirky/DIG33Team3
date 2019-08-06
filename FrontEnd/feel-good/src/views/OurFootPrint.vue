@@ -433,7 +433,7 @@ hr.mobile-line-blue{
 hr.info-lines{
   width: 100%;
   border: 1px solid var(--green-secondary);
-  margin-block:55px;
+  margin: 55px;
   margin-left:10px;
   float: left
 }
