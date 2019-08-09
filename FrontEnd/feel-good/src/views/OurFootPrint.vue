@@ -139,10 +139,10 @@
                   <hr class="info-lines">
                     </div>
                 <div class="info-tag-text col align-self-end">
-                  <p class="specs"><small>The 100% organic and renewable moulded fibre</small></p>
-                  <p class="specs"><small>Bottle is designed to look beautiful and functional with patterned paper design</small></p>
-                  <p class="specs"><small>The structural integrity of the bottle is comparable to plastic bottle</small></p>
-                  <p class="specs"><small>Paper label with ecofriendly printable coating</small></p>
+                  <p class="specs"><small><b>The 100% organic and renewable moulded fibre</b></small></p>
+                  <p class="specs"><small><b>Bottle is designed to look beautiful and functional with patterned paper design</b></small></p>
+                  <p class="specs"><small><b>The structural integrity of the bottle is comparable to plastic bottle</b></small></p>
+                  <p class="specs"><small><b>Paper label with ecofriendly printable coating</b></small></p>
                     </div>
                       </div>
                          </div> <!--end bottle info tags row-->
@@ -220,7 +220,7 @@ h1{
 
 hr{
   border: 1px solid white;
-  width: 60%;
+  width: 50%;
   margin-bottom: 20px;
   margin-top: 0px
 }
@@ -403,10 +403,12 @@ h5.bottle-text{
 .bottle-specifications{
   width:28%;
 }
+
 .specs-mobile{
   padding: 20px;
   padding-bottom: 0px
 }
+
 .paper-bottle-mobile{
 padding: 20px
 }
@@ -445,7 +447,7 @@ hr.info-lines{
 p.specs{
   line-height: 1.3;
   margin-bottom: 25px;
-  color: var(--green-secondary);
+  color: var(--green-primary);
   text-align: left
 }
 
