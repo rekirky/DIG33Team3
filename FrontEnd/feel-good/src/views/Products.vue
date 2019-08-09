@@ -37,18 +37,6 @@
         <div class="hero-bottle-group">
           <div class="hero-bottle up-move">
             <img src="@/assets/img/bottles/orangebottle_big.png">
-            <router-link to="/product/1">
-            <div class="plus-button">
-              <div class="circle">
-                <span class="bar"></span>
-                <span class="bar bar-vertical"></span>
-              </div>
-            </div>
-            </router-link>
-            <div class="product-group-label">A BIT BUBBLY</div>
-          </div>
-          <div class="hero-bottle up-move">
-            <img src="@/assets/img/bottles/pinkbottle_big.png">
             <router-link to="/product/2">
             <div class="plus-button">
               <div class="circle">
@@ -58,6 +46,18 @@
             </div>
             </router-link>
             <div class="product-group-label">REFRESHINGLY STILL</div>
+          </div>
+          <div class="hero-bottle up-move">
+            <img src="@/assets/img/bottles/pinkbottle_big.png">
+            <router-link to="/product/1">
+            <div class="plus-button">
+              <div class="circle">
+                <span class="bar"></span>
+                <span class="bar bar-vertical"></span>
+              </div>
+            </div>
+            </router-link>
+            <div class="product-group-label">A BIT BUBBLY</div>
           </div>
         </div>
       </div>
