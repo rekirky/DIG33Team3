@@ -325,7 +325,7 @@ text-shadow: 3px 3px 6px #000;
   /* [4] Tweak the appearance, and give it a nice background i.e. the world map */
   color: #000;
   border-radius: 50%;
-  background: url(../assets/img/worldmap_base.png) 0 0 repeat;
+  background: url(../assets/img/earth.png) 0 0 repeat;
   box-shadow: inset 20px 0 80px 6px rgba(0, 0, 0, 1);
 
   /* [5] Position things in a 3d space */
