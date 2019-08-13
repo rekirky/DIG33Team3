@@ -351,21 +351,15 @@ text-shadow: 3px 3px 6px #000;
   background: radial-gradient(circle at 100px 100px #3290d1 #000);
 }
 
-/*End code snippet and comments for globe spin animation sourced by Deb from W3Bits.(2019). Create a 3d Earth with Rotating Animation
- with CSS. [online] Available at: https://w3bits.com/css-earth/ [Accessed 28 Jul. 2019].*/
-
-/*Code snippet for globe spin animation keyframes sourced from 
-Stack Overflow.(2017). Rotating globe in CSS. [online] Available at:
- https://stackoverflow.com/questions/27781634/rotating-globe-in-css [Accessed 31 Jul. 2019].*/
-
+/*Jon's modified keyframes to smooth globe spin*/
 @keyframes rotate {
   0% { background-position: 0 0; }
   100% {   background-position: 7000px 0; }
 }
-
+/*End code snippet and comments for globe spin animation sourced by Deb from W3Bits.(2019). Create a 3d Earth with Rotating Animation
+ with CSS. [online] Available at: https://w3bits.com/css-earth/ [Accessed 28 Jul. 2019].*/
 
 /*Plastic alternative bottle information section styling*/
-
 .bottles.main{
   width:100%
 }
