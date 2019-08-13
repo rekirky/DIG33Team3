@@ -319,8 +319,8 @@ text-shadow: 3px 3px 6px #000;
   margin: 3em auto;
 
   /* [3] Prepare the animation effects */
-  transition: transform 2000ms linear;
-  animation: rotate 25s linear infinite; /* This is going to be defined in the next step */
+  transition: transform 200ms linear;
+  animation: rotate 60s linear infinite; /* This is going to be defined in the next step */
 
   /* [4] Tweak the appearance, and give it a nice background i.e. the world map */
   color: #000;
@@ -348,7 +348,7 @@ text-shadow: 3px 3px 6px #000;
   /* [4] Add some shape and overlay effect to it */
   opacity: .2;
   border-radius: 50%;
-  background: radial-gradient(circle at 100px 100px, #fff, #000);
+  background: radial-gradient(circle at 100px 100px #3290d1 #000);
 }
 
 /*End code snippet and comments for globe spin animation sourced by Deb from W3Bits.(2019). Create a 3d Earth with Rotating Animation
@@ -359,8 +359,8 @@ Stack Overflow.(2017). Rotating globe in CSS. [online] Available at:
  https://stackoverflow.com/questions/27781634/rotating-globe-in-css [Accessed 31 Jul. 2019].*/
 
 @keyframes rotate {
-  from { background-position:  100%  0; }
-  to {   background-position:    0   0; }
+  0% { background-position: 0 0; }
+  100% {   background-position: 7000px 0; }
 }
 
 
