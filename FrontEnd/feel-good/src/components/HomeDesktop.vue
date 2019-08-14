@@ -769,8 +769,13 @@ export default {
   }
 
   .good-hand{
-    width: 45vw !important;
     height: 22vw !important;
+    bottom: 100%;
+    overflow: hidden;
+  }
+
+  .good-hand.active{
+    bottom: 0%;
   }
 
   .good-fish{
