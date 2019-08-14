@@ -132,6 +132,13 @@
     <!-- One third section of the Good section that is the target for the rest of the section to be revealed -->
     <div id="good-container" class="third-container"  @mouseenter="bottomBarGrow" @mouseleave="bottomBarShrink" @click="goodActive">
       <div class="top-bar"></div>
+      <!-- Close button deactives the section -->
+      <div class="close-button" v-on:click.stop="goodDeactive">
+          <div class="circle hamburger">
+            <span class="bar top"></span>
+            <span class="bar bottom"></span>
+          </div>
+        </div>
       <div class="center-content">
         <div class="top-tag">100%</div>
         <div class="name-tag">GOOD</div>
@@ -156,14 +163,6 @@
     <!-- Left side two third content that slides out when the section is active -->
      <div id="good-content-container">
       <div id="good-content">
-
-        <!-- Close button deactives the section -->
-        <div class="close-button" v-on:click="goodDeactive">
-          <div class="circle hamburger">
-            <span class="bar top"></span>
-            <span class="bar bottom"></span>
-          </div>
-        </div>
         <div class="two-third-container">        
           <div class="two-third-title">
             You can become part of the crusade to protect our oceans for future generations
@@ -247,6 +246,7 @@ export default {
     //When the Good section is selected, active Classes are added to reveal the section
     goodActive(){
       var goodContainer = document.getElementById("good-container")
+      goodContainer.classList.add("active")
       goodContainer.getElementsByClassName("bottom-bar")[0].classList.add("active")
       goodContainer.getElementsByClassName("top-tag")[0].classList.add("active")
       goodContainer.getElementsByClassName("bottom-tag")[0].classList.add("active")
@@ -260,12 +260,12 @@ export default {
     //Resets Good section back to normal
     goodDeactive(){      
       var goodContainer = document.getElementById("good-container")
+      goodContainer.classList.remove("active")
       goodContainer.getElementsByClassName("bottom-bar")[0].classList.remove("active")
       goodContainer.getElementsByClassName("top-tag")[0].classList.remove("active")
       goodContainer.getElementsByClassName("bottom-tag")[0].classList.remove("active")
       goodContainer.getElementsByClassName("name-tag")[0].classList.remove("active")
       goodContainer.getElementsByClassName("hand")[0].classList.remove("active")
-      //goodContainer.getElementsByClassName("good-fish")[0].classList.remove("active")
       $( "#good-content-container" ).delay(1000).animate({width: "0%"}, 0);
       document.getElementById("good-content").classList.remove("active")
     },
@@ -452,7 +452,7 @@ export default {
     position: absolute;
     padding: .5rem;
     cursor: pointer;
-    z-index: 6;
+    z-index: 10;
   }
 
   .circle{
@@ -769,8 +769,13 @@ export default {
   }
 
   .good-hand{
-    width: 45vw !important;
     height: 22vw !important;
+    bottom: 100%;
+    overflow: hidden;
+  }
+
+  .good-hand.active{
+    bottom: 0%;
   }
 
   .good-fish{
@@ -787,5 +792,14 @@ export default {
     margin: 20px;
   }
 
+
+  #good-container>.close-button{
+    right: -66vw;
+    transition: all ease-out .3s;
+  }
+
+  #good-container.active>.close-button{
+    right: 2rem;
+  }
 
 </style>
