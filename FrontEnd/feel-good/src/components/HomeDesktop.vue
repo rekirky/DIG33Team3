@@ -721,6 +721,7 @@ export default {
     right: 0;
     height: 100%;
     width: 33%;
+    overflow: hidden;
   }
 
   #good-container .top-bar, #good-container .bottom-bar{
