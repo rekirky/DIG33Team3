@@ -165,7 +165,8 @@ h2 {
   color: var(--orange-primary);
   font-weight: bold;
   text-align: center;
-  margin-top: 40px;
+  padding: 20px;
+  padding-top: 60px;
 }
 
 h3 {
