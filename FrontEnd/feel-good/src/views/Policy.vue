@@ -237,8 +237,8 @@ export default {
 /*Custom heading colour for privacy page, i.e. different from global styles*/
 h2{
   color: var(--orange-primary);
-  margin-top: 40px;
-  padding: 20px
+  padding: 20px;
+  padding-top: 60px;
 }
 
 h5{
