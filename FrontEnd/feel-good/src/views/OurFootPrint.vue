@@ -326,7 +326,7 @@ text-shadow: 3px 3px 6px #000;
   color: #000;
   border-radius: 50%;
   background: url(../assets/img/earth.png) 0 0 repeat;
-  box-shadow: inset 20px 0 80px 6px rgba(0, 0, 0, 1);
+  box-shadow: inset 20px 0 80px 6px #0b535e;
 
   /* [5] Position things in a 3d space */
   transform-style: preserve-3d;
@@ -348,7 +348,7 @@ text-shadow: 3px 3px 6px #000;
   /* [4] Add some shape and overlay effect to it */
   opacity: .2;
   border-radius: 50%;
-  background: radial-gradient(circle at 100px 100px #3290d1 #000);
+  //background: radial-gradient(circle at 100px 100px #3290d1 #000);
 }
 
 /*Jon's modified keyframes to smooth globe spin*/
