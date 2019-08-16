@@ -556,7 +556,7 @@ export default {
   }
 
   #feel-container .top-bar, #feel-container .bottom-bar{
-    background-color: var(--blue-secondary);
+    background-color: #43e2fa;
   }
 
   #feel-content-container{

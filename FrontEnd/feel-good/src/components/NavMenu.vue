@@ -50,6 +50,10 @@
         <div class="bullet-point"></div>
         <router-link to="/footprint" class="nav-link" id="footprint" v-on:click.native="togglePoint">Our Footprint</router-link>
       </div>
+      <div class="link-container" id="contact-link">
+        <div class="bullet-point"></div>
+        <router-link to="/contact" class="nav-link" id="contact" v-on:click.native="togglePoint">Contact Us</router-link>
+      </div>
     </div>
 
     <!-- Overlay that fills the rest of the screen, if clicked it will close the nav menu,

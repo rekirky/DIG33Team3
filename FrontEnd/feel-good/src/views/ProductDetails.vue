@@ -46,7 +46,7 @@
                 <div class="row no-gutters">
                   <div v-for="(product, index) in filteredProducts" :key="index" class="col-4">
                     <div v-if="index == 0" class="product-select active" :id="'item-' + index" v-on:click="activeProduct(index)">
-                      <div class="row">
+                      <div class="row bottle">
                           <img  :src="require(`@/assets/img/products/${product.bottleGroupImage}`)" :alt="product.name" class="d-block">
                       </div>
                       <div class="row">
@@ -56,7 +56,7 @@
                       </div>
                     </div>
                     <div v-else class="product-select" :id="'item-' + index" v-on:click="activeProduct(index)">
-                      <div class="row">
+                      <div class="row bottle">
                           <img  :src="require(`@/assets/img/products/${product.bottleGroupImage}`)" :alt="product.name" class="d-block">
                       </div>
                       <div class="row">
@@ -363,6 +363,21 @@ export default {
     text-transform: uppercase;
     font-family: 'Holtwood One SC', sans-serif;
     letter-spacing: 4px;
+  }
+
+
+  .bottle>img:hover {
+    animation: jiggle ease-in-out .7s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes jiggle {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(5deg); }
+    40% { transform: rotate(-10deg); }
+    60% { transform: rotate(10deg); }
+    80% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
   }
 
   @media only screen and (max-width: 1199px) {
