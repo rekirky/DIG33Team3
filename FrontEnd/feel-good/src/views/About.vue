@@ -183,13 +183,13 @@ h6{
 }
 
 .pattern{
-  height: 1540px;
+  height: 1640px;
   position: relative
 }
 
 .right-bar{
   width:10%;
-  height: 1540px;
+  height: 1640px;
   overflow: hidden;
   background-color: var(--beige-sidebar);
   float: right;
